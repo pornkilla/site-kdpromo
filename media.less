@@ -1,0 +1,27 @@
+// out: false
+
+.only {
+    display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .on-screen-320px {
+        &.show {
+            display: inline-block;
+        }
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+    .on-screen-480px {
+        &.show {
+            display: inline-block;
+        }
+    }
+}
+@media only screen and (min-width: 960px) {
+    .on-screen-960px {
+        &.show {
+            display: inline-block;
+        }
+    }
+}

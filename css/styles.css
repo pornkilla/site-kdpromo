@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Podkova|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Podkova&script=all&rev=1|Raleway&display=swap');
 html,
 body {
   font-family: 'Raleway', sans-serif;
@@ -19,20 +19,31 @@ h6,
   font-family: 'Podkova', serif;
 }
 header {
-  background: #7bb111 url("../img/bg_header.jpg") center 0 no-repeat;
-  background-size: cover;
-  min-height: 400px;
+  background: #7bb111 url("../img/bg_header.jpg") 20% 0 no-repeat;
+  background-size: auto 100%;
+  height: 420px;
   position: relative;
-  background-position-x: 20%;
 }
 header .logo {
-  padding: 60px 0 0 80px;
-  font-size: 0;
-  width: 190px;
-  height: 130px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 150px;
+  height: 100px;
   background: transparent url("../img/logo.svg") 0 0 no-repeat;
   -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
   filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
+}
+header .logo h1 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
 }
 header .price {
   position: absolute;
@@ -44,7 +55,7 @@ header .price {
   color: #fbf5e8;
   margin: auto;
   top: 160px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
 }
 header .price span {
@@ -52,7 +63,7 @@ header .price span {
   text-transform: uppercase;
 }
 header .price .middle {
-  padding: 14px 0;
+  padding: 10px 0;
 }
 header .price .middle span {
   font-size: 18px;
@@ -62,4 +73,180 @@ header .price .middle .amount {
   font-size: 54px;
   letter-spacing: -2px;
   color: #fac011;
+}
+.underhead {
+  color: #fbf5e8;
+  top: 350px;
+  position: relative;
+}
+.underhead .woodbox {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-left: 140px;
+  padding-right: 28px;
+  padding-bottom: 24px;
+  background: transparent url("../img/pic_woodbox-mobile.png") 0 0 no-repeat;
+}
+.underhead h2 {
+  font-family: 'Podkova', serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.underhead .list {
+  list-style-type: none;
+  font-size: 14px;
+}
+.underhead .list .item {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.underhead h2,
+.underhead .list {
+  text-transform: uppercase;
+}
+.underhead .marked {
+  color: #fff43c;
+}
+.underhead .videobox {
+  margin: 30px auto;
+  text-align: center;
+}
+.underhead .videobox video {
+  box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.4);
+}
+footer .logo p {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+}
+.only {
+  display: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .on-screen-320px.show {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+  .on-screen-480px.show {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .on-screen-960px.show {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 480px) {
+  header {
+    height: 560px;
+  }
+  header .price {
+    width: 320px;
+    right: auto;
+    left: 40px;
+    padding: 40px;
+    font-size: 24px;
+  }
+  header .price .middle {
+    padding: 4px 0;
+  }
+  header .price .middle .amount {
+    font-size: 64px;
+  }
+  .underhead {
+    top: 380px;
+  }
+  .underhead .woodbox {
+    width: 440px;
+    padding-top: 180px;
+    padding-left: 180px;
+    padding-bottom: 36px;
+    margin: 0 20px 0 auto;
+    background-image: url("../img/pic_woodbox.png");
+  }
+  .underhead h2 {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 720px) {
+  header {
+    height: 640px;
+    background-size: cover;
+    background-position-x: center;
+  }
+  header .logo {
+    width: 190px;
+    height: 130px;
+    left: 70px;
+    top: 40px;
+  }
+  header .price {
+    top: 210px;
+    left: 80px;
+    padding: 64px;
+    width: 50%;
+  }
+  header .price span {
+    line-height: 1.47;
+  }
+  .underhead {
+    top: 480px;
+  }
+  .underhead h2 {
+    font-size: 48px;
+  }
+  .underhead .woodbox {
+    width: 600px;
+    margin-right: 50px;
+    padding-bottom: 58px;
+    padding-top: 170px;
+    padding-left: 200px;
+  }
+  .underhead .list {
+    font-size: 18px;
+  }
+  .underhead .videobox {
+    margin-top: -40px;
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  header {
+    height: 720px;
+  }
+  header .price {
+    top: 240px;
+    width: 40%;
+  }
+  header .price .middle .amount {
+    font-size: 76px;
+    line-height: 1.1;
+  }
+  .underhead .woodbox {
+    width: 700px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  header {
+    height: 1000px;
+  }
+  header .price {
+    top: 290px;
+  }
+  .underhead .woodbox {
+    margin-right: 14%;
+  }
+  .underhead .videobox {
+    margin-left: 14%;
+  }
 }

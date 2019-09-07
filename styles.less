@@ -1,21 +1,14 @@
 // out: css/styles.css
 
-@import url('https://fonts.googleapis.com/css?family=Podkova|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Podkova&script=all&rev=1|Raleway&display=swap');
+
+@import (reference) 'helpers';
+@import (reference) 'colors';
 
 @font-podkova:   'Podkova', serif;
 @font-raleway:   'Raleway', sans-serif;
 @font-base:      16px;
 
-@color-hose:     #fbf5e8;
-@color-grey:     #aaa699;
-@color-dark:     #392119;
-@color-coffee:   #4e3329;
-@color-wood:     #5d2a1f;
-@color-mocca:    #ccc4b7;
-@color-sun:      #fac011;
-@color-blin:     #d1a10e;
-@color-green:    #7bb111;
-@color-shade:    rgba(20, 26, 13, .6);
 
 html, body {
     font-family: @font-raleway;
@@ -34,20 +27,22 @@ h1, h2, h3, h4, h5, h6, .text-accent {
 
 //header 
 header {
-    background: @color-green url("../img/bg_header.jpg") center 0 no-repeat;
-    background-size: cover;
-    min-height: 400px;
+    background: @color-green url("../img/bg_header.jpg") 20% 0 no-repeat;
+    background-size: auto 100%;
+    height: 420px;
     position: relative;
-    background-position-x: 20%; // media smartphone
     .logo {
-        padding: 60px 0 0 80px;
-        font-size: 0;
-        width: 190px;
-        height: 130px;
-        background: transparent url("../img/logo.svg") 0 0 no-repeat;
-        // box-shadow: 0px 3px 6px 2px rgba(89, 89, 89, 0.50);
+        position: absolute;
+        top: 20px;
+        left: 25px;        
+        width: 150px;
+        height: 100px;
+        background: transparent url("../img/logo.svg") 0 0 no-repeat;        
         -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.50));
         filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.50));
+        h1 {            
+            .text-hidden();
+        }
     }
     .price {
         position: absolute;
@@ -59,14 +54,14 @@ header {
         color: @color-hose;
         margin: auto;
         top: 160px;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 500;
         span {
             line-height: 1.2;
             text-transform: uppercase;
         }
         .middle {
-            padding: 14px 0;
+            padding: 10px 0;
             span {
                 font-size: 18px;
             }
@@ -79,3 +74,58 @@ header {
         }        
     }
 }
+
+.underhead {
+    color: @color-hose;
+    top: 350px;
+    position: relative;
+    .woodbox {
+        width: 320px;
+        margin: 0 auto;
+        padding-top: 150px;
+        padding-left: 140px;
+        padding-right: 28px;
+        padding-bottom: 24px;        
+        background: transparent url("../img/pic_woodbox-mobile.png") 0 0 no-repeat;
+    }
+    h2 {
+        font-family: @font-podkova;
+        font-size: 18px;
+        font-weight: 400;        
+    }
+    .list {    
+        list-style-type: none;
+        font-size: 14px;        
+        .item {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+    }
+    h2, .list {
+        text-transform: uppercase;
+    }
+    .marked {
+        color: @color-lemon;
+    }
+    .videobox {
+        margin: 30px auto;
+        text-align: center;
+        video {
+            box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.40);
+        }
+    }
+}
+
+footer {
+    .logo {
+        p {
+            .text-hidden();
+        }
+    }
+}
+
+@import 'media';
+@import 'media-480';
+@import 'media-720';
+@import 'media-960';
+@import 'media-1280';
