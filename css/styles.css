@@ -1,8 +1,65 @@
 @import url('https://fonts.googleapis.com/css?family=Podkova|Raleway&display=swap');
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Podkova', serif;
   font-size: 16px;
   background-color: #fbf5e8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-accent {
+  font-family: 'Podkova', serif;
+}
+header {
+  background: #7bb111 url("../img/bg_header.jpg") center 0 no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+  background-position-x: 20%;
+}
+header .logo {
+  padding: 60px 0 0 80px;
+  font-size: 0;
+  width: 190px;
+  height: 130px;
+  background: transparent url("../img/logo.svg") 0 0 no-repeat;
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
+  filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
+}
+header .price {
+  position: absolute;
+  background-color: rgba(20, 26, 13, 0.6);
+  width: 80%;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  color: #fbf5e8;
+  margin: auto;
+  top: 160px;
+  font-size: 24px;
+  font-weight: 500;
+}
+header .price span {
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+header .price .middle {
+  padding: 14px 0;
+}
+header .price .middle span {
+  font-size: 18px;
+}
+header .price .middle .amount {
+  font-family: 'Podkova', serif;
+  font-size: 54px;
+  letter-spacing: -2px;
+  color: #fac011;
 }
