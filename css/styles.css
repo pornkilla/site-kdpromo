@@ -6,6 +6,7 @@ body {
 body {
   margin: 0;
   padding: 0;
+  color: #392119;
   font-size: 16px;
   background-color: #fbf5e8;
 }
@@ -75,11 +76,11 @@ header .price .middle .amount {
   color: #fac011;
 }
 .underhead {
-  color: #fbf5e8;
   top: 350px;
   position: relative;
 }
 .underhead .woodbox {
+  color: #fbf5e8;
   width: 320px;
   margin: 0 auto;
   padding-top: 150px;
@@ -109,11 +110,29 @@ header .price .middle .amount {
   color: #fff43c;
 }
 .underhead .videobox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin: 30px auto;
   text-align: center;
 }
 .underhead .videobox video {
   box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.4);
+}
+.underhead .videobox .features {
+  padding: 30px 10px;
+  color: #392119;
+  font-family: 'Raleway', sans-serif;
+}
+.underhead .videobox .features h3 {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.underhead .videobox .features p {
+  font-weight: normal;
+  font-size: 18px;
 }
 footer .logo p {
   top: 0;
@@ -149,8 +168,9 @@ footer .logo p {
     height: 560px;
   }
   header .price {
-    width: 320px;
-    right: auto;
+    width: auto;
+    top: 210px;
+    right: 40px;
     left: 40px;
     padding: 40px;
     font-size: 24px;
@@ -165,16 +185,26 @@ footer .logo p {
     top: 380px;
   }
   .underhead .woodbox {
-    width: 440px;
+    width: auto;
     padding-top: 180px;
     padding-left: 180px;
     padding-bottom: 36px;
-    margin: 0 20px 0 auto;
+    margin: 0 40px 0 20px;
     background-image: url("../img/pic_woodbox.png");
   }
   .underhead h2 {
     font-size: 28px;
     line-height: 1.1;
+  }
+  .underhead .videobox {
+    align-items: flex-start;
+  }
+  .underhead .videobox .features {
+    text-align: left;
+    padding: 40px;
+  }
+  .underhead .videobox video {
+    margin-left: 40px;
   }
 }
 @media only screen and (min-width: 720px) {
@@ -190,8 +220,8 @@ footer .logo p {
     top: 40px;
   }
   header .price {
-    top: 210px;
     left: 80px;
+    right: auto;
     padding: 64px;
     width: 50%;
   }
@@ -206,7 +236,8 @@ footer .logo p {
   }
   .underhead .woodbox {
     width: 600px;
-    margin-right: 50px;
+    margin-right: 80px;
+    margin-left: auto;
     padding-bottom: 58px;
     padding-top: 170px;
     padding-left: 200px;
@@ -217,7 +248,14 @@ footer .logo p {
   .underhead .videobox {
     margin-top: -40px;
     text-align: left;
-    padding-left: 30px;
+    margin-left: 80px;
+    padding-left: 0;
+  }
+  .underhead .videobox video {
+    margin-left: 0;
+  }
+  .underhead .videobox .features {
+    padding-left: 0;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -226,27 +264,57 @@ footer .logo p {
   }
   header .price {
     top: 240px;
-    width: 40%;
+    width: 560px;
   }
   header .price .middle .amount {
-    font-size: 76px;
+    font-size: 100px;
     line-height: 1.1;
   }
   .underhead .woodbox {
-    width: 700px;
+    width: 680px;
+  }
+  .underhead .videobox {
+    flex-direction: row;
+  }
+  .underhead .videobox .features {
+    padding-left: 40px;
+    padding-top: 75px;
   }
 }
 @media only screen and (min-width: 1280px) {
   header {
-    height: 1000px;
+    height: 920px;
+  }
+  header .logo {
+    top: 60px;
+    left: 90px;
+    width: 240px;
+    height: 190px;
   }
   header .price {
     top: 290px;
+    left: auto;
+    right: 48%;
+    padding: 90px;
+  }
+  header .price .middle .amount {
+    font-size: 120px;
+  }
+  .underhead {
+    top: 640px;
   }
   .underhead .woodbox {
-    margin-right: 14%;
+    margin-right: auto;
+    margin-left: 41%;
   }
   .underhead .videobox {
-    margin-left: 14%;
+    margin-left: auto;
+    margin-right: 48%;
+    width: 560px;
+  }
+  .underhead .videobox .features {
+    margin-right: -90%;
+    padding-top: 120px;
+    padding-left: 80px;
   }
 }
