@@ -134,6 +134,28 @@ header .price .middle .amount {
   font-weight: normal;
   font-size: 18px;
 }
+main h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 4rem;
+}
+main section .wrapper {
+  padding: 40px 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .dark {
+  color: #fbf5e8;
+}
+section.why-choose {
+  background: #1f1d17 url("../img/bg_section-1-small.jpg") center bottom no-repeat;
+  background-size: auto 100%;
+}
+section.why-choose p {
+  text-align: justify;
+}
 footer .logo p {
   top: 0;
   left: 0;
@@ -145,22 +167,91 @@ footer .logo p {
   overflow: hidden;
   visibility: hidden;
 }
+button,
+.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Podkova', serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: none;
+  -webkit-tap-highlight-color: transparent;
+  webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+}
+button.yellow,
+.button.yellow {
+  color: #5d2a1f;
+  background-color: #fac011;
+  border-top: transparent 4px solid;
+  border-bottom: #d1a10e 4px solid;
+}
+button.wide,
+.button.wide {
+  min-width: 290px;
+}
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.v-spacer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.v-spacer.double {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.v-spacer.triple {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.v-spacer.quad {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 .only {
   display: none;
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+  header .underhead .woodbox {
+    width: 90%;
+    background-position-x: right;
+    background-size: 100% auto;
+    margin: 0 0 0 auto;
+    padding-left: 33%;
+    padding-top: 130px;
+  }
   .on-screen-320px.show {
     display: inline-block;
+  }
+  main {
+    margin-top: 1150px;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 959px) {
   .on-screen-480px.show {
     display: inline-block;
   }
+  main {
+    margin-top: 1100px;
+  }
 }
 @media only screen and (min-width: 960px) {
   .on-screen-960px.show {
     display: inline-block;
+  }
+  main {
+    margin-top: 1000px;
   }
 }
 @media only screen and (min-width: 480px) {
@@ -205,6 +296,10 @@ footer .logo p {
   }
   .underhead .videobox video {
     margin-left: 40px;
+  }
+  main section {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 @media only screen and (min-width: 720px) {
@@ -256,6 +351,14 @@ footer .logo p {
   }
   .underhead .videobox .features {
     padding-left: 0;
+  }
+  main section .wrapper {
+    padding: 80px 0;
+    max-width: 1280px;
+  }
+  section.why-choose {
+    background-image: url("../img/bg_section-1.jpg");
+    background-size: 100% auto;
   }
 }
 @media only screen and (min-width: 960px) {

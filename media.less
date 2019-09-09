@@ -5,10 +5,25 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+    header {
+        .underhead {
+            .woodbox {
+                width: 90%;
+                background-position-x: right;                
+                background-size: 100% auto;
+                margin: 0 0 0 auto;
+                padding-left: 33%;
+                padding-top: 130px;
+            }
+        }
+    }
     .on-screen-320px {
         &.show {
             display: inline-block;
         }
+    }
+    main {
+        margin-top: 1150px;
     }
 }
 @media only screen and (min-width: 480px) and (max-width: 959px) {
@@ -17,11 +32,17 @@
             display: inline-block;
         }
     }
+    main {
+        margin-top: 1100px;
+    }
 }
 @media only screen and (min-width: 960px) {
     .on-screen-960px {
         &.show {
             display: inline-block;
         }
+    }
+    main {
+        margin-top: 1000px;
     }
 }
