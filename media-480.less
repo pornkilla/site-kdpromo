@@ -1,7 +1,9 @@
 // out: false
 @media only screen and (min-width: 480px) {
     header {
-        height: 560px;        
+        .back {
+            height: 560px;
+        }
         .price {
             width: auto;
             top: 210px;
@@ -18,7 +20,7 @@
         }
     }
     .underhead {
-        top: 380px;
+        margin-top: -170px;
         .woodbox {
             width: auto;
             padding-top: 180px;
@@ -33,8 +35,7 @@
         }
         .videobox {
             align-items: flex-start;            
-            .features {
-                text-align: left;
+            .features {                
                 padding: 40px;
             }
             video {
@@ -46,6 +47,19 @@
         section {
             padding-left: 15%;
             padding-right: 15%;
+        }
+    }
+    section.benefits {
+        padding-bottom: 240px;
+        background: @color-green url("../img/bg-section-2-small.jpg") center bottom no-repeat;
+        background-size: 120% auto;
+        ol {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li {
+            flex-shrink: 0;
+            width: 45%;
         }
     }
 }

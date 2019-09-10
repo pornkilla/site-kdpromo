@@ -1,7 +1,9 @@
 // out: false
 @media only screen and (min-width: 960px) {
     header {        
-        height: 720px;
+        .back {
+            height: 720px;
+        }
         .price {
             top: 240px; 
             width: 560px;       
@@ -14,15 +16,30 @@
         }
     }
     .underhead {
+        margin-top: -210px;
         .woodbox {
             width: 680px;
         }
         .videobox {
+            position: relative;
             flex-direction: row;
+            &::before {
+                position: absolute;
+                left: 0;
+                content: '';
+                display: block;
+                top: -85px;
+                width: 150px;
+                height: 70px;
+                background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
+            }
             .features {
                 padding-left: 40px;
                 padding-top: 75px;
             }
         }
+    }
+    section.benefits {
+        padding-bottom: 380px;        
     }
 }

@@ -20,13 +20,18 @@ h6,
   font-family: 'Podkova', serif;
 }
 header {
+  position: relative;
+}
+header .back {
+  position: relative;
+  z-index: 1;
   background: #7bb111 url("../img/bg_header.jpg") 20% 0 no-repeat;
   background-size: auto 100%;
   height: 420px;
-  position: relative;
 }
 header .logo {
   position: absolute;
+  z-index: 2;
   top: 20px;
   left: 25px;
   width: 150px;
@@ -47,6 +52,7 @@ header .logo h1 {
   visibility: hidden;
 }
 header .price {
+  z-index: 2;
   position: absolute;
   background-color: rgba(20, 26, 13, 0.6);
   width: 80%;
@@ -76,7 +82,8 @@ header .price .middle .amount {
   color: #fac011;
 }
 .underhead {
-  top: 350px;
+  z-index: 3;
+  margin-top: -70px;
   position: relative;
 }
 .underhead .woodbox {
@@ -120,9 +127,21 @@ header .price .middle .amount {
   box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.4);
 }
 .underhead .videobox .features {
-  padding: 30px 10px;
+  padding: 30px 20px;
   color: #392119;
   font-family: 'Raleway', sans-serif;
+  position: relative;
+  text-align: left;
+}
+.underhead .videobox .features::after {
+  position: absolute;
+  right: 5%;
+  content: '';
+  display: block;
+  bottom: 25px;
+  width: 40px;
+  height: 170px;
+  background: transparent url("../img/pic_tools-2.png") center center no-repeat;
 }
 .underhead .videobox .features h3 {
   font-family: inherit;
@@ -137,7 +156,8 @@ header .price .middle .amount {
 main h3 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
+  line-height: 1.1;
   font-weight: normal;
   margin-bottom: 4rem;
 }
@@ -148,13 +168,47 @@ main section .wrapper {
 }
 main .dark {
   color: #fbf5e8;
+  background-color: #1f1d17;
+}
+main .green {
+  color: #fbf5e8;
+  background-color: #7bb111;
 }
 section.why-choose {
-  background: #1f1d17 url("../img/bg_section-1-small.jpg") center bottom no-repeat;
-  background-size: auto 100%;
+  background: url("../img/bg_section-1-small.jpg") center bottom no-repeat;
+  background-size: cover;
 }
 section.why-choose p {
   text-align: justify;
+}
+section.benefits {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 300px;
+  background: #7bb111 url("../img/bg-section-2-small.jpg") 30% bottom no-repeat;
+  background-size: 180% auto;
+}
+section.benefits ol {
+  counter-reset: bCounter;
+  margin: 0;
+  padding: 0;
+}
+section.benefits li {
+  color: #ffffff;
+  list-style: none;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 40px;
+  font-weight: 300;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section.benefits li::before {
+  font-size: 36px;
+  padding-bottom: 20px;
+  counter-increment: bCounter;
+  content: counter(bCounter);
+  display: block;
 }
 footer .logo p {
   top: 0;
@@ -203,59 +257,24 @@ button.wide,
   margin-right: auto;
   text-align: center;
 }
-.v-spacer {
+.v-space {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.v-spacer.double {
+.v-space.double {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.v-spacer.triple {
+.v-space.triple {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.v-spacer.quad {
+.v-space.quad {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-.only {
-  display: none;
-}
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  header .underhead .woodbox {
-    width: 90%;
-    background-position-x: right;
-    background-size: 100% auto;
-    margin: 0 0 0 auto;
-    padding-left: 33%;
-    padding-top: 130px;
-  }
-  .on-screen-320px.show {
-    display: inline-block;
-  }
-  main {
-    margin-top: 1150px;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 959px) {
-  .on-screen-480px.show {
-    display: inline-block;
-  }
-  main {
-    margin-top: 1100px;
-  }
-}
-@media only screen and (min-width: 960px) {
-  .on-screen-960px.show {
-    display: inline-block;
-  }
-  main {
-    margin-top: 1000px;
-  }
-}
 @media only screen and (min-width: 480px) {
-  header {
+  header .back {
     height: 560px;
   }
   header .price {
@@ -273,7 +292,7 @@ button.wide,
     font-size: 64px;
   }
   .underhead {
-    top: 380px;
+    margin-top: -170px;
   }
   .underhead .woodbox {
     width: auto;
@@ -291,7 +310,6 @@ button.wide,
     align-items: flex-start;
   }
   .underhead .videobox .features {
-    text-align: left;
     padding: 40px;
   }
   .underhead .videobox video {
@@ -301,9 +319,22 @@ button.wide,
     padding-left: 15%;
     padding-right: 15%;
   }
+  section.benefits {
+    padding-bottom: 240px;
+    background: #7bb111 url("../img/bg-section-2-small.jpg") center bottom no-repeat;
+    background-size: 120% auto;
+  }
+  section.benefits ol {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.benefits li {
+    flex-shrink: 0;
+    width: 45%;
+  }
 }
 @media only screen and (min-width: 720px) {
-  header {
+  header .back {
     height: 640px;
     background-size: cover;
     background-position-x: center;
@@ -322,9 +353,6 @@ button.wide,
   }
   header .price span {
     line-height: 1.47;
-  }
-  .underhead {
-    top: 480px;
   }
   .underhead h2 {
     font-size: 48px;
@@ -352,17 +380,27 @@ button.wide,
   .underhead .videobox .features {
     padding-left: 0;
   }
+  main h3 {
+    font-size: 48px;
+  }
   main section .wrapper {
     padding: 80px 0;
     max-width: 1280px;
   }
   section.why-choose {
     background-image: url("../img/bg_section-1.jpg");
+  }
+  section.benefits {
     background-size: 100% auto;
+  }
+  section.benefits ol {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
 }
 @media only screen and (min-width: 960px) {
-  header {
+  header .back {
     height: 720px;
   }
   header .price {
@@ -373,19 +411,36 @@ button.wide,
     font-size: 100px;
     line-height: 1.1;
   }
+  .underhead {
+    margin-top: -210px;
+  }
   .underhead .woodbox {
     width: 680px;
   }
   .underhead .videobox {
+    position: relative;
     flex-direction: row;
+  }
+  .underhead .videobox::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    display: block;
+    top: -85px;
+    width: 150px;
+    height: 70px;
+    background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
   }
   .underhead .videobox .features {
     padding-left: 40px;
     padding-top: 75px;
   }
+  section.benefits {
+    padding-bottom: 380px;
+  }
 }
 @media only screen and (min-width: 1280px) {
-  header {
+  header .back {
     height: 920px;
   }
   header .logo {
@@ -403,9 +458,6 @@ button.wide,
   header .price .middle .amount {
     font-size: 120px;
   }
-  .underhead {
-    top: 640px;
-  }
   .underhead .woodbox {
     margin-right: auto;
     margin-left: 41%;
@@ -419,5 +471,84 @@ button.wide,
     margin-right: -90%;
     padding-top: 120px;
     padding-left: 80px;
+  }
+  section.benefits {
+    padding-bottom: 400px;
+    background-image: url("../img/bg-section-2.jpg"), url("../img/section2-bottom.png");
+    background-position: center bottom, 0 bottom;
+    background-repeat: no-repeat, repeat-x;
+    background-size: 1280px auto, auto 146px;
+  }
+  section.benefits ol {
+    flex-wrap: nowrap;
+    width: auto;
+  }
+  section.benefits li {
+    text-align: center;
+    width: 20%;
+    margin-bottom: 0;
+  }
+  section.benefits li:nth-child(2) {
+    padding-right: 80px;
+    padding-left: 0;
+  }
+  section.benefits li:nth-child(4) {
+    padding-right: 0;
+    padding-left: 80px;
+  }
+  section.benefits li:nth-child(5) {
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  section.benefits li:nth-child(1) {
+    padding-right: 50px;
+    padding-left: 0;
+  }
+  section.benefits li:nth-child(1),
+  section.benefits li:nth-child(2) {
+    text-align: right;
+  }
+  section.benefits li:nth-child(4),
+  section.benefits li:nth-child(5) {
+    text-align: left;
+  }
+  section.benefits li:nth-child(1),
+  section.benefits li:nth-child(5) {
+    padding-top: 180px;
+  }
+  section.benefits li:nth-child(2),
+  section.benefits li:nth-child(4) {
+    margin-top: 70px;
+  }
+}
+.only {
+  display: none;
+}
+@media only screen and (min-width: 320px) {
+  header .underhead .videobox .features {
+    padding-right: 90px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  header .underhead .woodbox {
+    width: 90%;
+    background-position-x: right;
+    background-size: 100% auto;
+    margin: 0 0 0 auto;
+    padding-left: 33%;
+    padding-top: 130px;
+  }
+  .on-screen-320px.show {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 959px) {
+  .on-screen-480px.show {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .on-screen-960px.show {
+    display: inline-block;
   }
 }

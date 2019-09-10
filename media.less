@@ -3,7 +3,17 @@
 .only {
     display: none;
 }
-
+@media only screen and (min-width: 320px) {
+    header {
+        .underhead {
+            .videobox {
+                .features {
+                    padding-right: 90px;
+                }
+            }
+        }
+    }
+}
 @media only screen and (min-width: 320px) and (max-width: 479px) {
     header {
         .underhead {
@@ -21,10 +31,7 @@
         &.show {
             display: inline-block;
         }
-    }
-    main {
-        margin-top: 1150px;
-    }
+    }    
 }
 @media only screen and (min-width: 480px) and (max-width: 959px) {
     .on-screen-480px {
@@ -32,17 +39,11 @@
             display: inline-block;
         }
     }
-    main {
-        margin-top: 1100px;
-    }
 }
 @media only screen and (min-width: 960px) {
     .on-screen-960px {
         &.show {
             display: inline-block;
         }
-    }
-    main {
-        margin-top: 1000px;
     }
 }

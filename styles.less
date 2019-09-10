@@ -28,13 +28,18 @@ h1, h2, h3, h4, h5, h6, .text-accent {
 
 
 //header 
-header {
-    background: @color-green url("../img/bg_header.jpg") 20% 0 no-repeat;
-    background-size: auto 100%;
-    height: 420px;
+header {    
     position: relative;
+    .back {
+        position: relative;
+        z-index: 1;
+        background: @color-green url("../img/bg_header.jpg") 20% 0 no-repeat;
+        background-size: auto 100%;
+        height: 420px;
+    }
     .logo {
         position: absolute;
+        z-index: 2;
         top: 20px;
         left: 25px;        
         width: 150px;
@@ -47,6 +52,7 @@ header {
         }
     }
     .price {
+        z-index: 2;
         position: absolute;
         background-color: @color-shade;
         width: 80%;
@@ -78,7 +84,8 @@ header {
 }
 
 .underhead {    
-    top: 350px;
+    z-index: 3;
+    margin-top: -70px;    
     position: relative;
     .woodbox {
         color: @color-hose;
@@ -119,9 +126,21 @@ header {
             box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.40);       
         }
         .features {
-            padding: 30px 10px;
+            padding: 30px 20px;
             color: @color-terra;
             font-family: @font-raleway;
+            position: relative;
+            text-align: left;
+            &::after {
+                position: absolute;
+                right: 5%;
+                content: '';
+                display: block;
+                bottom: 25px;
+                width: 40px;
+                height: 170px;
+                background: transparent url("../img/pic_tools-2.png") center center no-repeat;
+            }
             h3 {
                 font-family: inherit;
                 font-size: 24px;
@@ -140,7 +159,8 @@ main {
     h3 {
         text-transform: uppercase;
         text-align: center;
-        font-size: 48px;
+        font-size: 36px;
+        line-height: 1.1;
         font-weight: normal;        
         margin-bottom: 4rem;
     }
@@ -153,14 +173,49 @@ main {
     }
     .dark {        
         color: @color-hose;
+        background-color: @color-night;
+    }
+    .green {
+        color: @color-hose;
+        background-color: @color-green;
     }
 }
 section.why-choose {
-    background: @color-night url("../img/bg_section-1-small.jpg") center bottom no-repeat;
-    background-size: auto 100%;
+    background: url("../img/bg_section-1-small.jpg") center bottom no-repeat;
+    background-size: cover;
     p {
         text-align: justify;
     }
+}
+section.benefits {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 300px;
+    background: @color-green url("../img/bg-section-2-small.jpg") 30% bottom no-repeat;
+    background-size: 180% auto;
+    ol {
+        counter-reset: bCounter;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        color: #ffffff;
+        list-style: none;
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 40px;
+        font-weight: 300;
+        padding-left: 10px;
+        padding-right: 10px;
+        &::before {
+            font-size: 36px;
+            padding-bottom: 20px;            
+            counter-increment: bCounter;
+            content: counter(bCounter);
+            display: block;
+        }       
+    }
+    
 }
 
 footer {
@@ -204,7 +259,7 @@ button, .button {
     margin-right: auto;
     text-align: center;
 }
-.v-spacer {
+.v-space {
     margin-top: 1rem;
     margin-bottom: 1rem;
     &.double {
@@ -221,8 +276,8 @@ button, .button {
     }
 }
 
-@import 'media';
 @import 'media-480';
 @import 'media-720';
 @import 'media-960';
 @import 'media-1280';
+@import 'media';
