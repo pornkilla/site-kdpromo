@@ -42,4 +42,33 @@
     section.benefits {
         padding-bottom: 380px;        
     }
+    section.technology {
+        .text p {
+            max-width: 386px;
+        }
+        .grid {
+            &:not(.reversed) {
+                .pic {
+                    img {
+                        margin-left: 0;
+                    }
+                }
+                .text p {
+                    margin-right: 0;
+                }
+            }
+
+            &.reversed {
+                .pic {
+                    img {
+                        margin-right: 0;
+                    }
+                }
+                .text p {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
 }

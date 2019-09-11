@@ -170,6 +170,9 @@ main .dark {
   color: #fbf5e8;
   background-color: #1f1d17;
 }
+main .dark .ui.list li::before {
+  color: inherit;
+}
 main .green {
   color: #fbf5e8;
   background-color: #7bb111;
@@ -185,7 +188,7 @@ section.benefits {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 300px;
-  background: #7bb111 url("../img/bg-section-2-small.jpg") 30% bottom no-repeat;
+  background: #7bb111 url("../img/bg_section-2-small.jpg") 30% bottom no-repeat;
   background-size: 180% auto;
 }
 section.benefits ol {
@@ -210,6 +213,102 @@ section.benefits li::before {
   content: counter(bCounter);
   display: block;
 }
+section.technology p {
+  text-align: justify;
+  line-height: 1.54;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.technology .grid {
+  margin-bottom: 4rem;
+}
+section.technology .pic img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.technology .conclusion {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.tendency {
+  background: #5d2a1f url("../img/bg_section-4.jpg") center 0 no-repeat;
+  background-size: cover;
+}
+section.tendency p {
+  line-height: 1.54;
+}
+section.tendency .pic img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 100px;
+}
+section.guarantee {
+  background: #7bb111 url("../img/bg_section-5.jpg") center 0 no-repeat;
+  background-size: cover;
+}
+section.guarantee .column p {
+  padding-bottom: 3rem;
+}
+section.guarantee .count {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-family: 'Podkova', serif;
+  font-weight: bold;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+section.guarantee .count::before,
+section.guarantee .count::after {
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  content: '';
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+section.guarantee .count::before {
+  border: 1px solid #ffffff;
+}
+section.guarantee .count::after {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 10px;
+}
+section.guarantee p {
+  text-align: justify;
+  line-height: 1.54;
+}
+footer a {
+  color: #5d2a1f;
+}
+footer .wrapper {
+  padding: 9rem 20px 3rem;
+}
+footer .smallest {
+  font-size: 14px;
+}
+footer .logo {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 220px;
+  height: 160px;
+  background: url("../img/logo-fullcolor.svg") center center no-repeat;
+}
 footer .logo p {
   top: 0;
   left: 0;
@@ -220,6 +319,19 @@ footer .logo p {
   position: absolute;
   overflow: hidden;
   visibility: hidden;
+}
+footer .contacts,
+footer .address {
+  font-size: 18px;
+  padding-top: 40px;
+}
+footer .phone {
+  font-size: 36px;
+  font-family: 'Podkova', serif;
+}
+footer .contacts a {
+  display: inline-block;
+  margin-bottom: 12px;
 }
 button,
 .button {
@@ -321,7 +433,7 @@ button.wide,
   }
   section.benefits {
     padding-bottom: 240px;
-    background: #7bb111 url("../img/bg-section-2-small.jpg") center bottom no-repeat;
+    background: #7bb111 url("../img/bg_section-2-small.jpg") center bottom no-repeat;
     background-size: 120% auto;
   }
   section.benefits ol {
@@ -398,6 +510,15 @@ button.wide,
     margin-right: auto;
     width: 70%;
   }
+  section.tendency .desc {
+    flex: 2;
+  }
+  section.tendency .pic {
+    flex: 1;
+  }
+  section.tendency .pic img {
+    max-width: 100%;
+  }
 }
 @media only screen and (min-width: 960px) {
   header .back {
@@ -438,6 +559,21 @@ button.wide,
   section.benefits {
     padding-bottom: 380px;
   }
+  section.technology .text p {
+    max-width: 386px;
+  }
+  section.technology .grid:not(.reversed) .pic img {
+    margin-left: 0;
+  }
+  section.technology .grid:not(.reversed) .text p {
+    margin-right: 0;
+  }
+  section.technology .grid.reversed .pic img {
+    margin-right: 0;
+  }
+  section.technology .grid.reversed .text p {
+    margin-left: 0;
+  }
 }
 @media only screen and (min-width: 1280px) {
   header .back {
@@ -474,7 +610,7 @@ button.wide,
   }
   section.benefits {
     padding-bottom: 400px;
-    background-image: url("../img/bg-section-2.jpg"), url("../img/section2-bottom.png");
+    background-image: url("../img/bg_section-2.jpg"), url("../img/section2-bottom.png");
     background-position: center bottom, 0 bottom;
     background-repeat: no-repeat, repeat-x;
     background-size: 1280px auto, auto 146px;
@@ -540,6 +676,9 @@ button.wide,
   }
   .on-screen-320px.show {
     display: inline-block;
+  }
+  section.tendency .ui.grid .column.pic {
+    display: none;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 959px) {
