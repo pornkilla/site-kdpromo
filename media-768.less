@@ -1,5 +1,5 @@
 // out: false
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 768px) {
     header {
         .back {
             height: 640px;
@@ -83,5 +83,29 @@
                 max-width: 100%;
             }
         }
-    }    
+    }
+    section.question {
+        display: flex;
+        flex-wrap: nowrap;
+        h2 {
+            small {
+                font-size: 36px;
+            }
+        }
+        & > * {
+            flex: 1;
+        }
+        fieldset {
+            max-width: 500px;
+            margin-left: 0;
+        }
+        .fillmeharder {
+            padding: 30px;
+        }
+    }
+    footer {
+        .row {
+            text-align: left;
+        }        
+    }
 }

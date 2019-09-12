@@ -9,7 +9,6 @@
 @font-raleway:   'Raleway', sans-serif;
 @font-base:      16px;
 
-
 html, body {
     font-family: @font-raleway;
 }
@@ -45,8 +44,8 @@ header {
         width: 150px;
         height: 100px;
         background: transparent url("../img/logo.svg") 0 0 no-repeat;        
-        -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.50));
-        filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.50));
+        -webkit-filter: drop-shadow(@shadow);
+        filter: drop-shadow(@shadow);
         h1 {            
             .text-hidden();
         }
@@ -155,7 +154,7 @@ header {
     }
 }
 
-main {
+main {    
     h3 {
         text-transform: uppercase;
         text-align: center;
@@ -164,8 +163,8 @@ main {
         font-weight: normal;        
         margin-bottom: 4rem;
     }
-    section {
-        .wrapper {
+    section {        
+        .wrapper {            
             padding: 40px 10px;
             margin-left: auto;
             margin-right: auto;            
@@ -262,7 +261,7 @@ section.tendency {
     }
 }
 section.guarantee {
-    background: @color-green url("../img/bg_section-5.jpg") center 0 no-repeat;
+    background: @color-green url("../img/bg_section-5.jpg") center bottom no-repeat;
     background-size: cover;
     .column {
         p {
@@ -305,15 +304,80 @@ section.guarantee {
     }
 }
 
+section.question {
+    padding: 0;
+    background-color: @color-skin;
+    a {
+        color: @color-wood;
+    }
+    h2 {
+        font-size: 48px;
+        font-weight: bold;
+         text-transform: uppercase;
+        small {
+            line-height: 1;
+            text-transform: initial;
+            font-size: 28px;
+            font-weight: normal;
+            display: block;
+        }        
+    }
+    .text {       
+        text-align: right;
+        padding: 20px;
+        display: flex;        
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        color: @color-hose;
+        background: url("../img/bg_contacts.jpg") right 0 no-repeat;
+        background-size: cover;
+        min-height: 400px;
+        & > * {
+            max-width: 310px;
+        }
+        h2, p {
+            text-shadow: @shadow;
+        }
+    }
+    .fillmeharder {
+        padding: 20px 14px;
+        a {
+            text-decoration: underline;
+        }
+    }
+    fieldset {
+        max-width: 290px;
+        border: 0;
+        padding: 0.01em 0 0 0;
+        margin: 0 auto 2rem auto;
+        min-width: 0;
+    }
+    .dopustim {
+        display: none;
+    }
+    .ui.form {
+        textarea, input {
+            border-radius: 0;
+        }       
+    }
+}
+
 footer {
     a {
         color: @color-wood;
     }
+    .row {
+        text-align: center;
+    }
     .wrapper {
-        padding: 9rem 20px 3rem;
+        padding: 6rem 20px 3rem;
     }
     .smallest {
         font-size: 14px;
+        a {
+            text-decoration: underline;
+        }
     }
     .logo {
         .centered();
@@ -330,7 +394,7 @@ footer {
         padding-top: 40px;
     }
     .phone {
-        font-size: 36px;
+        font-size: 28px;
         font-family: @font-podkova;
     }
     .contacts {
@@ -392,7 +456,7 @@ button, .button {
 }
 
 @import 'media-480';
-@import 'media-720';
+@import 'media-768';
 @import 'media-960';
 @import 'media-1280';
 @import 'media';

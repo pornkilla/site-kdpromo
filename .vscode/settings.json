@@ -1,0 +1,7 @@
+{
+    "editor.matchBrackets": false,
+    "editor.formatOnPaste": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.cursorBlinking": true
+}

@@ -249,7 +249,7 @@ section.tendency .pic img {
   max-width: 100px;
 }
 section.guarantee {
-  background: #7bb111 url("../img/bg_section-5.jpg") center 0 no-repeat;
+  background: #7bb111 url("../img/bg_section-5.jpg") center bottom no-repeat;
   background-size: cover;
 }
 section.guarantee .column p {
@@ -292,14 +292,78 @@ section.guarantee p {
   text-align: justify;
   line-height: 1.54;
 }
+section.question {
+  padding: 0;
+  background-color: #d9ccba;
+}
+section.question a {
+  color: #5d2a1f;
+}
+section.question h2 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+section.question h2 small {
+  line-height: 1;
+  text-transform: initial;
+  font-size: 28px;
+  font-weight: normal;
+  display: block;
+}
+section.question .text {
+  text-align: right;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fbf5e8;
+  background: url("../img/bg_contacts.jpg") right 0 no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+section.question .text > * {
+  max-width: 310px;
+}
+section.question .text h2,
+section.question .text p {
+  text-shadow: 0px 2px 2px rgba(89, 89, 89, 0.5);
+}
+section.question .fillmeharder {
+  padding: 20px 14px;
+}
+section.question .fillmeharder a {
+  text-decoration: underline;
+}
+section.question fieldset {
+  max-width: 290px;
+  border: 0;
+  padding: 0.01em 0 0 0;
+  margin: 0 auto 2rem auto;
+  min-width: 0;
+}
+section.question .dopustim {
+  display: none;
+}
+section.question .ui.form textarea,
+section.question .ui.form input {
+  border-radius: 0;
+}
 footer a {
   color: #5d2a1f;
 }
+footer .row {
+  text-align: center;
+}
 footer .wrapper {
-  padding: 9rem 20px 3rem;
+  padding: 6rem 20px 3rem;
 }
 footer .smallest {
   font-size: 14px;
+}
+footer .smallest a {
+  text-decoration: underline;
 }
 footer .logo {
   margin-left: auto;
@@ -326,7 +390,7 @@ footer .address {
   padding-top: 40px;
 }
 footer .phone {
-  font-size: 36px;
+  font-size: 28px;
   font-family: 'Podkova', serif;
 }
 footer .contacts a {
@@ -445,7 +509,7 @@ button.wide,
     width: 45%;
   }
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 768px) {
   header .back {
     height: 640px;
     background-size: cover;
@@ -519,6 +583,26 @@ button.wide,
   section.tendency .pic img {
     max-width: 100%;
   }
+  section.question {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  section.question h2 small {
+    font-size: 36px;
+  }
+  section.question > * {
+    flex: 1;
+  }
+  section.question fieldset {
+    max-width: 500px;
+    margin-left: 0;
+  }
+  section.question .fillmeharder {
+    padding: 30px;
+  }
+  footer .row {
+    text-align: left;
+  }
 }
 @media only screen and (min-width: 960px) {
   header .back {
@@ -573,6 +657,9 @@ button.wide,
   }
   section.technology .grid.reversed .text p {
     margin-left: 0;
+  }
+  footer .phone {
+    font-size: 36px;
   }
 }
 @media only screen and (min-width: 1280px) {
