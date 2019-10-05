@@ -84,6 +84,22 @@
             }
         }
     }
+    section.plan {
+        h3 {
+            &::before, &::after {
+                display: block;
+            }
+        }
+        .step-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .column {
+                margin: 10px;
+            }
+        }
+    }
     section.question {
         display: flex;
         flex-wrap: nowrap;
