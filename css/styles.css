@@ -310,7 +310,7 @@ section.plan h3::after {
   content: '';
   width: 150px;
   height: 45px;
-  background: url(../img/pic_tools-5.png) 0 0 no-repeat;
+  background: url(../img/pic_tools-4.png) 0 0 no-repeat;
   background-size: 100% auto;
 }
 section.plan h3::before {
@@ -339,6 +339,9 @@ section.plan .step-list {
   counter-reset: bCounter;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 section.plan .step-list .column {
   margin: 20px auto;
@@ -372,6 +375,32 @@ section.plan .step-list .column::before {
   counter-increment: bCounter;
   content: counter(bCounter);
   display: block;
+}
+section.wood-house {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: #edeae5 url("../img/bg_section-6.jpg") right bottom no-repeat;
+  background-size: auto 400px;
+}
+section.wood-house .wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+section.wood-house h3 {
+  font-weight: 900;
+}
+section.wood-house h3 small {
+  display: block;
+  text-transform: lowercase;
+}
+section.wood-house .desc {
+  text-align: center;
+}
+section.specs .column {
+  margin: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 section.question {
   padding: 0;
@@ -426,10 +455,6 @@ section.question fieldset {
 }
 section.question .dopustim {
   display: none;
-}
-section.question .ui.form textarea,
-section.question .ui.form input {
-  border-radius: 0;
 }
 footer a {
   color: #5d2a1f;
@@ -529,6 +554,22 @@ button.wide,
 .v-space.quad {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+.ui.form input:not([type]),
+.ui.form input[type=date],
+.ui.form input[type=datetime-local],
+.ui.form input[type=email],
+.ui.form input[type=file],
+.ui.form input[type=number],
+.ui.form input[type=password],
+.ui.form input[type=search],
+.ui.form input[type=tel],
+.ui.form input[type=text],
+.ui.form input[type=time],
+.ui.form input[type=url],
+.ui.form textarea {
+  border-radius: 0;
+  font-family: 'Raleway', sans-serif;
 }
 @media only screen and (min-width: 480px) {
   header .back {
@@ -671,13 +712,15 @@ button.wide,
   section.plan h3::after {
     display: block;
   }
-  section.plan .step-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   section.plan .step-list .column {
     margin: 10px;
+  }
+  section.wood-house {
+    background-size: auto 500px;
+  }
+  section.wood-house h3,
+  section.wood-house .desc {
+    text-align: left;
   }
   section.question {
     display: flex;
@@ -839,6 +882,9 @@ button.wide,
   section.benefits li:nth-child(4) {
     margin-top: 70px;
   }
+  section.wood-house {
+    background-size: cover;
+  }
 }
 .only {
   display: none;
@@ -862,6 +908,16 @@ button.wide,
   }
   section.tendency .ui.grid .column.pic {
     display: none;
+  }
+  section.wood-house form {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.wood-house form button {
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 100%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {

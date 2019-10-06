@@ -373,7 +373,7 @@ section.plan {
             content: '';
             width: 150px;
             height: 45px;            
-            background: url(../img/pic_tools-5.png) 0 0 no-repeat;
+            background: url(../img/pic_tools-4.png) 0 0 no-repeat;
             background-size: 100% auto;
         }
         &::before {
@@ -405,7 +405,9 @@ section.plan {
         counter-reset: bCounter;
         margin: 0;
         padding: 0;        
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         .column {
             margin: 20px auto;
             padding: 56px 32px;
@@ -440,6 +442,36 @@ section.plan {
                 display: block;
             }
         }
+    }
+}
+
+section.wood-house {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: #edeae5 url("../img/bg_section-6.jpg") right bottom no-repeat;
+    background-size: auto 400px;
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    h3 {
+        font-weight: 900;
+        small {
+            display: block;
+            text-transform: lowercase;
+        }
+    }
+    .desc {
+        text-align: center;
+    }
+}
+
+section.specs {
+    .column {
+        margin: 10px;
+        padding: 12px;
+        border-radius: 10px;
+        background-color: #ffffff;
     }
 }
 
@@ -505,15 +537,7 @@ section.question {
 
     .dopustim {
         display: none;
-    }
-
-    .ui.form {
-
-        textarea,
-        input {
-            border-radius: 0;
-        }
-    }
+    }    
 }
 
 footer {
@@ -622,6 +646,25 @@ button,
     &.quad {
         margin-top: 4rem;
         margin-bottom: 4rem;
+    }
+}
+
+.ui.form {
+    input:not([type]),
+    input[type=date],
+    input[type=datetime-local],
+    input[type=email],
+    input[type=file],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    textarea {
+        border-radius: 0;
+        font-family: @font-raleway;
     }
 }
 
