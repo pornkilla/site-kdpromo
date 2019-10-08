@@ -53,23 +53,48 @@
                     </div>
                 </div>
             </div>
+
             <div class="videobox">
-                <video width="320" controls class="show only on-screen-320px"
-                    src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'>
-                    Извините, ваш браузер не поддерживает возможность проигрывания html5 видео.
-                </video>
-                <video width="400" controls class="show only on-screen-480px"
-                    src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'>
-                    Извините, ваш браузер не поддерживает возможность проигрывания html5 видео.
-                </video>
-                <video width="560" controls class="show only on-screen-768px"
-                    src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'>
-                    Извините, ваш браузер не поддерживает возможность проигрывания html5 видео.
-                </video>
-                <video width="640" controls class="show only on-screen-960px"
-                    src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'>
-                    Извините, ваш браузер не поддерживает возможность проигрывания html5 видео.
-                </video>
+
+<div id="spaceforvideo" class="video">    
+    <div class="ui active tab" data-tab="first-video">
+        <video width="320" controls class="show only on-screen-320px"
+            src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="400" controls class="show only on-screen-480px"
+            src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="560" controls class="show only on-screen-768px"
+            src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="640" controls class="show only on-screen-960px"
+            src="http://best.karelianhouse.ru/media/movie00.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+    </div>
+    <div class="ui tab" data-tab="second-video">
+        <video width="320" controls class="show only on-screen-320px"
+            src="http://best.karelianhouse.ru/media/movie01.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="400" controls class="show only on-screen-480px"
+            src="http://best.karelianhouse.ru/media/movie01.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="560" controls class="show only on-screen-768px"
+            src="http://best.karelianhouse.ru/media/movie01.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="640" controls class="show only on-screen-960px"
+            src="http://best.karelianhouse.ru/media/movie01.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+    </div>
+    <div class="ui tab" data-tab="third-video">
+        <video width="320" controls class="show only on-screen-320px"
+            src="http://best.karelianhouse.ru/media/movie02.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="400" controls class="show only on-screen-480px"
+            src="http://best.karelianhouse.ru/media/movie02.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="560" controls class="show only on-screen-768px"
+            src="http://best.karelianhouse.ru/media/movie02.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+        <video width="640" controls class="show only on-screen-960px"
+            src="http://best.karelianhouse.ru/media/movie02.webm" type='video/webm; codecs="vp8, vorbis"'></video>
+    </div>
+    <div class="ui secondary menu only">
+        <a class="item active" data-tab="first-video">1</a>
+        <a class="item" data-tab="second-video">2</a>
+        <a class="item" data-tab="third-video">3</a>
+    </div>
+</div>
+
+               
                 <div class="features">
                     <h3>Используем материал 100% качества</h3>
                     <p>Применяем только отборный материал, высушенный по технологии до влажности 8-10%</p>
@@ -428,11 +453,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="column"></div>
-                        <div class="column centered">
-                            <h2>Цена комплекта</h2>
-                        </div>
-                        <div class="column"></div>
+                        <h3 class="centered">Цена комплекта</h3>
                     </div>
                     <div class="row">
                         <div class="column">
@@ -451,9 +472,45 @@
                             </div>
                         </div>
                     </div>
-
-
-
+                    <div class="one column row">
+                        <div class="column centered">
+                            <img src="img/pic_tools-6.png" class="padded" alt="Работы по сборке дома из клееного бруса">
+                            <h2>Перечень работ по сборке комплекта дома на готовом фундаменте</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <div class="ui list">                                
+                                <div class="item">» устройство гидроизоляции под нижний венец дома</div>
+                                <div class="item">» устройство обвязочной доски</div>
+                                <div class="item">» устройство стен из клееного бруса, с установкой чашечного и меж венцового уплотнителя</div>
+                                <div class="item">» устройство стропильной системы–коньковая балка, стропила, опорные столбы из клееных балок</div>
+                                <div class="item">» устройство меж этажных балок перекрытия внутренних помещений 2-го этажа</div>
+                                <div class="item">» устройство несущих конструкций террас и балконов с установкой опорных столбов</div>
+                                <div class="item">» устройство оконных и дверных проемов с установкой обсадной доски</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="item">» устройство гидроизоляции под нижний венец дома</div>
+                            <div class="item">» устройство обвязочной доски</div>
+                            <div class="item">» устройство стен из клееного бруса, с установкой чашечного и меж венцового уплотнителя</div>
+                            <div class="item">» устройство стропильной системы–коньковая балка, стропила, опорные столбы из клееных балок</div>
+                            <div class="item">» устройство меж этажных балок перекрытия внутренних помещений 2-го этажа</div>
+                            <div class="item">» устройство несущих конструкций террас и балконов с установкой опорных столбов</div>
+                            <div class="item">» устройство оконных и дверных проемов с установкой обсадной доски</div>
+                        </div>
+                        <div class="column"></div>
+                    </div>
+                    <div class="one column row">
+                        <div class="column centered woodline">
+                            цена сборки комплекта &mdash; по запросу *
+                        </div>
+                    </div>
+                    <div class="one column row">
+                        <div class="column">
+<p class="disclaim">* &mdash; Строительство загородного дома «под ключ» возможно. Правда, стоимость такой работы невозможно указать в средних значениях, поскольку она сильно зависит от архитектуры и дизайн-проекта интерьера дома.</p>
+                        </div>
+                    </div>
 
         </section>
         <section class="three-column assembly"></section>
@@ -539,6 +596,10 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="js/semantic.min.js"></script>
     <script>
+        $('#spaceforvideo .menu .item')
+        .tab({        
+            context: 'parent'
+        });
         $('.ui.accordion').accordion();
         $('#form-two').form({
             inline: true,

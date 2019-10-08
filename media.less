@@ -6,7 +6,10 @@
 @import 'media-1280';
 
 .only {
-    display: none;
+    &, &.ui.menu {
+        display: none;
+    }
+    
 }
 @media only screen and (min-width: 320px) {
     header {
@@ -14,6 +17,9 @@
             .videobox {
                 .features {
                     padding-right: 90px;
+                }
+                .only.menu {
+                    display: flex;
                 }
             }
         }

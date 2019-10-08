@@ -396,7 +396,15 @@ section.wood-house h3 small {
 section.wood-house .desc {
   text-align: center;
 }
-section.specs .column h4 {
+section.specs h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+section.specs h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+section.specs h4 {
   text-align: center;
   font-weight: 700;
   font-size: 20px;
@@ -440,6 +448,17 @@ section.specs .price strong {
 }
 section.specs .price.gray {
   background-image: url("../img/pic_offer-gray.png");
+}
+section.specs .woodline {
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 80px;
+  background: transparent url("../img/bg_section-4.jpg") center center no-repeat;
+  background-size: cover;
+}
+section.specs .disclaim {
+  font-size: 12px;
 }
 section.question {
   padding: 0;
@@ -649,7 +668,7 @@ button.wide,
   .underhead .videobox .features {
     padding: 40px;
   }
-  .underhead .videobox video {
+  .underhead .videobox .video {
     margin-left: 40px;
   }
   main section {
@@ -714,7 +733,7 @@ button.wide,
     margin-left: 80px;
     padding-left: 0;
   }
-  .underhead .videobox video {
+  .underhead .videobox .video {
     margin-left: 0;
   }
   .underhead .videobox .features {
@@ -925,12 +944,16 @@ button.wide,
     background-size: cover;
   }
 }
-.only {
+.only,
+.only.ui.menu {
   display: none;
 }
 @media only screen and (min-width: 320px) {
   header .underhead .videobox .features {
     padding-right: 90px;
+  }
+  header .underhead .videobox .only.menu {
+    display: flex;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 479px) {
