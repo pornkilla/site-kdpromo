@@ -417,6 +417,9 @@ section.specs .column .pic img {
   margin-left: auto;
   margin-right: auto;
 }
+section.specs .column .note {
+  font-size: 12px;
+}
 section.specs .column .accordion {
   margin-top: 12px;
   box-shadow: none;
