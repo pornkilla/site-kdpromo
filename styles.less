@@ -467,6 +467,8 @@ section.wood-house {
 }
 
 section.specs {
+    padding-left: 10px;
+    padding-right: 10px;
     h2 {
         font-size: 30px;
         text-transform: uppercase;
@@ -474,8 +476,10 @@ section.specs {
     h3 {
         font-weight: 700;
         font-size: 18px;
+        margin: 2rem 0;
     }
     h4 {
+        min-height: 50px;
         text-align: center;
         font-weight: 700;
         font-size: 20px;
@@ -483,7 +487,7 @@ section.specs {
     }
     .column {        
         .white {
-            padding: 16px;
+            padding: 1rem;
             border-radius: 10px;
             background-color: #ffffff;
         }
@@ -497,6 +501,9 @@ section.specs {
                 margin-right: auto;
             }
         }
+        .desc {
+            margin-bottom: 1rem;
+        }
         .note {
             font-size: 12px;
         }
@@ -509,10 +516,22 @@ section.specs {
             }
         }
     }
+    .trinity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       .column {
+            max-width: 400px;            
+            margin-bottom: 4rem;
+       }
+    }
     .price {
         background: transparent url("../img/pic_offer-yellow.png") center center no-repeat;
+        background-size: 250px auto;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
         line-height: 77px;
-        max-width: 279px;
+        max-width: 277px;
         margin-left: auto;
         margin-right: auto;
         strong {
@@ -522,15 +541,29 @@ section.specs {
             background-image: url("../img/pic_offer-gray.png");
         }
     }
+    .addition {
+        margin-top: 3rem;
+        h2 {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+        }
+        .list {
+            text-align: left;
+        }
+    }
     .woodline {
         border-radius: 10px;
         text-transform: uppercase;
         color: #ffffff;
-        line-height: 80px;
+        padding: 2rem;
         background: transparent url("../img/bg_section-4.jpg") center center no-repeat;
         background-size: cover;
     }
     .disclaim {
+        margin-top: 2rem;
+        text-align: left;
         font-size: 12px;
     }
 }

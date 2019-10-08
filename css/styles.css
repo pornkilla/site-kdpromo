@@ -396,6 +396,10 @@ section.wood-house h3 small {
 section.wood-house .desc {
   text-align: center;
 }
+section.specs {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 section.specs h2 {
   font-size: 30px;
   text-transform: uppercase;
@@ -403,15 +407,17 @@ section.specs h2 {
 section.specs h3 {
   font-weight: 700;
   font-size: 18px;
+  margin: 2rem 0;
 }
 section.specs h4 {
+  min-height: 50px;
   text-align: center;
   font-weight: 700;
   font-size: 20px;
   padding: 0 8px;
 }
 section.specs .column .white {
-  padding: 16px;
+  padding: 1rem;
   border-radius: 10px;
   background-color: #ffffff;
 }
@@ -425,6 +431,9 @@ section.specs .column .pic img {
   margin-left: auto;
   margin-right: auto;
 }
+section.specs .column .desc {
+  margin-bottom: 1rem;
+}
 section.specs .column .note {
   font-size: 12px;
 }
@@ -436,10 +445,22 @@ section.specs .column .accordion .title {
   font-family: 'Raleway', sans-serif;
   padding-left: 0;
 }
+section.specs .trinity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.specs .trinity .column {
+  max-width: 400px;
+  margin-bottom: 4rem;
+}
 section.specs .price {
   background: transparent url("../img/pic_offer-yellow.png") center center no-repeat;
+  background-size: 250px auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   line-height: 77px;
-  max-width: 279px;
+  max-width: 277px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -449,15 +470,29 @@ section.specs .price strong {
 section.specs .price.gray {
   background-image: url("../img/pic_offer-gray.png");
 }
+section.specs .addition {
+  margin-top: 3rem;
+}
+section.specs .addition h2 {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+section.specs .addition .list {
+  text-align: left;
+}
 section.specs .woodline {
   border-radius: 10px;
   text-transform: uppercase;
   color: #ffffff;
-  line-height: 80px;
+  padding: 2rem;
   background: transparent url("../img/bg_section-4.jpg") center center no-repeat;
   background-size: cover;
 }
 section.specs .disclaim {
+  margin-top: 2rem;
+  text-align: left;
   font-size: 12px;
 }
 section.question {
@@ -691,6 +726,9 @@ button.wide,
   section.plan .step-list .column {
     max-width: 230px;
   }
+  section.specs .price {
+    background-size: 100% auto;
+  }
 }
 @media only screen and (min-width: 768px) {
   header .back {
@@ -797,6 +835,10 @@ button.wide,
   section.question .fillmeharder {
     padding: 30px;
   }
+  section.specs {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
   footer .row {
     text-align: left;
   }
@@ -854,6 +896,26 @@ button.wide,
   }
   section.technology .grid.reversed .text p {
     margin-left: 0;
+  }
+  section.specs {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  section.specs .trinity {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  section.specs .trinity .column {
+    width: 32%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 1rem;
+  }
+  section.specs .trinity .column:first-of-type {
+    margin-left: 0;
+  }
+  section.specs .trinity .column:last-of-type {
+    margin-right: 0;
   }
   footer .phone {
     font-size: 36px;
