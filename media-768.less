@@ -38,16 +38,32 @@
             font-size: 18px;
         }
         .videobox {
-            margin-top: -40px;
             text-align: left;
+            margin-top: -40px;
             margin-left: 80px;
+            margin-right: 80px;
             padding-left: 0;
+            position: relative;
+            flex-direction: row;
+            &::before {
+                position: absolute;
+                left: 0;
+                content: '';
+                display: block;
+                top: -85px;
+                width: 150px;
+                height: 70px;
+                background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
+            }
             .video {
+                max-width: 400px;
                 margin-left: 0;
+                flex-shrink: 0;
                 margin-right: 0;
             }
             .features {
-                padding-left: 0;
+                 padding-left: 40px;
+                 padding-top: 75px;
             }
         }
     }

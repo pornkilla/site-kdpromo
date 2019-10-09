@@ -55,63 +55,21 @@
             </div>
 
             <div class="videobox">
- <style scoped>
-     video {
-         width: 100% !important;
-         height: auto !important;
-     }
- </style>
                 <div id="spaceforvideo" class="video">
                     <div class="ui active tab" data-tab="first-video">
-                        <video width="320" controls class=""
+                        <video controls class=""
                             src="http://best.karelianhouse.ru/media/movie00.webm"
                             type='video/webm; codecs="vp8, vorbis"'></video>
-                        <!--video width="320" controls class="show only on-screen-320px"
-                            src="http://best.karelianhouse.ru/media/movie00.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="400" controls class="show only on-screen-480px"
-                            src="http://best.karelianhouse.ru/media/movie00.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="560" controls class="show only on-screen-768px"
-                            src="http://best.karelianhouse.ru/media/movie00.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="640" controls class="show only on-screen-960px"
-                            src="http://best.karelianhouse.ru/media/movie00.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video-->
                     </div>
                     <div class="ui tab" data-tab="second-video">
-                        <video width="320" controls class=""
+                        <video controls class=""
                             src="http://best.karelianhouse.ru/media/movie01.webm"
                             type='video/webm; codecs="vp8, vorbis"'></video>
-                        <!--video width="320" controls class="show only on-screen-320px"
-                            src="http://best.karelianhouse.ru/media/movie01.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="400" controls class="show only on-screen-480px"
-                            src="http://best.karelianhouse.ru/media/movie01.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="560" controls class="show only on-screen-768px"
-                            src="http://best.karelianhouse.ru/media/movie01.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="640" controls class="show only on-screen-960px"
-                            src="http://best.karelianhouse.ru/media/movie01.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video-->
                     </div>
                     <div class="ui tab" data-tab="third-video">
-                        <video width="320" controls class=""
-                            src="http://best.karelianhouse.ru/media/movie02.webm"
+                        <video controls class=""
+                            src="http://best.karelianhouse.ru/media/movie02.webm?2"
                             type='video/webm; codecs="vp8, vorbis"'></video>
-                        <!--video width="320" controls class="show only on-screen-320px"
-                            src="http://best.karelianhouse.ru/media/movie02.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="400" controls class="show only on-screen-480px"
-                            src="http://best.karelianhouse.ru/media/movie02.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="560" controls class="show only on-screen-768px"
-                            src="http://best.karelianhouse.ru/media/movie02.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video>
-                        <video width="640" controls class="show only on-screen-960px"
-                            src="http://best.karelianhouse.ru/media/movie02.webm"
-                            type='video/webm; codecs="vp8, vorbis"'></video-->
                     </div>
                     <div class="ui secondary menu only">
                         <a class="item active" data-tab="first-video">1</a>
@@ -595,10 +553,10 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="js/semantic.min.js"></script>
     <script>
-        var videoItemActive = $('#spaceforvideo .active.tab video');
+        var videoItem = $('#spaceforvideo video');
         var videoMenuItem = $('#spaceforvideo .menu .item');
 
-        videoItemActive.each(function() {
+        videoItem.each(function() {
 
             $(this)
             // jQuery .data does not work on object/embed elements
@@ -610,7 +568,7 @@
 
         $(window).resize(function() {
 
-            videoItemActive.each(function() {
+            videoItem.each(function() {
 
                 var $el = $(this);
                 var newWidth = $el.parents('.active.tab').width();
@@ -620,7 +578,7 @@
 
         }).resize();
         videoMenuItem.on('click', function() {
-            videoItemActive.trigger('pause');
+            videoItem.trigger('pause');
         });
         videoMenuItem.tab({
                 context: 'parent'

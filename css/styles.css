@@ -125,6 +125,8 @@ header .price .middle .amount {
 }
 .underhead .videobox video {
   box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.4);
+  width: 100% !important;
+  height: auto !important;
 }
 .underhead .videobox .features {
   padding: 30px 20px;
@@ -768,17 +770,33 @@ button.wide,
     font-size: 18px;
   }
   .underhead .videobox {
-    margin-top: -40px;
     text-align: left;
+    margin-top: -40px;
     margin-left: 80px;
+    margin-right: 80px;
     padding-left: 0;
+    position: relative;
+    flex-direction: row;
+  }
+  .underhead .videobox::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    display: block;
+    top: -85px;
+    width: 150px;
+    height: 70px;
+    background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
   }
   .underhead .videobox .video {
+    max-width: 400px;
     margin-left: 0;
+    flex-shrink: 0;
     margin-right: 0;
   }
   .underhead .videobox .features {
-    padding-left: 0;
+    padding-left: 40px;
+    padding-top: 75px;
   }
   main h3 {
     font-size: 48px;
@@ -864,23 +882,8 @@ button.wide,
   .underhead .woodbox {
     width: 680px;
   }
-  .underhead .videobox {
-    position: relative;
-    flex-direction: row;
-  }
-  .underhead .videobox::before {
-    position: absolute;
-    left: 0;
-    content: '';
-    display: block;
-    top: -85px;
-    width: 150px;
-    height: 70px;
-    background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
-  }
-  .underhead .videobox .features {
-    padding-left: 40px;
-    padding-top: 75px;
+  .underhead .videobox .video {
+    max-width: 560px;
   }
   section.benefits {
     padding-bottom: 380px;
@@ -1058,6 +1061,13 @@ button.wide,
     flex-wrap: wrap;
   }
   header .underhead .videobox .features {
-    padding-right: 160px;
+    padding-right: 120px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  header .underhead .videobox {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
