@@ -500,6 +500,27 @@ section.specs .disclaim {
   text-align: left;
   font-size: 12px;
 }
+section.assembling {
+  background: #5d2a1f url("../img/bg_section-7.jpg") center center no-repeat;
+  background-size: cover;
+}
+section.assembling h3 {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 48px;
+}
+section.assembling h3 small {
+  text-transform: lowercase;
+  display: block;
+  font-size: 36px;
+}
+section.assembling form {
+  text-align: center;
+}
+section.assembling .wrapper {
+  padding-top: 8rem;
+  padding-bottom: 12rem;
+}
 section.faq .row.white {
   margin-bottom: 2rem !important;
   padding: 2rem;
@@ -1075,6 +1096,21 @@ button.wide,
 @media only screen and (min-width: 1180px) {
   header .underhead .videobox {
     flex-wrap: nowrap;
+  }
+  section.assembling h3 {
+    text-align: left;
+  }
+  section.assembling form {
+    display: flex;
+    align-items: center;
+  }
+  section.assembling form.ui.form .fields {
+    margin: 0;
+    margin-right: 4rem;
+  }
+  section.assembling .wrapper {
+    padding-top: 12rem;
+    padding-bottom: 16rem;
   }
 }
 @media only screen and (min-width: 1280px) {
