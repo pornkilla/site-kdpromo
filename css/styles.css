@@ -168,6 +168,10 @@ main section .wrapper {
   margin-left: auto;
   margin-right: auto;
 }
+main section .white {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
 main .dark {
   color: #fbf5e8;
   background-color: #1f1d17;
@@ -420,8 +424,6 @@ section.specs h4 {
 }
 section.specs .column .white {
   padding: 1rem;
-  border-radius: 10px;
-  background-color: #ffffff;
 }
 section.specs .column .pic {
   text-align: center;
@@ -497,6 +499,15 @@ section.specs .disclaim {
   margin-top: 2rem;
   text-align: left;
   font-size: 12px;
+}
+section.faq .row.white {
+  margin-bottom: 2rem !important;
+  padding: 2rem;
+}
+section.faq .row h4 {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 4px;
+  font-weight: 700;
 }
 section.question {
   padding: 0;
@@ -776,7 +787,6 @@ button.wide,
     margin-right: 80px;
     padding-left: 0;
     position: relative;
-    flex-direction: row;
   }
   .underhead .videobox::before {
     position: absolute;
@@ -784,14 +794,14 @@ button.wide,
     content: '';
     display: block;
     top: -85px;
-    width: 150px;
-    height: 70px;
+    width: 110px;
+    height: 50px;
     background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
+    background-size: 100% auto;
   }
   .underhead .videobox .video {
-    max-width: 400px;
+    max-width: 500px;
     margin-left: 0;
-    flex-shrink: 0;
     margin-right: 0;
   }
   .underhead .videobox .features {
@@ -882,8 +892,17 @@ button.wide,
   .underhead .woodbox {
     width: 680px;
   }
+  .underhead .videobox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .underhead .videobox::before {
+    width: 150px;
+    height: 70px;
+  }
   .underhead .videobox .video {
     max-width: 560px;
+    flex-shrink: 0;
   }
   section.benefits {
     padding-bottom: 380px;
@@ -951,15 +970,10 @@ button.wide,
     margin-left: 41%;
   }
   .underhead .videobox {
-    margin-left: auto;
-    margin-left: 15%;
     margin-right: 35%;
-    margin-left: 8%;
     margin-right: auto;
   }
   .underhead .videobox .features {
-    width: 40%;
-    margin-right: -50%;
     padding-top: 120px;
     padding-left: 80px;
   }
@@ -1050,23 +1064,22 @@ button.wide,
     min-width: 100%;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-}
-@media only screen and (min-width: 960px) {
-}
-@media only screen and (min-width: 960px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
   header .underhead .videobox {
-    flex-wrap: wrap;
+    max-width: 1050px;
   }
   header .underhead .videobox .features {
     padding-right: 120px;
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1180px) {
   header .underhead .videobox {
-    max-width: 1250px;
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  header .underhead .videobox {
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }

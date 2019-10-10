@@ -38,11 +38,6 @@
             }
         }
     }
-    // .on-screen-320px {
-    //     &.show {
-    //         display: inline-block;
-    //     }
-    // }
     section.tendency {
         .ui.grid {
             .column.pic {
@@ -63,32 +58,11 @@
         }
     }
 }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    // .on-screen-480px {
-    //     &.show {
-    //         display: inline-block;
-    //     }
-    // }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    // .on-screen-768px {
-    //     &.show {
-    //         display: inline-block;
-    //     }
-    // }
-}
-@media only screen and (min-width: 960px) {
-    // .on-screen-960px {
-    //     &.show {
-    //         display: inline-block;
-    //     }
-    // }
-}
-@media only screen and (min-width: 960px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
     header {
         .underhead {
             .videobox {
-                flex-wrap: wrap;
+                max-width: 1050px;
                 .features {
                     padding-right: 120px;
                 }
@@ -96,11 +70,20 @@
         }
     }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1180px) {
     header {
         .underhead {
             .videobox {
-                max-width: 1250px;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1280px) {
+    header {
+        .underhead {
+            .videobox {
+                max-width: 1100px;
                 margin-left: auto;
                 margin-right: auto;
             }

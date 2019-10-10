@@ -21,8 +21,15 @@
             width: 680px;
         }
         .videobox {
+            flex-direction: row;
+            flex-wrap: wrap;
+            &::before {
+                width: 150px;
+                height: 70px;
+            }
             .video {
                 max-width: 560px;
+                flex-shrink: 0;
             }
         }
     }
