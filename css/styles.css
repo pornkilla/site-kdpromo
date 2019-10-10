@@ -295,7 +295,7 @@ section.guarantee .count::after {
   margin: 10px;
 }
 section.guarantee p {
-  text-align: justify;
+  text-align: center;
   line-height: 1.54;
 }
 section.plan {
