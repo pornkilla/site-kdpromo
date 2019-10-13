@@ -278,7 +278,7 @@
             <div class="wrapper">
                 <h3>Получите консультацию<small>по проекту будущего дома</small></h3>
                 <p class="desc">Наш специалист перезвонит Вам в течение 2 часов</p>
-                <form class="ui massive form" id="form-two">
+                <form class="ui massive form callback" id="form-two">
                     <div class="two fields">
                         <div class="field">
                             <input type="text" name="fieldname" placeholder="Ваше имя">
@@ -475,7 +475,7 @@
         <section class="assembling">
             <div class="wrapper">
                 <h3>УЗНАЙТЕ<small>стоимость сборки</small></h3>
-                <form class="ui massive form" id="form-three">
+                <form class="ui massive form callback" id="form-three">
                     <div class="two fields">
                         <div class="field">
                             <input type="text" name="fieldname" placeholder="Ваше имя">
@@ -591,7 +591,7 @@
                 <p>Наш специалист перезвонит Вам в самое ближайшее время</p>
             </div>
             <div class="fillmeharder">
-                <form class="ui massive form" id="form-four">
+                <form class="ui massive form contact" id="form-four">
                     <fieldset>
                         <div class="field">
                             <input type="text" name="fieldname" placeholder="Ваше имя">
@@ -600,20 +600,22 @@
                             <input type="tel" name="fieldphone" placeholder="Телефон">
                         </div>
                         <div class="field">
-                            <textarea name="fieldmessage" id="form-message" cols="30" rows="3">Ваше сообщение</textarea>
+                            <textarea placeholder="Ваше сообщение" name="fieldmessage" id="form-message" cols="30"
+                                rows="3"></textarea>
                         </div>
                         <div class="field">
                             <input type="text" class="dopustim">
                         </div>
                         <div class="field">
                             <div class="ui checkbox">
-                                <input type="checkbox" tabindex="0" class="hidden">
+                                <input type="checkbox" tabindex="0" name="terms">
                                 <label>Я согласен с <a href="#">политикой обработки персональных данных</a></label>
                             </div>
                         </div>
                         <button type="submit" class="yellow wide">отправить вопрос</button>
                     </fieldset>
-<div id="contact_results"></div>
+                    <div class="ui error message"></div>
+                    <div class="ui success message hidden"></div>
                 </form>
             </div>
         </section>
