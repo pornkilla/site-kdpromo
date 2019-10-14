@@ -1,7 +1,7 @@
 <?php
-$recipient_email    = "pornkilla@gmail.com"; //recepient
+$recipient_email    = "ssbrusdom@gmail.com"; //recepient
 $from_email         = "info@karelianhouse.ru"; //from email using site domain.
-$subject            = "Новое сообщение с промо-страницы";
+$subject            = "Новый отклик с промо-страницы best.karelianhouse.ru";
 
 
 if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
