@@ -1,7 +1,7 @@
 <!doctype html>
-
+<html>
 <head>
-    <title>karelianhouse.ru</title>
+    <title>Компания Карельский дом - дома из клееного бруса</title>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="centered v-space quad">
-                <button type="button" class="yellow wide">узнайте больше</button>
+                <button type="button" class="yellow wide learn-more">узнайте больше</button>
             </div>
         </div>
     </header>
@@ -288,6 +288,10 @@
                         </div>
                     </div>
                     <button type="submit" class="yellow wide">Получить консультацию</button>
+                    <div class="centered">
+                        <div class="ui error message"></div>
+                        <div class="ui success message hidden"></div>
+                    </div>
                 </form>
             </div>
         </section>
@@ -485,6 +489,10 @@
                         </div>
                     </div>
                     <button type="submit" class="yellow wide">Позвоните мне</button>
+                    <div class="centered">
+                        <div class="ui error message"></div>
+                        <div class="ui success message hidden"></div>
+                    </div>
                 </form>
             </div>
         </section>
@@ -609,7 +617,8 @@
                         <div class="field">
                             <div class="ui checkbox">
                                 <input type="checkbox" tabindex="0" name="terms">
-                                <label>Я согласен с <a href="#">политикой обработки персональных данных</a></label>
+                                <label>Я согласен с <a href="javascript:void(0)" class="show-legal">политикой обработки персональных
+                                        данных</a></label>
                             </div>
                         </div>
                         <button type="submit" class="yellow wide">отправить вопрос</button>
@@ -657,11 +666,47 @@
                 <div class="row smallest">
                     <div class="column centered">Информация не является публичной офертой</div>
                     <div class="column">2019 &copy; Все права защищены</div>
-                    <div class="column"><a href="#">Политика конфиденциальности</a> | <a href="#">Лицензии</a></div>
+                    <div class="column"><a href="policy.html" target="_blank">Политика конфиденциальности</a> | <a
+                            href="http://karelianhouse.ru/technology/index.php?p=1&id=11" target="_blank">Лицензии</a></div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <div class="ui tiny modal">
+        <div class="header flexy">
+            <h3>Закажите обратный звонок</h3>
+            <i class="icon cancel"></i>
+        </div>
+        <div class="content">
+            <form class="ui massive form callback" id="form-one">
+                <div class="two fields">
+                    <div class="field">
+                        <input type="text" name="fieldname" placeholder="Ваше имя">
+                    </div>
+                    <div class="field">
+                        <input type="tel" name="fieldphone" placeholder="Телефон">
+                    </div>
+                </div>
+                <div class="ui error message"></div>
+                <div class="ui success message hidden"></div>
+                <div class="centered">
+                    <button type="submit" class="yellow wide">Получить консультацию</button>
+                    <button type="button" class="ui basic button cancel hidden">Закрыть</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="ui longer modal legal">
+        <div class="content">
+            <iframe src="/policy.html" frameborder="0"></iframe>
+        </div>
+        <div class="actions">
+            <div class="ui basic button deny">Закрыть</div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="js/semantic.min.js"></script>
