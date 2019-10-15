@@ -35,8 +35,8 @@ header .logo {
   top: 20px;
   left: 25px;
   width: 150px;
-  height: 100px;
-  background: transparent url("../img/logo.svg") 0 0 no-repeat;
+  height: 96px;
+  background: transparent url("../img/logo.svg") center 0 no-repeat;
   -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
   filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
 }
@@ -697,6 +697,9 @@ button.wide,
   width: 100%;
   min-height: 400px;
 }
+.modal .header .cancel {
+  cursor: pointer;
+}
 .v-space {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -807,6 +810,7 @@ button.wide,
     height: 130px;
     left: 70px;
     top: 40px;
+    background-position-y: center;
   }
   header .price {
     left: 80px;
@@ -1113,6 +1117,9 @@ button.wide,
     padding-left: 5px;
     padding-right: 5px;
     min-width: 100%;
+  }
+  .modal .header .cancel {
+    margin-right: -15px;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1100px) {
