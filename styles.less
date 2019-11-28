@@ -1,6 +1,6 @@
 // out: css/styles.css
 
-@import url('https://fonts.googleapis.com/css?family=Podkova&script=all&rev=1|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Podkova:400,500,600,700,800&display=swap&subset=cyrillic,cyrillic-ext');
 
 @import (reference) 'helpers';
 @import (reference) 'colors';
@@ -299,8 +299,13 @@ section.tendency {
     background: @color-wood url("../img/bg_section-4.jpg") center 0 no-repeat;
     background-size: cover;
 
-    p {
-        line-height: 1.54;
+    .wrapper {
+        .desc.column {
+            p,
+            li {
+                line-height: 1.54;
+            }
+        }
     }
 
     .pic {

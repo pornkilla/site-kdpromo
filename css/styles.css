@@ -1,4 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Podkova&script=all&rev=1|Raleway&display=swap');
+@font-face {
+  font-family: 'Podkova';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/podkova/v15/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Podkova';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/podkova/v15/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Podkova';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/podkova/v15/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Podkova';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/podkova/v15/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Podkova';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/podkova/v15/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
+}
 html,
 body {
   font-family: 'Raleway', sans-serif;
@@ -244,7 +278,8 @@ section.tendency {
   background: #5d2a1f url("../img/bg_section-4.jpg") center 0 no-repeat;
   background-size: cover;
 }
-section.tendency p {
+section.tendency .wrapper .desc.column p,
+section.tendency .wrapper .desc.column li {
   line-height: 1.54;
 }
 section.tendency .pic img {
