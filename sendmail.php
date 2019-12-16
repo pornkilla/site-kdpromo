@@ -1,5 +1,5 @@
 <?php
-$recipient_email    = "ssbrusdom@gmail.com"; //recepient
+$recipient_email    = "karelianhaus@yandex.ru"; //recepient
 $from_email         = "karelianhaus@yandex.ru"; //from email using site domain.
 $subject            = "Новый отклик с промо-страницы best.karelianhouse.ru";
 
