@@ -1,0 +1,20 @@
+AddType 'text/html; charset=utf-8' .html .htm .shtml
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.best.karelianhouse.ru
+RewriteRule (.*) http://best.karelianhouse.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www.)?brus.karelianhouse.ru$
+RewriteCond %{REQUEST_URI} !^/brus/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /brus/$1
+RewriteCond %{HTTP_HOST} ^(www.)?brus.karelianhouse.ru$
+RewriteRule ^(/)?$ brus/index.html [L]
+
+RewriteCond %{HTTP_HOST} ^(www.)?karkas.karelianhouse.ru$
+RewriteCond %{REQUEST_URI} !^/karkas/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /karkas/$1
+RewriteCond %{HTTP_HOST} ^(www.)?karkas.karelianhouse.ru$
+RewriteRule ^(/)?$ karkas/index.html [L]

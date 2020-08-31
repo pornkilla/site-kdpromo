@@ -1,0 +1,117 @@
+// out: false
+.abs-mixin() {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    margin: auto;
+    position: absolute;
+}
+.logotype {
+    width: 280px;
+    height: 230px;
+    display: flex;
+    .abs-mixin();
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    img {
+        z-index: 3;
+        top: -10px;
+        position: relative;
+    }
+    &::before {
+        z-index: 1;
+        .abs-mixin();
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg baseProfile='tiny' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23FFF' d='M15 150l135-80.1L285 150l-135 80.1z'/%3E%3Cpath fill='none' stroke='%23FFF' stroke-miterlimit='10' d='M150 62L0 150l150 88 150-88z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 280px auto;
+    }
+}
+#face {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+    .brus {
+        background: url(../img/bg_header.jpg) right 0 no-repeat;
+        background-size: cover;
+    }
+    .karkas {
+        background: url(../img/bg_header-karkas.jpg) left 0 no-repeat;
+        background-size: cover;
+    }
+    .side {
+        height: 50vh;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        &::after {
+            z-index: 2;
+            .abs-mixin();
+            display: block;
+            background-color: fade(#000000, 60%);
+        }
+        .content {
+            flex: 1;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 20% 10%;
+            text-align: center;
+            .button {
+                text-transform: uppercase;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 0;
+                line-height: 1;
+                padding-top: 2em;
+                padding-bottom: 2em;
+                color: #ffffff !important;
+                border: #ffffff 2px solid;
+                font-size: 2rem;
+                font-family: @font-podkova;
+                &:hover {
+                    background-color: fade(#ffffff, 35%) !important;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 960px) {
+        flex-direction: row;
+        .side {
+            height: 100vh;
+            width: 50%;
+            .content {
+                padding: 10%;
+                overflow: hidden;
+                align-items: flex-end;
+            }
+            &.karkas {
+                .content .button {
+                    transform: translateX(14%);
+                    text-align: left;
+                }
+            }
+            &.brus {
+                .content .button {
+                    transform: translateX(-14%);
+                    text-align: right;
+                }
+            }
+        }
+        .logotype {
+            top: 12%;
+            transform: scale(1.3);
+            bottom: auto;
+        }
+    }
+}

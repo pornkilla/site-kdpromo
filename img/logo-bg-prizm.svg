@@ -1,0 +1,4 @@
+<svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <path fill="#FFF" d="M15 150l135-80.1L285 150l-135 80.1z"/>
+  <path fill="none" stroke="#FFF" stroke-miterlimit="10" d="M150 62L0 150l150 88 150-88z"/>
+</svg>

@@ -3,35 +3,158 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v16/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v16/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v16/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v16/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v16/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
+}
+.logotype {
+  width: 280px;
+  height: 230px;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  margin: auto;
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+}
+.logotype img {
+  z-index: 3;
+  top: -10px;
+  position: relative;
+}
+.logotype::before {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  margin: auto;
+  position: absolute;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg baseProfile='tiny' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23FFF' d='M15 150l135-80.1L285 150l-135 80.1z'/%3E%3Cpath fill='none' stroke='%23FFF' stroke-miterlimit='10' d='M150 62L0 150l150 88 150-88z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 280px auto;
+}
+#face {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+}
+#face .brus {
+  background: url(../img/bg_header.jpg) right 0 no-repeat;
+  background-size: cover;
+}
+#face .karkas {
+  background: url(../img/bg_header-karkas.jpg) left 0 no-repeat;
+  background-size: cover;
+}
+#face .side {
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+#face .side::after {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  margin: auto;
+  position: absolute;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#face .side .content {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20% 10%;
+  text-align: center;
+}
+#face .side .content .button {
+  text-transform: uppercase;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0;
+  line-height: 1;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: #ffffff !important;
+  border: #ffffff 2px solid;
+  font-size: 2rem;
+  font-family: 'Podkova', serif;
+}
+#face .side .content .button:hover {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+}
+@media only screen and (min-width: 960px) {
+  #face {
+    flex-direction: row;
+  }
+  #face .side {
+    height: 100vh;
+    width: 50%;
+  }
+  #face .side .content {
+    padding: 10%;
+    overflow: hidden;
+    align-items: flex-end;
+  }
+  #face .side.karkas .content .button {
+    transform: translateX(14%);
+    text-align: left;
+  }
+  #face .side.brus .content .button {
+    transform: translateX(-14%);
+    text-align: right;
+  }
+  #face .logotype {
+    top: 12%;
+    transform: scale(1.3);
+    bottom: auto;
+  }
 }
 html,
 body {
@@ -66,14 +189,14 @@ header .back {
 header .logo {
   position: absolute;
   z-index: 2;
-  top: 24px;
+  top: 34px;
   left: 12%;
   width: 160px;
-  height: 140px;
-  background: transparent url("../img/logo-fullcolor.svg") center 0 no-repeat;
+  height: 60px;
+  background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
   -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
-  background-size: 100% auto;
   filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
+  background-size: 100% auto;
 }
 header .logo h1 {
   top: 0;
@@ -647,8 +770,8 @@ footer .logo {
   margin-right: auto;
   text-align: center;
   width: 220px;
-  height: 160px;
-  background: url("../img/logo-fullcolor.svg") center center no-repeat;
+  height: 186px;
+  background: url("../img/logo-fullcolor-new.svg") center center no-repeat;
 }
 footer .logo p {
   top: 0;
@@ -773,7 +896,7 @@ button.wide,
     height: 560px;
   }
   header .logo {
-    top: 24px;
+    top: 64px;
   }
   header .price {
     width: auto;
@@ -844,10 +967,9 @@ button.wide,
     background-position-x: center;
   }
   header .logo {
-    width: 220px;
-    height: 180px;
-    top: 40px;
-    background-position-y: center;
+    width: 190px;
+    height: 70px;
+    top: 80px;
   }
   header .price {
     left: 80px;
@@ -1043,10 +1165,8 @@ button.wide,
     height: 920px;
   }
   header .logo {
-    top: 60px;
-    left: 90px;
-    width: 240px;
-    height: 190px;
+    width: 18vw;
+    height: 12vw;
   }
   header .price {
     top: 290px;
