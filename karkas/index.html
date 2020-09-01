@@ -22,48 +22,110 @@
     content="Мы строим, собираем и продаем каркасные дома. Проекты домов отвечают высочайшему стандарту качества и новейшим технологиям строительства в Карелии">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="../css/styles.css?v20200311">
 </head>
-<body>
+<body class="karkas">
   <header>
-     <nav class="ui borderless overlay main menu">
-       <div class="ui text container">
-         <div class="header item">
-           <img class="logo" src="img/logo-fullcolor-new.svg">
-         </div>
-         <a href="#" class="item">Секция 1</a>
-         <a href="#" class="item">Секция 2</a>
-         <a href="#" class="item">Секция 3</a>
-         <a href="#" class="item">Секция 4</a>
-         <a href="#" class="item">Секция 5</a>
-         <a href="#" class="item">Секция 6</a>
-         <a href="#" class="item">Секция 7</a>
-         <a href="#" class="ui right floated dropdown item" tabindex="0">
-           Dropdown <i class="dropdown icon"></i>
-           <div class="menu" tabindex="-1">
-             <div class="item">Дома из клееного бруса</div>
-             <div class="item">Каркасные дома</div>
-             <div class="divider"></div>
-             <div class="item">В начало</div>
-           </div>
-         </a>
-       </div>
+     <nav class="ui borderless fixed navi main menu">
+        <div class="header item">
+          <div class="logo">
+            <h1>Карельский дом</h1>
+          </div>
+        </div>
+        <ul>
+          <li><a href="#">Секция 1</a></li>
+          <li><a href="#">Секция 2</a></li>
+          <li><a href="#">Секция 3</a></li>
+          <li><a href="#">Секция 4</a></li>
+          <li><a href="#">Секция 5</a></li>
+          <li><a href="#">Секция 6</a></li>
+        </ul>
+       <a href="#" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+       </a>
      </nav>
   </header>
   <main>
     <div class="carousel" style="height: 400px">
-      <div>
-        <img src="../img/pic_tools-1.png" alt="">
+      <div class="ui card">
+        <div class="extra content">
+          <div class="center aligned author">
+            <img class="ui responsive image" src="../img/pic_tools-1.png" height="200" alt="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="center aligned header">Заголовок в несколько слов</div>
+          <div class="center aligned description">
+            <p>Описание в несколько строк</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src="../img/pic_tools-2.png" alt="">
+      <div class="ui card">
+        <div class="extra content">
+          <div class="center aligned author">
+            <img class="ui responsive image" src="../img/pic_tools-2.png" height="200" alt="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="center aligned header">Заголовок в несколько слов</div>
+          <div class="center aligned description">
+            <p>Описание в несколько строк</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src="../img/pic_tools-3.png" alt="">
+      <div class="ui card">
+        <div class="extra content">
+          <div class="center aligned author">
+            <img class="ui responsive image" src="../img/pic_tools-3.png" height="200" alt="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="center aligned header">Заголовок в несколько слов</div>
+          <div class="center aligned description">
+            <p>Описание в несколько строк</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src="../img/pic_tools-4.png" alt="">
+      <div class="ui card">
+        <div class="extra content">
+          <div class="center aligned author">
+            <img class="ui responsive image" src="../img/pic_tools-4.png" height="200" alt="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="center aligned header">Заголовок в несколько слов</div>
+          <div class="center aligned description">
+            <p>Описание в несколько строк</p>
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="extra content">
+          <div class="center aligned author">
+            <img class="ui responsive image" src="../img/pic_tools-5.png" height="200" alt="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="center aligned header">Заголовок в несколько слов</div>
+          <div class="center aligned description">
+            <p>Описание в несколько строк</p>
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="extra content">
+          <div class="center aligned author">
+            <img class="ui responsive image" src="../img/pic_tools-6.png" height="200" alt="">
+          </div>
+        </div>
+        <div class="content">
+          <div class="center aligned header">Заголовок в несколько слов</div>
+          <div class="center aligned description">
+            <p>Описание в несколько строк</p>
+          </div>
+        </div>
       </div>
     </div>
     <section class="contacts question">
@@ -180,7 +242,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="../js/semantic.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../js/slick.min.js"></script>
   <script src="../js/script.js"></script>
 </body>
 

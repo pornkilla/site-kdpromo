@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    const mobileBreakpoint = 768;
+
     $('.learn-more').click(function () {
         $('.tiny.modal').modal('show');
     });
@@ -182,18 +185,35 @@ $(document).ready(function () {
     $('.ui.accordion').accordion();
     $('.ui.checkbox').checkbox();
 
-    $('.overlay.navi').visibility({
-        type   : 'fixed',
-        offset : 0 
-    });
-
-
     $(document).ready(function(){
         $('.carousel').slick({
-            dots: true,
             infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 3
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 6,
+            responsive: [
+                {
+                    breakpoint: mobileBreakpoint,
+                    settings: {
+                        dots: true,
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     });
+
+    $(".burger").click(function () {
+        $(this).toggleClass('active');
+        $(".main.menu ul").slideToggle('fast');
+    })
+
+    $(window).resize(function () {
+        if ($(window).width() > mobileBreakpoint) {
+            $('.main.menu ul').removeAttr('style');
+        }
+    })
 });

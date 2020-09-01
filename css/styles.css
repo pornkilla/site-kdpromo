@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
@@ -32,6 +33,243 @@
   font-weight: 800;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
+}
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover:before,
+.slick-next:hover:before,
+.slick-prev:focus:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Icons */
+}
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/slick.eot');
+  src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
+}
+.slick-prev {
+  left: -25px;
+}
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+.slick-next {
+  right: -25px;
+}
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+/* Dots */
+.slick-dotted .slick-slider {
+  margin-bottom: 30px;
+}
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 8px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
 }
 .logotype {
   width: 280px;
@@ -215,8 +453,14 @@ h6,
 .text-accent {
   font-family: 'Podkova', serif;
 }
+a:hover {
+  color: #5d2a1f;
+}
 header {
   position: relative;
+}
+.karkas header {
+  padding-top: 80px;
 }
 header .back {
   position: relative;
@@ -226,16 +470,10 @@ header .back {
   height: 420px;
 }
 header .logo {
-  position: absolute;
-  z-index: 2;
-  top: 34px;
-  left: 12%;
-  width: 160px;
-  height: 60px;
   background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
-  -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
-  filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
   background-size: 100% auto;
+  width: 120px;
+  height: 45px;
 }
 header .logo h1 {
   top: 0;
@@ -247,6 +485,16 @@ header .logo h1 {
   position: absolute;
   overflow: hidden;
   visibility: hidden;
+}
+header .logo.brus {
+  position: absolute;
+  z-index: 2;
+  top: 34px;
+  left: 12%;
+  width: 160px;
+  height: 60px;
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
+  filter: drop-shadow(0px 2px 2px rgba(89, 89, 89, 0.5));
 }
 header .price {
   z-index: 2;
@@ -277,6 +525,78 @@ header .price .middle .amount {
   font-size: 54px;
   letter-spacing: -2px;
   color: #fac011;
+}
+header .burger {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  z-index: 5;
+  display: block;
+  border: transparent 10px solid;
+  box-sizing: content-box;
+}
+header .burger span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  display: block;
+  background: #1f1d17;
+  transition: 0.5s;
+}
+header .burger span:first-child {
+  top: 3px;
+}
+header .burger span:last-child {
+  top: 26px;
+}
+header .burger.active span {
+  opacity: 0;
+  top: 50%;
+}
+header .burger.active span:first-child {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+header .burger.active span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg);
+}
+header .menu.main {
+  flex-direction: column;
+  align-items: stretch;
+}
+header .menu.main ul {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+header .menu.main li {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+header .menu.main li:last-child {
+  border: none;
+}
+header .menu.main li a {
+  display: block;
+  width: 100%;
+  color: #4e3329;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid #aaa699;
+}
+header .menu.main li a:last-child {
+  border: none;
 }
 .underhead {
   z-index: 3;
@@ -792,7 +1112,10 @@ section.question .fillmeharder.karkas label {
   color: #fbf5e8;
 }
 section.question .fillmeharder.karkas a {
-  color: #d1a10e;
+  color: #fac011;
+}
+section.question .fillmeharder.karkas a:hover {
+  color: inherit;
 }
 section.question fieldset {
   max-width: 290px;
@@ -949,7 +1272,7 @@ button.wide,
   header .back {
     height: 560px;
   }
-  header .logo {
+  header .logo.brus {
     top: 64px;
   }
   header .price {
@@ -1020,7 +1343,7 @@ button.wide,
     background-size: cover;
     background-position-x: center;
   }
-  header .logo {
+  header .logo.brus {
     width: 190px;
     height: 70px;
     top: 80px;
@@ -1033,6 +1356,26 @@ button.wide,
   }
   header .price span {
     line-height: 1.47;
+  }
+  header .burger {
+    display: none;
+  }
+  header .menu.main {
+    flex-direction: row;
+  }
+  header .menu.main ul {
+    display: flex;
+  }
+  header .menu.main ul li {
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+    border-right: 1px solid #aaa699;
+  }
+  header .menu.main ul a {
+    padding: 0;
+    font-size: 16px;
+    border: none;
   }
   .underhead h2 {
     font-size: 48px;
@@ -1218,7 +1561,7 @@ button.wide,
   header .back {
     height: 920px;
   }
-  header .logo {
+  header .logo.brus {
     width: 18vw;
     height: 12vw;
   }
