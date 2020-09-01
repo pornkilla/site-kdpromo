@@ -4,11 +4,11 @@
 
 @import (reference) 'helpers';
 @import (reference) 'colors';
-@import 'intro';
+@import 'intro'; 
 
 @font-podkova: 'Podkova', serif;
 @font-raleway: 'Raleway', sans-serif;
-@font-base: 16px;
+@font-base: 16px;  
 
 html,body {
     font-family: @font-raleway;
@@ -652,9 +652,16 @@ section.question {
         align-items: flex-end;
         justify-content: center;
         color: @color-hose;
-        background: url("../img/bg_contacts.jpg") right 0 no-repeat;
         background-size: cover;
         min-height: 400px;
+
+        &.brus {
+            background: url("../img/bg_contacts.jpg") right 0 no-repeat;
+        }
+
+        &.karkas {
+            background: url("../img/bg_section-10-1-karkas.jpg") right 0 no-repeat;
+        }
 
         &>* {
             max-width: 310px;
@@ -671,6 +678,16 @@ section.question {
 
         a {
             text-decoration: underline;
+        }
+        &.karkas {
+            background: url("../img/bg_section-10-2-karkas.jpg") 0 0 no-repeat;
+            background-size: cover;
+            label {
+                color: @color-hose;
+            }
+            a {
+                color: @color-blin;
+            }
         }
     }
 
