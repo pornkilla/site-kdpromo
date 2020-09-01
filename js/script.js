@@ -182,4 +182,18 @@ $(document).ready(function () {
     $('.ui.accordion').accordion();
     $('.ui.checkbox').checkbox();
 
+    $('.overlay.navi').visibility({
+        type   : 'fixed',
+        offset : 0 
+    });
+
+
+    $(document).ready(function(){
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 3
+        });
+    });
 });
