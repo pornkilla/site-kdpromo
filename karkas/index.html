@@ -22,23 +22,36 @@
     content="Мы строим, собираем и продаем каркасные дома. Проекты домов отвечают высочайшему стандарту качества и новейшим технологиям строительства в Карелии">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="../css/styles.css?v20200311">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css?v20200904">
 </head>
 <body class="karkas">
   <header>
      <nav class="ui borderless fixed navi main menu">
-        <div class="header item">
+        <div class="header item badge">
           <div class="logo">
             <h1>Карельский дом</h1>
           </div>
         </div>
         <ul>
-          <li><a href="#">Секция 1</a></li>
-          <li><a href="#">Секция 2</a></li>
-          <li><a href="#">Секция 3</a></li>
-          <li><a href="#">Секция 4</a></li>
-          <li><a href="#">Секция 5</a></li>
-          <li><a href="#">Секция 6</a></li>
+          <li><a class="navlink" data-nav-section="houses" href="#">О домах</a></li>
+          <li><a class="navlink" data-nav-section="selection" href="#">Подобрать</a></li>
+          <li><a class="navlink" data-nav-section="packages" href="#">Комплектации</a></li>
+          <li><a class="navlink" data-nav-section="services" href="#">Наши услуги</a></li>
+          <li><a class="navlink" data-nav-section="technologies" href="#">Технологии</a></li>
+          <li><a class="navlink" data-nav-section="about" href="#">О нас</a></li>
+          <li><a class="navlink" data-nav-section="faq" href="#">FAQ</a></li>
+          <li class="special">
+            <span class="contacts flexy">
+              <a href="mailto:karelianhaus@yandex.ru">
+                <i class="envelope outline icon"></i>
+                <span>karelianhaus@yandex.ru</span>
+              </a>
+              <a class="unbordered" href="tel:+79535332396">
+                <i class="phone icon"></i>
+                <span>+7 953 533-23-96</span>
+              </a>
+            </span>
+          </li>
         </ul>
        <a href="#" class="burger">
           <span></span>
@@ -46,91 +59,136 @@
           <span></span>
        </a>
      </nav>
+     <div class="back"></div>
+
   </header>
   <main>
-    <div class="carousel" style="height: 400px">
-      <div class="ui card">
-        <div class="extra content">
-          <div class="center aligned author">
-            <img class="ui responsive image" src="../img/pic_tools-1.png" height="200" alt="">
+    
+
+    <section class="dark" data-section="houses">
+      <div class="wrapper">
+        <h3>Наши клиенты выбирают энергоэффективные дома<br>из экологически чистых материалов</h3>
+        <p>Мы строим каркасные дома, в которых продумана каждая мелочь! Технологии каркасного домостроения существуют
+          вот уже более 5 веков. Наша компания одной из первых в Карелии начинала развивать эту технологию
+          строительства. Более 10 лет работы и сотрудничества с финскими компаниями позволил довести уровень
+          строительства до Европейских стандартов. При строительстве наших домов применяются только новейшие технологии
+          и материалы. Убедитесь сами в преимуществах каркасного домостроения!</p>
+          <div class="carousel" style="height: 400px">
+            <div class="ui card">
+              <div class="extra content">
+                <div class="center aligned author">
+                  <img class="ui responsive image" src="../img/pic_tools-1.png" height="200" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <div class="center aligned header">Заголовок в несколько слов</div>
+                <div class="center aligned description">
+                  <p>Описание в несколько строк</p>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="extra content">
+                <div class="center aligned author">
+                  <img class="ui responsive image" src="../img/pic_tools-2.png" height="200" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <div class="center aligned header">Заголовок в несколько слов</div>
+                <div class="center aligned description">
+                  <p>Описание в несколько строк</p>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="extra content">
+                <div class="center aligned author">
+                  <img class="ui responsive image" src="../img/pic_tools-3.png" height="200" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <div class="center aligned header">Заголовок в несколько слов</div>
+                <div class="center aligned description">
+                  <p>Описание в несколько строк</p>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="extra content">
+                <div class="center aligned author">
+                  <img class="ui responsive image" src="../img/pic_tools-4.png" height="200" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <div class="center aligned header">Заголовок в несколько слов</div>
+                <div class="center aligned description">
+                  <p>Описание в несколько строк</p>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="extra content">
+                <div class="center aligned author">
+                  <img class="ui responsive image" src="../img/pic_tools-5.png" height="200" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <div class="center aligned header">Заголовок в несколько слов</div>
+                <div class="center aligned description">
+                  <p>Описание в несколько строк</p>
+                </div>
+              </div>
+            </div>
+            <div class="ui card">
+              <div class="extra content">
+                <div class="center aligned author">
+                  <img class="ui responsive image" src="../img/pic_tools-6.png" height="200" alt="">
+                </div>
+              </div>
+              <div class="content">
+                <div class="center aligned header">Заголовок в несколько слов</div>
+                <div class="center aligned description">
+                  <p>Описание в несколько строк</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="content">
-          <div class="center aligned header">Заголовок в несколько слов</div>
-          <div class="center aligned description">
-            <p>Описание в несколько строк</p>
-          </div>
-        </div>
       </div>
-      <div class="ui card">
-        <div class="extra content">
-          <div class="center aligned author">
-            <img class="ui responsive image" src="../img/pic_tools-2.png" height="200" alt="">
-          </div>
-        </div>
-        <div class="content">
-          <div class="center aligned header">Заголовок в несколько слов</div>
-          <div class="center aligned description">
-            <p>Описание в несколько строк</p>
-          </div>
-        </div>
+    </section>
+    <section data-section="selection">
+      <div class="wrapper">
+        <h3>Подобрать</h3>
       </div>
-      <div class="ui card">
-        <div class="extra content">
-          <div class="center aligned author">
-            <img class="ui responsive image" src="../img/pic_tools-3.png" height="200" alt="">
-          </div>
-        </div>
-        <div class="content">
-          <div class="center aligned header">Заголовок в несколько слов</div>
-          <div class="center aligned description">
-            <p>Описание в несколько строк</p>
-          </div>
-        </div>
+    </section>
+    <section data-section="packages">
+      <div class="wrapper">
+        <h3>Комплектации</h3>
       </div>
-      <div class="ui card">
-        <div class="extra content">
-          <div class="center aligned author">
-            <img class="ui responsive image" src="../img/pic_tools-4.png" height="200" alt="">
-          </div>
-        </div>
-        <div class="content">
-          <div class="center aligned header">Заголовок в несколько слов</div>
-          <div class="center aligned description">
-            <p>Описание в несколько строк</p>
-          </div>
-        </div>
+    </section>
+    <section data-section="services">
+      <div class="wrapper">
+        <h3>Наши услуги</h3>
       </div>
-      <div class="ui card">
-        <div class="extra content">
-          <div class="center aligned author">
-            <img class="ui responsive image" src="../img/pic_tools-5.png" height="200" alt="">
-          </div>
-        </div>
-        <div class="content">
-          <div class="center aligned header">Заголовок в несколько слов</div>
-          <div class="center aligned description">
-            <p>Описание в несколько строк</p>
-          </div>
-        </div>
+    </section>
+    <section data-section="technologies">
+      <div class="wrapper">
+        <h3>Технологии</h3>
       </div>
-      <div class="ui card">
-        <div class="extra content">
-          <div class="center aligned author">
-            <img class="ui responsive image" src="../img/pic_tools-6.png" height="200" alt="">
-          </div>
-        </div>
-        <div class="content">
-          <div class="center aligned header">Заголовок в несколько слов</div>
-          <div class="center aligned description">
-            <p>Описание в несколько строк</p>
-          </div>
-        </div>
+    </section>
+    <section data-section="about">
+      <div class="wrapper">
+        <h3>О компании</h3>
       </div>
-    </div>
+    </section>
+    <section data-section="faq">
+      <div class="wrapper">
+        <h3>Чаво</h3>
+      </div>
+    </section>
+
     <section class="contacts question">
       <div class="text karkas">
-        <h2>Остались вопросы?<br> <small>заполните форму</small></h2>
+        <h3>Остались вопросы?<br> <small>заполните форму</small></h3>
         <p>Наш специалист перезвонит Вам в самое ближайшее время</p>
       </div>
       <div class="fillmeharder karkas">

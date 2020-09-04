@@ -459,15 +459,27 @@ a:hover {
 header {
   position: relative;
 }
-.karkas header {
-  padding-top: 80px;
-}
 header .back {
   position: relative;
   z-index: 1;
   background: #7bb111 url("../img/bg_header.jpg") 20% 0 no-repeat;
   background-size: auto 100%;
   height: 420px;
+}
+.karkas header .back {
+  background: #ccc4b7 url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
+}
+.karkas header .back::after {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  content: '';
 }
 header .logo {
   background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
@@ -566,9 +578,15 @@ header .burger.active span:last-child {
   opacity: 1;
   transform: rotate(-405deg);
 }
+header .header.item.badge {
+  background-color: #fbf5e8;
+}
 header .menu.main {
   flex-direction: column;
   align-items: stretch;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  font-family: 'Podkova', serif;
 }
 header .menu.main ul {
   display: none;
@@ -592,11 +610,39 @@ header .menu.main li a {
   color: #4e3329;
   text-decoration: none;
   font-size: 1.25rem;
-  padding: 2rem 1.5rem;
-  border-bottom: 1px solid #aaa699;
+  padding: 1rem 1.5rem;
 }
-header .menu.main li a:last-child {
-  border: none;
+header .menu.main li:not(.unbordered) {
+  border-top: 1px solid #aaa699;
+}
+header .menu.main li.special {
+  padding-top: 1.25rem;
+}
+header .menu.main li.special a {
+  padding-bottom: 0.5rem;
+}
+header .menu.main li:hover {
+  background-color: #4e3329;
+}
+header .menu.main li:hover a {
+  color: #ccc4b7;
+}
+header .menu.main.sticky {
+  background-color: #ffffff;
+}
+header .menu.main:not(.sticky) {
+  box-shadow: none;
+  color: #fbf5e8;
+}
+header .menu.main:not(.sticky) a {
+  color: inherit;
+}
+header .menu.main.opened {
+  height: 100vh;
+  background-color: #ffffff;
+}
+header .menu.main.opened a {
+  color: #4e3329;
 }
 .underhead {
   z-index: 3;
@@ -679,6 +725,7 @@ main h3 {
   line-height: 1.1;
   font-weight: normal;
   margin-bottom: 4rem;
+  word-break: break-all;
 }
 main section .wrapper {
   padding: 40px 10px;
@@ -1205,27 +1252,6 @@ button.wide,
 .button.wide {
   min-width: 290px;
 }
-.centered {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.flexy {
-  display: flex !important;
-}
-.ui.modal > .flexy.header {
-  align-items: center;
-  justify-content: space-between;
-}
-.ui.modal > .flexy.header h3 {
-  margin-bottom: 0;
-}
-.ui.modal > .flexy.header .cancel {
-  padding: 5px 10px;
-  width: auto;
-  height: auto;
-  font-size: 16px;
-}
 .callback .hidden {
   display: none;
 }
@@ -1357,26 +1383,6 @@ button.wide,
   header .price span {
     line-height: 1.47;
   }
-  header .burger {
-    display: none;
-  }
-  header .menu.main {
-    flex-direction: row;
-  }
-  header .menu.main ul {
-    display: flex;
-  }
-  header .menu.main ul li {
-    display: flex;
-    align-items: center;
-    padding: 0 2%;
-    border-right: 1px solid #aaa699;
-  }
-  header .menu.main ul a {
-    padding: 0;
-    font-size: 16px;
-    border: none;
-  }
   .underhead h2 {
     font-size: 48px;
   }
@@ -1496,6 +1502,25 @@ button.wide,
   header .price .middle .amount {
     font-size: 100px;
     line-height: 1.1;
+  }
+  header .burger {
+    display: none;
+  }
+  header .menu.main {
+    flex-direction: row;
+  }
+  header .menu.main ul {
+    display: flex;
+  }
+  header .menu.main ul li {
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+  }
+  header .menu.main ul a {
+    padding: 0;
+    font-size: 16px;
+    border: none;
   }
   .underhead {
     margin-top: -210px;

@@ -40,10 +40,7 @@ a:hover {
 
 //header 
 header {
-    position: relative;
-    .karkas & {
-        padding-top: 80px;
-    }
+    position: relative;    
 
     .back {
         position: relative;
@@ -51,6 +48,23 @@ header {
         background: @color-green url("../img/bg_header.jpg") 20% 0 no-repeat;
         background-size: auto 100%;
         height: 420px;
+    }
+    .karkas & {
+        .back {            
+            background: @color-mocca url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
+            &::after {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 60%);
+                z-index: 2;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: block;
+                content: '';
+            }
+        }
     }
 
     .logo {
@@ -153,10 +167,17 @@ header {
             }
         }
     }
+     
+    .header.item.badge {
+        background-color: @color-hose;
+    }
 
     .menu.main {
         flex-direction: column; 
         align-items: stretch;
+        transition: all 0.3s ease;
+        background-color: transparent;
+        font-family: @font-podkova;
         ul {
             display: none;
             padding: 0;
@@ -169,7 +190,7 @@ header {
         li {
             width: 100%;
             padding: 0;
-            margin: 0;
+            margin: 0; 
              
             &:last-child {
                 border: none;
@@ -181,11 +202,39 @@ header {
                 color: @color-coffee;
                 text-decoration: none;
                 font-size: 1.25rem;
-                padding: 2rem 1.5rem;
-                border-bottom: 1px solid @color-grey;
-                &:last-child {
-                    border: none;
+                padding: 1rem 1.5rem;
+            }
+            &:not(.unbordered) {
+                 border-top: 1px solid @color-grey;
+            }
+            &.special {
+                padding-top: 1.25rem;
+                a {
+                    padding-bottom: 0.5rem;
                 }
+            }
+            &:hover {
+                background-color: @color-coffee;
+                a {
+                    color: @color-mocca;
+                }
+            }
+        }
+        &.sticky {
+            background-color: #ffffff;
+        }
+        &:not(.sticky) {
+            box-shadow: none;
+            color: @color-hose;
+            a {
+                color: inherit;
+            }
+        }
+        &.opened {
+            height: 100vh;
+            background-color: #ffffff;
+            a {
+                color: @color-coffee;
             }
         }
     }
@@ -286,6 +335,7 @@ main {
         line-height: 1.1;
         font-weight: normal;
         margin-bottom: 4rem;
+        word-break: break-all;
     }
 
     section {
@@ -883,27 +933,6 @@ button,
     }
 }
 
-.centered {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.flexy { 
-    display: flex !important;
-    .ui.modal > &.header {
-        align-items: center;
-        justify-content: space-between;
-        h3 {
-            margin-bottom: 0;
-        }
-        .cancel {
-            padding: 5px 10px;
-            width: auto;
-            height: auto;
-            font-size: 16px;
-        }
-    }
-}
 .callback {
     .hidden {
         display: none;
