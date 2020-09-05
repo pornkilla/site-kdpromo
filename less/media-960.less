@@ -17,9 +17,11 @@
         .burger {
             display: none;
         }
-
+        
         .menu.main {
             flex-direction: row;
+            padding-left: 2%;
+            padding-right: 2%;
 
             ul {
                 display: flex;
@@ -27,7 +29,18 @@
                 li {
                     display: flex;
                     align-items: center;
-                    padding: 0 2%;
+                    &,
+                    &:not(.unbordered) {
+                        border-top-color: transparent;
+                    }
+                    &.special {
+                        display: none;
+                    }
+                    &:not(.special) {
+                        a {
+                             line-height:5;
+                        }
+                    }
                 }
 
                 a {
@@ -36,9 +49,6 @@
                     border: none;
                 }
             }
-            // .badge {
-            //     margin-left: 2rem;
-            // }
         }
     }
     .underhead {
@@ -109,7 +119,20 @@
                 }
             }
         }
-    }    
+    }
+    section[data-section="houses"] {
+        .carousel {
+            .slick-slide {
+                flex: 1 1 47%;
+                margin: 8px;
+            }
+            .slick-track {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: stretch;
+            }
+        }
+    }
     footer {
         .phone {
             font-size: 36px;

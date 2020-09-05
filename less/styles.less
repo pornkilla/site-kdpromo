@@ -2,12 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Podkova:400,500,600,700,800&display=swap&subset=cyrillic,cyrillic-ext');
 
-@import (reference) 'helpers';
 @import (reference) 'colors';
+@import 'helpers';
 @import 'slick-theme'; 
 @import 'slick'; 
-@import 'intro'; 
-
+@import 'intro';
+ 
 @font-podkova: 'Podkova', serif;
 @font-raleway: 'Raleway', sans-serif;
 @font-base: 16px;  
@@ -52,6 +52,7 @@ header {
     .karkas & {
         .back {            
             background: @color-mocca url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
+            background-size: cover;
             &::after {
                 position: absolute;
                 background-color: rgba(0, 0, 0, 60%);
@@ -169,54 +170,63 @@ header {
     }
      
     .header.item.badge {
+        min-height: 80px;
         background-color: @color-hose;
     }
 
     .menu.main {
-        flex-direction: column; 
+        border: none;
         align-items: stretch;
+        flex-direction: column;
         transition: all 0.3s ease;
-        background-color: transparent;
         font-family: @font-podkova;
+        background-color: transparent;
         ul {
-            display: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
+            width: 100%;
+            display: none;
             list-style: none; 
             text-align: center;
-            width: 100%;
         }
         
         li {
-            width: 100%;
+            margin: 0;
             padding: 0;
-            margin: 0; 
+            width: 100%;
+            transition: all 0.5s ease;
              
             &:last-child {
                 border: none;
             }
 
             a {
-                display: block; 
                 width: 100%;
+                display: block;
+                font-size: 1.5rem;
                 color: @color-coffee;
                 text-decoration: none;
-                font-size: 1.25rem;
-                padding: 1rem 1.5rem;
+                padding: 1.125rem 1.5rem;
             }
             &:not(.unbordered) {
                  border-top: 1px solid @color-grey;
             }
             &.special {
+                padding-left: 1rem;
+                padding-right: 1rem;
                 padding-top: 1.25rem;
                 a {
+                    font-size: 1rem;
+                    white-space: nowrap;
+                    padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
                 }
             }
             &:hover {
-                background-color: @color-coffee;
+                color: @color-coffee;
+                background-color: @color-mocca;
                 a {
-                    color: @color-mocca;
+                    color: inherit;
                 }
             }
         }
@@ -329,19 +339,19 @@ header {
 
 main {
     h3 {
-        text-transform: uppercase;
-        text-align: center;
         font-size: 36px;
         line-height: 1.1;
+        text-align: center;
         font-weight: normal;
         margin-bottom: 4rem;
         word-break: break-all;
+        text-transform: uppercase;
     }
 
     section {
         .wrapper {
-            padding: 40px 10px;
             margin-left: auto;
+            padding: 40px 10px;
             margin-right: auto;
         }
         .white {
@@ -394,9 +404,9 @@ section.benefits {
         list-style: none;
         font-size: 18px;
         text-align: left;
-        margin-bottom: 40px;
         font-weight: 300;
         padding-left: 10px;
+        margin-bottom: 40px;
         padding-right: 10px;
 
         &::before {
@@ -849,6 +859,31 @@ section.question {
         display: none;
     }    
 }
+
+// karkas sections
+section[data-section="houses"] {
+    background-image: url('../img/bg_section-1-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .carousel {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        .header {
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+        .description {
+            padding-bottom: 2rem;
+        }
+        .icon.green {
+            background-color: transparent;
+        }
+    }
+    .slick-slide {
+        margin: 0 2rem;
+    }
+} 
 
 footer {
     a {

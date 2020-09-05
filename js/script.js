@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    const mobileBreakpoint = 768;
+    const mobileBreakpoint = 960;
     const stickyOffset = 90;
 
     $('.learn-more').click(function () {
@@ -138,6 +138,11 @@ $(document).ready(function () {
 
     $(window).resize(function () {
 
+         if ($(window).width() > mobileBreakpoint) {
+             $('.main.menu ul').removeAttr('style');
+             $('.main.menu').removeClass('opened');
+         }
+
         videoItem.each(function () {
 
             var $el = $(this);
@@ -147,6 +152,7 @@ $(document).ready(function () {
         });
 
     }).resize();
+
     videoMenuItem.on('click', function () {
         videoItem.trigger('pause');
     });
@@ -156,43 +162,40 @@ $(document).ready(function () {
     $('.ui.accordion').accordion();
     $('.ui.checkbox').checkbox();
 
-    $(document).ready(function(){
-        $('.carousel').slick({
-            infinite: true,
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 6,
-            responsive: [
-                {
-                    breakpoint: mobileBreakpoint,
-                    settings: {
-                        dots: true,
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
+    $('.carousel').slick({
+        infinite: true,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 8,
+        responsive: [{
+            breakpoint: mobileBreakpoint,
+            settings: {
+                dots: true,
+                arrows: false,
+                // centerMode: true,
+                centerPadding: '5px',
+                slidesToShow: 1,
+            }
+        }]
     });
 
-    $(".burger").click(function () {
-        $(this).toggleClass('active');
+    var clickOnBurger = function () {
+        $(".burger").toggleClass('active');
         $(".main.menu ul").slideToggle('fast');
         $(".main.menu").toggleClass('opened');
-    })
+    };
 
-    $(window).resize(function () {
-        if ($(window).width() > mobileBreakpoint) {
-            $('.main.menu ul').removeAttr('style');
-            $('.main.menu').removeClass('opened');
-        }
+    $(".burger").click(function () {
+        clickOnBurger();
     })
 
     // Scroll to section by Page Nav click
     var clickMenu = function () {
         $('a.navlink').click(function () {
+            var currentWidth = $(window).width();
+            if (currentWidth <= mobileBreakpoint) {
+                clickOnBurger();
+            }
             var section = $(this).data('nav-section');
             $('html, body').animate({
                 'scrollTop': $('[data-section="' + section + '"]').offset().top
