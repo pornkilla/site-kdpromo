@@ -874,6 +874,8 @@ section[data-section="houses"] {
             padding-bottom: 1rem;
         }
         .description {
+            margin-left: 10%;
+            margin-right: 10%;
             padding-bottom: 2rem;
         }
         .icon.green {
@@ -882,6 +884,19 @@ section[data-section="houses"] {
     }
     .slick-slide {
         margin: 0 2rem;
+        &.ui.card {
+            min-height: 220px;
+            background-color: @color-hose;
+        }
+    }
+    .text-card {
+        &.ui.card {
+            min-width: 100%;
+            background-color: @color-hose;
+            .content {
+                padding: 2rem;
+            }
+        }
     }
 } 
 
