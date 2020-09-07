@@ -191,7 +191,7 @@ $(document).ready(function () {
 
     // Scroll to section by Page Nav click
     var clickMenu = function () {
-        $('a.navlink').click(function () {
+        $('.navlink').click(function () {
             var currentWidth = $(window).width();
             if (currentWidth <= mobileBreakpoint) {
                 clickOnBurger();
