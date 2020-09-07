@@ -26,67 +26,93 @@
 </head>
 <body id="karkas">
   <header>
-     <nav class="ui borderless fixed navi main menu">
-        <div class="header item badge">
-          <div class="logo">
-            <h1>Карельский дом</h1>
+    <nav class="ui borderless fixed navi main menu">
+      <div class="header item badge">
+        <div class="logo">
+          <h1>Карельский дом</h1>
+        </div>
+      </div>
+      <ul>
+        <li><a class="navlink nowrap" data-nav-section="houses" href="#">О домах</a></li>
+        <li><a class="navlink" data-nav-section="selection" href="#">Подобрать</a></li>
+        <li><a class="navlink" data-nav-section="packages" href="#">Комплектации</a></li>
+        <li><a class="navlink" data-nav-section="services" href="#">Наши услуги</a></li>
+        <li><a class="navlink" data-nav-section="technologies" href="#">Технологии</a></li>
+        <li><a class="navlink nowrap" data-nav-section="about" href="#">О нас</a></li>
+        <li><a class="navlink" data-nav-section="faq" href="#">FAQ</a></li>
+      </ul>
+      <div class="special">
+        <span class="contacts">
+          <a href="mailto:karelianhaus@yandex.ru">
+            <i class="envelope outline icon"></i>
+            <span>karelianhaus@yandex.ru</span>
+          </a>
+          <a class="unbordered" href="tel:+79535332396">
+            <i class="phone icon"></i>
+            <span>+7 953 533-23-96</span>
+          </a>
+        </span>
+      </div>
+      <a href="#" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </a>
+    </nav>     
+    
+    <div class="content">
+      <div class="ui stackable two column grid">
+        <div class="column teaser">
+          <h2>Построим теплый <br><span class="upper">КАРКАСНЫЙ ДОМ</span> <br>от <span class="color-sun">16 т. р.</span> за м<sup>2</sup> в
+            Карелии!</h2>
+          <div class="features">
+            <ul class="ui list">
+              <li class="item">
+                <i class="large check circle yellow icon"></i>
+                <span>Гарантия на несущие конструкции 10 лет</span>
+              </li>
+              <li class="item">
+                <i class="large check circle yellow icon"></i>
+                <span>Минимальные сроки строительства, возведение дома занимает от полутора недель</span>
+              </li>
+              <li class="item">
+                <i class="large check circle yellow icon"></i>
+                <span>Отсутствие сезонных ограничений для строительства дома</span>
+              </li>
           </div>
         </div>
-        <ul>
-          <li><a class="navlink" data-nav-section="houses" href="#">О домах</a></li>
-          <li><a class="navlink" data-nav-section="selection" href="#">Подобрать</a></li>
-          <li><a class="navlink" data-nav-section="packages" href="#">Комплектации</a></li>
-          <li><a class="navlink" data-nav-section="services" href="#">Наши услуги</a></li>
-          <li><a class="navlink" data-nav-section="technologies" href="#">Технологии</a></li>
-          <li><a class="navlink" data-nav-section="about" href="#">О нас</a></li>
-          <li><a class="navlink" data-nav-section="faq" href="#">FAQ</a></li>
-          <li class="special">
-            <span class="contacts">
-              <a href="mailto:karelianhaus@yandex.ru">
-                <i class="envelope outline icon"></i>
-                <span>karelianhaus@yandex.ru</span>
-              </a>
-              <a class="unbordered" href="tel:+79535332396">
-                <i class="phone icon"></i>
-                <span>+7 953 533-23-96</span>
-              </a>
-            </span>
-          </li>
-        </ul>
-       <a href="#" class="burger">
-          <span></span>
-          <span></span>
-          <span></span>
-       </a>
-    </nav>
-     
-    <form class="ui massive form contact" id="form-four">
-      <fieldset>
-        <div class="field">
-          <input type="text" name="fieldname" placeholder="Ваше имя">
-        </div>
-        <div class="field">
-          <input type="tel" name="fieldphone" placeholder="Телефон">
-        </div>
-        <div class="field">
-          <textarea placeholder="Ваше сообщение" name="fieldmessage" id="form-message" cols="30" rows="3"></textarea>
-        </div>
-        <div class="field">
-          <input type="text" class="dopustim">
-        </div>
-        <div class="field">
-          <div class="ui checkbox">
-            <input type="checkbox" tabindex="0" name="terms">
-            <label>Я согласен с <a href="javascript:void(0)" class="show-legal">политикой обработки
-                персональных
-                данных</a></label>
+        <div class="column">
+          <div class="ui card bg-hose">
+            <h3>Оставьте заявку</h3>
+            <p class="lead">И получите каталог каркасных домов</p>
+            <form class="ui massive form catalog" id="form-one">
+              <fieldset>
+                <div class="field">
+                  <input type="text" name="fieldname" placeholder="Ваше имя">
+                </div>
+                <div class="field">
+                  <input type="tel" name="fieldphone" placeholder="Телефон">
+                </div>
+                <div class="field">
+                  <input type="email" name="fieldmail" placeholder="Электронная почта">
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" name="terms">
+                    <label>Я согласен с <a href="javascript:void(0)" class="show-legal">политикой обработки
+                        персональных
+                        данных</a></label>
+                  </div>
+                </div>
+                <button type="submit" class="yellow wide">Получить каталог</button>
+              </fieldset>
+              <div class="ui error message"></div>
+              <div class="ui success message hidden"></div>
+            </form>
           </div>
         </div>
-        <button type="submit" class="yellow wide">отправить вопрос</button>
-      </fieldset>
-      <div class="ui error message"></div>
-      <div class="ui success message hidden"></div>
-    </form>
+      </div>
+    </div>
 
      <div class="back"></div>
   </header>
@@ -175,7 +201,7 @@
             </div>
             
           </div>
-          <div class="ui centered card text-card">
+          <div class="ui centered card text-card bg-hose">
             <div class="content">
               <div class="center aligned description">
                 <p>Строительство дома – процесс трудоемкий, требующий времени, финансов и сил. Панельные каркасные дома
@@ -184,7 +210,8 @@
                   изготовление каркасно-панельных домов с применением специализированных материалов гарантирует высокое
                   качество каждой детали. А правильная технология позволит собрать из этих элементов тёплый дом.</p>
 
-                <p><strong>Помните, что настоящий стиль заключается в большей степени в целесообразности и сдержанности,
+                <p class="color-blin"><strong>Помните, что настоящий стиль заключается в большей степени в
+                    целесообразности и сдержанности,
                     чем в пышности и броскости.</strong></p>
               </div>
             </div>
@@ -203,17 +230,171 @@
     </section>
     <section data-section="services">
       <div class="wrapper">
-        <h3>Наши услуги</h3>
+        <h3>Мы сделаем для вас</h3>
+        <div class="carousel-second">
+          <div class="ui card">
+            <div class="content">
+              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned description">
+                <p>Поможем с подбором участка</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned description">
+                <p>Продумаем планировку дома</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned description">
+                <p>Предложим профессиональный проект</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned description">
+                <p>Поможем с получением ипотеки </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned description">
+                <p>Соберем дом на участке</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned description">
+                <p>Предоставляем гарантийное и сервисное обслуживание</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="assembling" data-section="check-price">
+      <div class="wrapper">
+        <h3>УЗНАЙТЕ<small>стоимость сборки</small></h3>
+        <form class="ui massive form callback" id="form-three">
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="fieldname" placeholder="Ваше имя">
+            </div>
+            <div class="field">
+              <input type="tel" name="fieldphone" placeholder="Телефон">
+            </div>
+          </div>
+          <button type="submit" class="yellow wide">Позвоните мне</button>
+          <div class="centered">
+            <div class="ui error message"></div>
+            <div class="ui success message hidden"></div>
+          </div>
+        </form>
       </div>
     </section>
     <section data-section="technologies">
       <div class="wrapper">
-        <h3>Технологии</h3>
+        <h3>Финские технологии домостроения</h3>
+
+        
+
+      </div>
+    </section>
+    <section class="technology" class="hidden">
+      <div class="wrapper">
+        <div class="centered">
+          <h4>Компания «Карельский Дом» расширила линейку продаж домов для индивидуального жилищного строительства</h4>
+        </div>
+
+        <div class="ui stackable two column grid">
+          <div class="column text">
+            <p>Как сказал французский литератор Жак Пеше «Всё новое — это хорошо забытое старое»!</p>
+            <p>Вы можете купить у нас комплект каркасного дома компании Finnkoti – изготовленный на европейском
+              оборудовании
+              в заводских условиях по оригинальной и проверенной десятилетиями финской панельно-каркасной технологии -
+              “Low-energy wall” и “Low-energy corner”.</p>
+              <p>При производстве домов в качестве несущего каркаса стеновых панелей используются деревянные сухие
+                гладко-строганные стойки с применением технологии терморазрыв. Также в стеновую панель укладывается
+                бесшовный
+                слой утеплителя. Утеплитель внутри стен не проседает даже спустя десятилетия. Для домов постоянного
+                проживания
+                толщина утеплителя для наружной стены предусмотрена 250мм. Благодаря этому коэффициент теплопроводности
+                стены
+                равен 0,16 В/м2*К. Технология исключает изменение геометрических размеров древесины при перепадах
+                температуры
+                и влажности.</p>
+          </div>
+          <div class="column pic">
+            <img src="../img/tech-1.jpg" alt="">
+          </div>
+
+        </div>
+        <div class="ui computer reversed stackable two column grid">
+          <div class="column text">
+            <p>Ограждающими конструкциями стеновых панелей являются ветрозащитная древесноволокнистая плита Isoplaat
+              толщиной 12 мм и сверхпрочный гипсокартон Gyproc толщиной 15 мм. На панели выполнена специальная фреза,
+              которая упрощает монтаж дома.</p>
+            <p>Стеновые панели каркасного дома могут быть отделаны различными строительными материалами: тонкопилённой
+   скандинавской доской, кирпичом, имитацией бруса, листами аквапанелей с последующим оштукатуриванием. Размеры
+   стеновых панелей фиксированы и стандартны, что исключает человеческий фактор при производстве панели,
+   увеличивают качество и долговечность заметно облегчают строительство.</p>
+            <p>Финская технология по которой изготовлен каркасный дом компании Finnkoti прекрасно подходит для проживания
+     даже в самом суровом климате. Благодаря высокоэффективной теплоизоляции каркасные дома позволяют снизить
+     затраты на отопление до 50%.</p>
+          </div>
+          <div class="column pic">
+            <img src="../img/tech-2.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="ui stackable two column grid">
+          <div class="column text">
+            <p>В заводских условиях в стеновые панели устанавливаются пластиковые окна открывающиеся во внутрь профиль
+              Rehau
+              Grazio 70мм (+ теплопакет) и входные финские двери производства компании Skaala. Это означает, что в доме
+              не
+              будет дуть через окна или входные двери в местах стыках панели с оконным или дверным блоком. Конструкции
+              из
+              элементов легко монтируются, что сокращает время строительства на участке. Это минимизирует погодные и
+              сезонные воздействия и экономит затраты. Благодаря этому вы получаете готовый дом в минимально короткие
+              сроки.
+            </p>
+            <p>В комплекте со стеновыми панелями поставляются кровельные конструкции: стропильные фермы и балки
+              заводского
+              изготовления на метало - зубчатых пластинах.</p>
+            <p>Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж
+              на
+              вашем участке займет всего-навсего от полутора до четырех недель. На ваш дом будет действовать гарантия в
+              течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+    
+          </div>
+          <div class="column pic">
+            <img src="../img/tech-3.jpg" alt="">
+          </div>
+
+        </div>
       </div>
     </section>
     <section data-section="about">
       <div class="wrapper">
-        <h3>О компании</h3>
+        <h3>Почему наши клиенты выбирают «Карельский дом»</h3>
+
       </div>
     </section>
     <section data-section="faq">
@@ -224,7 +405,7 @@
 
     <section class="contacts question">
       <div class="text karkas">
-        <h3>Остались вопросы?<br> <small>заполните форму</small></h3>
+        <h2>Остались вопросы?<br> <small>заполните форму</small></h2>
         <p>Наш специалист перезвонит Вам в самое ближайшее время</p>
       </div>
       <div class="fillmeharder karkas">

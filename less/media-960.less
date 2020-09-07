@@ -25,12 +25,13 @@
 
             ul {
                 display: flex;
+                justify-content: center;
 
-                 a {
-                     padding: 24px 2vw;
-                     font-size: @font-base;
-                     border: none;
-                 }
+                a {
+                    padding: 24px 2vw;
+                    font-size: @font-base;
+                    border: none;
+                }
 
                 li {
                     width: auto;
@@ -40,9 +41,20 @@
                     &:not(.unbordered) {
                         border-top-color: transparent;
                     }
-                    &.special {
-                        display: none;
-                    }
+                }
+                .concacts, .special {
+                    display: none;
+                }
+            }
+        }
+        #karkas & {
+            .content {
+                padding-top: 14rem;
+                padding-bottom: 8rem;
+            }
+            .teaser {
+                h2 {
+                    font-size: 3.5rem;
                 }
             }
         }
@@ -116,22 +128,25 @@
             }
         }
     }
-    section[data-section="houses"] {
+    section[data-section="houses"] {        
+    }
+    footer {
+        .phone {
+            font-size: 36px;
+        }
+    }
+    #karkas {
         .carousel {
             .slick-slide {
                 flex: 1 1 47%;
                 margin: 8px;
             }
+
             .slick-track {
-               display: flex;
-               flex-wrap: wrap;
-               align-items: stretch;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
             }
-        }
-    }
-    footer {
-        .phone {
-            font-size: 36px;
         }
     }
 }

@@ -62,12 +62,12 @@ header {
         }
 
         &.brus {
-            position: absolute;
             z-index: 2;
             top: 34px;
             left: 12%;
             width: 160px;
             height: 60px;
+            position: absolute;
             -webkit-filter: drop-shadow(@shadow);
             filter: drop-shadow(@shadow);   
         }
@@ -76,7 +76,6 @@ header {
     .price {
         z-index: 2;
         position: absolute;
-        background-color: @color-shade;
         width: 80%;
         padding: 20px;
         left: 0;
@@ -86,6 +85,7 @@ header {
         top: 160px;
         font-size: 18px;
         font-weight: 500;
+        background-color: @color-shade;
 
         span {
             line-height: 1.2;
@@ -163,13 +163,20 @@ header {
         transition: all 0.3s ease;
         font-family: @font-podkova;
         background-color: transparent;
+
         ul {
             margin: 0;
             padding: 0;
             width: 100%;
-            display: none;
             list-style: none; 
             text-align: center;
+        }
+
+        ul, .special {
+            display: none;
+        }
+        a {
+            color: @color-coffee;
         }
         
         li {
@@ -186,30 +193,31 @@ header {
                 width: 100%;
                 display: block;
                 font-size: 1.5rem;
-                color: @color-coffee;
                 text-decoration: none;
                 padding: 1.125rem 1.5rem;
             }
             &:not(.unbordered) {
                  border-top: 1px solid @color-grey;
             }
-            &.special {
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-top: 1.25rem;
-                a {
-                    font-size: 1rem;
-                    white-space: nowrap;
-                    padding-top: 0.5rem;
-                    padding-bottom: 0.5rem;
-                }
-            }
             &:hover {
                 color: @color-coffee;
                 background-color: @color-mocca;
+
                 a {
                     color: inherit;
                 }
+            }
+        }
+        .special {
+            text-align: center;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1.75rem;
+            a {
+                font-size: 1rem;
+                padding-top: 0.5rem;
+                white-space: nowrap;
+                padding-bottom: 0.5rem;
             }
         }
         &.sticky {
@@ -217,9 +225,8 @@ header {
         }
         &:not(.sticky) {
             box-shadow: none;
-            color: @color-hose;
             a {
-                color: inherit;
+                color: @color-hose;
             }
         }
         &.opened {
@@ -238,9 +245,9 @@ header {
     position: relative;
 
     .woodbox {
-        color: @color-hose;
         width: 320px;
         margin: 0 auto;
+        color: @color-hose;
         padding-top: 150px;
         padding-left: 140px;
         padding-right: 28px;
@@ -249,9 +256,9 @@ header {
     }
 
     h2 {
-        font-family: @font-podkova;
         font-size: 18px;
         font-weight: 400;
+        font-family: @font-podkova;
     }
 
     .list {
@@ -259,8 +266,8 @@ header {
         font-size: 14px;
 
         .item {
-            margin-bottom: 4px;
             line-height: 1.4;
+            margin-bottom: 4px;
         }
     }
 
@@ -276,22 +283,22 @@ header {
     .videobox {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        margin: 30px auto;
         text-align: center;
+        margin: 30px auto;
+        flex-direction: column;
 
         video {
-            box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.40);
             width: 100% !important;
             height: auto !important;
+            box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.40);
         }
 
         .features {
+            text-align: left;
             padding: 30px 20px;
             color: @color-terra;
-            font-family: @font-raleway;
             position: relative;
-            text-align: left;
+            font-family: @font-raleway;
 
             &::after {
                 position: absolute;
@@ -321,12 +328,11 @@ header {
 
 main {
     h3 {
-        font-size: 36px;
+        font-size: 2.25rem;
         line-height: 1.1;
         text-align: center;
         font-weight: normal;
         margin-bottom: 4rem;
-        word-break: break-all;
         text-transform: uppercase;
     }
 
@@ -831,10 +837,6 @@ section.question {
 
     fieldset {
         max-width: 290px;
-        border: 0;
-        padding: 0.01em 0 0 0;
-        margin: 0 auto 2rem auto;
-        min-width: 0;
     }
 
     .dopustim {
@@ -844,21 +846,125 @@ section.question {
 
 #karkas {
     header {
+        background: @color-mocca url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
+        background-size: cover;
+        z-index: 1;
         .back {
-            background: @color-mocca url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
-            background-size: cover;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            bottom: 0;
+            height: auto;
+            margin: auto;
+            display: block;
+            position: absolute;
+            background-image: none;
+            background-color: rgba(0, 0, 0, 60%); 
+        }
+        .list {
+            margin: 0 auto;
+            max-width: 400px;
+            .item {
+                text-align: left;
+                margin-bottom: 1rem;
+            }
+            .icon {
+                padding-right: 1rem;
+            }
+            span {
+                padding-top: 5px;
+                display: table-cell;
+            }
+        }
+        .grid {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content {
+            z-index: 3;
+            position: relative;
+            padding-top: 10rem;
+        }
+        .card {
+            padding: 1rem;
+            margin: 2rem auto;
+            text-align: center;
+        }
+        .teaser {
+            text-align: center;
+            color: @color-hose;
+            h2 {
+                font-size: 2rem;
+                font-weight: 100;
+                line-height: 1.125;
+                margin-bottom: 2rem;
+                .upper {
+                    font-weight: 900;
+                }
+            }
+        }
+        h3 {
+            line-height: 1;
+            font-weight: bold;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        form {
+            .field {
+                margin-bottom: 0.75rem;
+            }
+            input {
+                padding: 0.5rem;
+            }
+            button {
+                min-width: 260px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .checkbox {
+                label {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .carousel {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
 
-            &::after {
-                top: 0;
-                z-index: 2;
-                bottom: 0;
-                left: 0;
-                position: absolute;
-                right: 0;
-                margin: auto;
-                display: block;
-                content: '';
-                background-color: rgba(0, 0, 0, 60%);
+        .header {
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .description {
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-bottom: 2rem;
+        }
+
+        .icon.green {
+            background-color: transparent;
+        }
+    }
+
+    .slick-slide {
+        margin: 0 2rem;
+
+        &.ui.card {
+            min-height: 220px;
+            background-color: @color-hose;
+        }
+    }
+
+    .text-card {
+        &.ui.card {
+            min-width: 100%;
+            background-color: @color-hose;
+
+            .content {
+                padding: 2rem;
             }
         }
     }
@@ -870,39 +976,61 @@ section[data-section="houses"] {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    .carousel {
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        .header {
-            padding-top: 2rem;
-            padding-bottom: 1rem;
-        }
-        .description {
-            margin-left: 10%;
-            margin-right: 10%;
-            padding-bottom: 2rem;
-        }
-        .icon.green {
-            background-color: transparent;
-        }
+}
+
+section[data-section="packages"] {
+    background-image: url('../img/bg_section-4-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .wrapper {
+        min-height: 100vh;
     }
-    .slick-slide {
-        margin: 0 2rem;
-        &.ui.card {
-            min-height: 220px;
-            background-color: @color-hose;
-        }
+}
+
+section[data-section="services"] {
+    background-image: url('../img/bg_section-5-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .wrapper {
+        color: @color-hose;
     }
-    .text-card {
-        &.ui.card {
-            min-width: 100%;
-            background-color: @color-hose;
-            .content {
-                padding: 2rem;
-            }
-        }
+}
+
+section[data-section="check-price"] {
+    background-image: url('../img/bg_section-6-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .wrapper {        
+        color: @color-hose;
     }
-} 
+}
+
+section[data-section="about"] {
+    background-image: url('../img/bg_section-7-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .wrapper {        
+        color: @color-hose;
+    }
+}
+
+section[data-section="technologies"] {
+    background-image: url('../img/bg_section-8-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .wrapper {        
+        color: @color-hose;
+    }
+}
 
 footer {
     a {
@@ -957,14 +1085,14 @@ footer {
 
 button,
 .button {
+    outline: 0;
     cursor: pointer;
     display: inline-block;
     min-height: 1em;
-    outline: 0;
     text-align: center;
     text-transform: uppercase;
-    font-family: @font-podkova;
     font-size: 18px;
+    font-family: @font-podkova;
     font-weight: bold;
     padding: 20px 40px;
     border-radius: none;
@@ -1021,6 +1149,12 @@ button,
         border-radius: 0;
         font-family: @font-raleway;
     }
+}
+form fieldset {
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0 auto 2rem auto;
+    min-width: 0;
 }
 
 @import 'media';

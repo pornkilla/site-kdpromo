@@ -13,7 +13,59 @@ $(document).ready(function () {
         $('.ui.modal').modal('hide');
     });
 
-
+    $('.ui.form.catalog').form({
+        inline: true,
+        on: 'blur',
+        transition: 'fade down',
+        onSuccess: nowIsValid,
+        fields: {
+            fieldname: {
+                identifier: 'fieldname',
+                rules: [{
+                        type: 'empty',
+                        prompt: 'Назовите себя, пожалуйста'
+                    },
+                    {
+                        type: 'minLength[2]',
+                        prompt: 'Введите хотя бы две буквы'
+                    }
+                ]
+            },
+            fieldphone: {
+                identifier: 'fieldphone',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Пожалуйста, укажите телефон для связи'
+                }, {
+                    type: 'number',
+                    prompt: 'Допускаются только цифры'
+                }, {
+                    type: 'minLength[5]',
+                    prompt: 'Мы не уверены, что такие короткие номера вообще бывают'
+                }]
+            },
+            fieldphone: {
+                identifier: 'fieldmail',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Пожалуйста, укажите ваш адрес эл. почты'
+                }, {
+                    type: 'email',
+                    prompt: 'Проверьте, правильно ли указали почту'
+                }, {
+                    type: 'minLength[2]',
+                    prompt: 'Мы не уверены, что такие короткие адреса вообще бывают'
+                }]
+            },
+            terms: {
+                identifier: 'terms',
+                rules: [{
+                    type: 'checked',
+                    prompt: 'Поле обязательно для подтверждения'
+                }]
+            }
+        }
+    });
     $('.ui.form.contact').form({
         inline: true,
         on: 'blur',
@@ -139,7 +191,7 @@ $(document).ready(function () {
     $(window).resize(function () {
 
          if ($(window).width() > mobileBreakpoint) {
-             $('.main.menu ul').removeAttr('style');
+             $('.main.menu ul, .main.menu .special').removeAttr('style');
              $('.main.menu').removeClass('opened');
          }
 
@@ -167,21 +219,38 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 8,
+        autoplay: true,
         responsive: [{
             breakpoint: mobileBreakpoint,
             settings: {
                 dots: true,
                 arrows: false,
-                // centerMode: true,
                 centerPadding: '5px',
                 slidesToShow: 1,
             }
         }]
     });
 
+    $('.carousel-second').slick({
+        infinite: true,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 6,
+        autoplay: true,
+        responsive: [{
+            breakpoint: mobileBreakpoint,
+            settings: {
+                dots: true,
+                arrows: false,
+                centerPadding: '5px',
+                slidesToShow: 2,
+            }
+        }]
+    });
+
     var clickOnBurger = function () {
         $(".burger").toggleClass('active');
-        $(".main.menu ul").slideToggle('fast');
+        $(".main.menu ul, .main.menu .special").slideToggle('fast');
         $(".main.menu").toggleClass('opened');
     };
 
