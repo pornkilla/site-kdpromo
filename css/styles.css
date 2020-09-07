@@ -1247,6 +1247,8 @@ section[data-section="houses"] .carousel .header {
   padding-bottom: 1rem;
 }
 section[data-section="houses"] .carousel .description {
+  margin-left: 10%;
+  margin-right: 10%;
   padding-bottom: 2rem;
 }
 section[data-section="houses"] .carousel .icon.green {
@@ -1254,6 +1256,17 @@ section[data-section="houses"] .carousel .icon.green {
 }
 section[data-section="houses"] .slick-slide {
   margin: 0 2rem;
+}
+section[data-section="houses"] .slick-slide.ui.card {
+  min-height: 220px;
+  background-color: #fbf5e8;
+}
+section[data-section="houses"] .text-card.ui.card {
+  min-width: 100%;
+  background-color: #fbf5e8;
+}
+section[data-section="houses"] .text-card.ui.card .content {
+  padding: 2rem;
 }
 footer a {
   color: #5d2a1f;
