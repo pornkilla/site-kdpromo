@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     const mobileBreakpoint = 960;
     const stickyOffset = 90;
+    const scrollShift = 64;
 
     $('.learn-more').click(function () {
         $('.tiny.modal').modal('show');
@@ -214,7 +215,7 @@ $(document).ready(function () {
     $('.ui.accordion').accordion();
     $('.ui.checkbox').checkbox();
 
-    $('.carousel').slick({
+    $('.carousel-first').slick({
         infinite: true,
         centerMode: true,
         centerPadding: '60px',
@@ -243,10 +244,21 @@ $(document).ready(function () {
                 dots: true,
                 arrows: false,
                 centerPadding: '5px',
-                slidesToShow: 2,
+                slidesToShow: 1,
             }
         }]
     });
+
+    var clickOnTechButton = function () {
+        $('#karkas .technology').slideToggle('slow');
+    }
+
+    $(".tech-revealer .chevron.up").hide();
+    $(".tech-revealer .chevron.down").show();
+    $(".tech-revealer .reveal-button").click(function () {
+        $(".chevron", this).toggle();
+        clickOnTechButton();
+    })
 
     var clickOnBurger = function () {
         $(".burger").toggleClass('active');
@@ -266,8 +278,10 @@ $(document).ready(function () {
                 clickOnBurger();
             }
             var section = $(this).data('nav-section');
+            var offset = $('[data-section="' + section + '"]').offset().top;
+            var result =  offset - scrollShift;
             $('html, body').animate({
-                'scrollTop': $('[data-section="' + section + '"]').offset().top
+                'scrollTop': result
             }, 500, 'swing');
             $('.burger').removeClass('active');
             return false;

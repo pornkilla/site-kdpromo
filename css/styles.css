@@ -1231,12 +1231,7 @@ section.question fieldset {
 section.question .dopustim {
   display: none;
 }
-#karkas header {
-  background: #ccc4b7 url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
-  background-size: cover;
-  z-index: 1;
-}
-#karkas header .back {
+#karkas .back {
   top: 0;
   left: 0;
   right: 0;
@@ -1248,6 +1243,11 @@ section.question .dopustim {
   position: absolute;
   background-image: none;
   background-color: rgba(0, 0, 0, 0.6);
+}
+#karkas header {
+  background: #ccc4b7 url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
+  background-size: cover;
+  z-index: 1;
 }
 #karkas header .list {
   margin: 0 auto;
@@ -1277,6 +1277,7 @@ section.question .dopustim {
   padding: 1rem;
   margin: 2rem auto;
   text-align: center;
+  background-color: #fbf5e8;
 }
 #karkas header .teaser {
   text-align: center;
@@ -1308,6 +1309,9 @@ section.question .dopustim {
   padding-left: 20px;
   padding-right: 20px;
 }
+#karkas header form a {
+  color: #d1a10e;
+}
 #karkas header form .checkbox label {
   text-align: left;
 }
@@ -1331,7 +1335,6 @@ section.question .dopustim {
   margin: 0 2rem;
 }
 #karkas .slick-slide.ui.card {
-  min-height: 220px;
   background-color: #fbf5e8;
 }
 #karkas .text-card.ui.card {
@@ -1341,11 +1344,24 @@ section.question .dopustim {
 #karkas .text-card.ui.card .content {
   padding: 2rem;
 }
+#karkas section.technology {
+  display: none;
+}
+#karkas section.technology h4 {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
 section[data-section="houses"] {
   background-image: url('../img/bg_section-1-karkas.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+section[data-section="houses"] .slick-slide {
+  min-height: 234px;
+}
+section[data-section="houses"] h3 {
+  font-size: 1.25rem;
 }
 section[data-section="packages"] {
   background-image: url('../img/bg_section-4-karkas.jpg');
@@ -1365,6 +1381,12 @@ section[data-section="services"] {
 section[data-section="services"] .wrapper {
   color: #fbf5e8;
 }
+section[data-section="services"] .carousel .slick-slide {
+  min-height: 300px;
+}
+section[data-section="services"] .carousel .slick-slide img {
+  width: 128px;
+}
 section[data-section="check-price"] {
   background-image: url('../img/bg_section-6-karkas.jpg');
   background-position: center center;
@@ -1373,6 +1395,11 @@ section[data-section="check-price"] {
 }
 section[data-section="check-price"] .wrapper {
   color: #fbf5e8;
+}
+section[data-section="check-price"] .ui.form .fields {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 section[data-section="about"] {
   background-image: url('../img/bg_section-7-karkas.jpg');
@@ -1388,9 +1415,38 @@ section[data-section="technologies"] {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
 section[data-section="technologies"] .wrapper {
+  z-index: 3;
+  position: relative;
+}
+section[data-section="technologies"] .reveal-button {
+  padding-right: 20px;
+}
+section[data-section="faq"] {
+  background-image: url('../img/bg_section-9-karkas.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section[data-section="faq"] .wrapper {
   color: #fbf5e8;
+}
+section[data-section="faq"] .accordion .title {
+  background-color: #fbf5e8;
+  border: #5d2a1f 1px solid;
+}
+section[data-section="faq"] .accordion .content {
+  background-color: rgba(251, 245, 232, 0.2);
+}
+section[data-section="faq"] .accordion .title,
+section[data-section="faq"] .accordion .content p {
+  padding: 1rem 2rem;
 }
 footer a {
   color: #5d2a1f;
@@ -1442,16 +1498,16 @@ footer .contacts a {
 button,
 .button {
   outline: 0;
+  min-height: 1em;
   cursor: pointer;
   display: inline-block;
-  min-height: 1em;
   text-align: center;
   text-transform: uppercase;
   font-size: 18px;
-  font-family: 'Podkova', serif;
   font-weight: bold;
   padding: 20px 40px;
   border-radius: none;
+  font-family: 'Podkova', serif;
   -webkit-tap-highlight-color: transparent;
   webkit-user-select: none;
   -moz-user-select: none;
@@ -1569,6 +1625,9 @@ form fieldset {
   }
   section.specs .price {
     background-size: 100% auto;
+  }
+  section[data-section="houses"] h3 {
+    font-size: 2rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1708,6 +1767,9 @@ form fieldset {
   }
   footer .row {
     text-align: left;
+  }
+  section[data-section="houses"] h3 {
+    font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 960px) {

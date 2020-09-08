@@ -24,6 +24,7 @@
   <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="../css/styles.css?v20200904">
 </head>
+
 <body id="karkas">
   <header>
     <nav class="ui borderless fixed navi main menu">
@@ -63,8 +64,7 @@
     <div class="content">
       <div class="ui stackable two column grid">
         <div class="column teaser">
-          <h2>Построим теплый <br><span class="upper">КАРКАСНЫЙ ДОМ</span> <br>от <span class="color-sun">16 т. р.</span> за м<sup>2</sup> в
-            Карелии!</h2>
+          <h2>Построим теплый <br><span class="upper">КАРКАСНЫЙ ДОМ</span> <br>от <span class="color-sun">16 т. р.</span> за м<sup>2</sup> в Карелии!</h2>
           <div class="features">
             <ul class="ui list">
               <li class="item">
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div class="column">
-          <div class="ui card bg-hose">
+          <div class="ui card">
             <h3>Оставьте заявку</h3>
             <p class="lead">И получите каталог каркасных домов</p>
             <form class="ui massive form catalog" id="form-one">
@@ -119,14 +119,14 @@
   <main>
     <section class="dark" data-section="houses">
       <div class="wrapper">
-        <h3>Наши клиенты выбирают энергоэффективные дома<br>из экологически чистых материалов</h3>
+        <h3>Наши клиенты выбирают<br> энергоэффективные дома<br> из экологически чистых материалов</h3>
         <p class="centered">Мы строим каркасные дома, в которых продумана каждая мелочь! Технологии каркасного
           домостроения существуют
           вот уже более 5 веков. Наша компания одной из первых в Карелии начинала развивать эту технологию
           строительства. Многолетний опыт работы и сотрудничества с финскими компаниями позволил довести уровень
           строительства до Европейских стандартов. При строительстве наших домов применяются только новейшие технологии
           и материалы. Убедитесь сами в преимуществах каркасного домостроения! </p>
-          <div class="carousel">
+          <div class="carousel carousel-first">
             <div class="ui card">
               <div class="content">
                 <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
@@ -231,10 +231,12 @@
     <section data-section="services">
       <div class="wrapper">
         <h3>Мы сделаем для вас</h3>
-        <div class="carousel-second">
+        <div class="carousel carousel-second">
           <div class="ui card">
             <div class="content">
-              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned header">
+                <img src="../img/pic_services-4.png" alt="Подбор участка">
+              </div>
               <div class="center aligned description">
                 <p>Поможем с подбором участка</p>
               </div>
@@ -243,7 +245,9 @@
 
           <div class="ui card">
             <div class="content">
-              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned header">
+                <img src="../img/pic_services-5.png" alt="Создание планировки">
+              </div>
               <div class="center aligned description">
                 <p>Продумаем планировку дома</p>
               </div>
@@ -252,7 +256,9 @@
 
           <div class="ui card">
             <div class="content">
-              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned header">
+                <img src="../img/pic_services-6.png" alt="Подбор проекта">
+              </div>
               <div class="center aligned description">
                 <p>Предложим профессиональный проект</p>
               </div>
@@ -261,16 +267,20 @@
 
           <div class="ui card">
             <div class="content">
-              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned header">
+                <img src="../img/pic_services-1.png" alt="Помощь в оформлении ипотеки">
+              </div>
               <div class="center aligned description">
-                <p>Поможем с получением ипотеки </p>
+                <p>Поможем с получением ипотеки</p>
               </div>
             </div>
           </div>
 
           <div class="ui card">
             <div class="content">
-              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned header">
+                <img src="../img/pic_services-2.png" alt="Сборка дома">
+              </div>
               <div class="center aligned description">
                 <p>Соберем дом на участке</p>
               </div>
@@ -279,7 +289,9 @@
 
           <div class="ui card">
             <div class="content">
-              <div class="center aligned header"><i class="circular teal large snowflake icon"></i></div>
+              <div class="center aligned header">
+                <img src="../img/pic_services-3.png" alt="Гарантия и обслуживание">
+              </div>
               <div class="center aligned description">
                 <p>Предоставляем гарантийное и сервисное обслуживание</p>
               </div>
@@ -308,15 +320,20 @@
         </form>
       </div>
     </section>
-    <section data-section="technologies">
+    <section data-section="technologies" class="dark tech-revealer">
       <div class="wrapper">
         <h3>Финские технологии домостроения</h3>
-
-        
-
+        <div class="centered">
+          <button class="reveal-button yellow wide" type="button">
+            <span>Узнать детали</span>
+            <i class="chevron up icon"></i>
+            <i class="chevron down icon"></i>
+          </button>
+        </div>
       </div>
+      <div class="back"></div>
     </section>
-    <section class="technology" class="hidden">
+    <section class="technology">
       <div class="wrapper">
         <div class="centered">
           <h4>Компания «Карельский Дом» расширила линейку продаж домов для индивидуального жилищного строительства</h4>
@@ -341,7 +358,7 @@
                 и влажности.</p>
           </div>
           <div class="column pic">
-            <img src="../img/tech-1.jpg" alt="">
+            <img src="../img/tech-karkas-1.jpg" alt="Технологии каркасного домомстроения, шаг 1">
           </div>
 
         </div>
@@ -359,7 +376,7 @@
      затраты на отопление до 50%.</p>
           </div>
           <div class="column pic">
-            <img src="../img/tech-2.jpg" alt="">
+            <img src="../img/tech-karkas-2.jpg" alt="Технологии каркасного домомстроения, шаг 2">
           </div>
         </div>
 
@@ -385,7 +402,7 @@
     
           </div>
           <div class="column pic">
-            <img src="../img/tech-3.jpg" alt="">
+            <img src="../img/tech-karkas-3.jpg" alt="Технологии каркасного домомстроения, шаг 3">
           </div>
 
         </div>
@@ -397,9 +414,66 @@
 
       </div>
     </section>
-    <section data-section="faq">
+    <section class="dark" data-section="faq">
       <div class="wrapper">
         <h3>Чаво</h3>
+        <div class="ui accordion">
+          <div class="active title">
+            <i class="dropdown icon"></i>
+            Что нужно для того, чтобы начать строительство каркасного дома?
+          </div>
+          <div class="active content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Возможно ли строительство каркасного дома по индивидуальному проекту?
+          </div>
+          <div class="content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Будет ли каркасный дом экологически безопасным?
+          </div>
+          <div class="content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Через сколько можно приступать к отделочным работам внутри дома?
+          </div>
+          <div class="content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Насколько прочны каркасные дома?
+          </div>
+          <div class="content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            В какие сроки можно построить каркасный дом?
+          </div>
+          <div class="content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Можно ли жить в каркасном доме  круглый год?
+          </div>
+          <div class="content">
+            <p>[ЗАМЕНИТЬ]Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж на вашем участке займет всего-навсего от полутора до четырех недель.  На ваш дом будет действовать гарантия в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+          </div>
+        </div>
       </div>
     </section>
 

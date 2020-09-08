@@ -845,23 +845,23 @@ section.question {
 }
 
 #karkas {
+   .back {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        bottom: 0;
+        height: auto;
+        margin: auto;
+        display: block;
+        position: absolute;
+        background-image: none;
+        background-color: rgba(0, 0, 0, 60%); 
+    }
     header {
         background: @color-mocca url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
         background-size: cover;
         z-index: 1;
-        .back {
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 2;
-            bottom: 0;
-            height: auto;
-            margin: auto;
-            display: block;
-            position: absolute;
-            background-image: none;
-            background-color: rgba(0, 0, 0, 60%); 
-        }
         .list {
             margin: 0 auto;
             max-width: 400px;
@@ -890,6 +890,7 @@ section.question {
             padding: 1rem;
             margin: 2rem auto;
             text-align: center;
+            background-color: @color-hose;
         }
         .teaser {
             text-align: center;
@@ -922,6 +923,9 @@ section.question {
                 padding-left: 20px;
                 padding-right: 20px;
             }
+            a {
+                color: @color-blin; 
+            }
             .checkbox {
                 label {
                     text-align: left;
@@ -953,7 +957,6 @@ section.question {
         margin: 0 2rem;
 
         &.ui.card {
-            min-height: 220px;
             background-color: @color-hose;
         }
     }
@@ -968,6 +971,13 @@ section.question {
             }
         }
     }
+    section.technology {
+        display: none;
+        h4 {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 // karkas sections
@@ -976,6 +986,12 @@ section[data-section="houses"] {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    .slick-slide {
+        min-height: 234px;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
 }
 
 section[data-section="packages"] {
@@ -997,6 +1013,14 @@ section[data-section="services"] {
     .wrapper {
         color: @color-hose;
     }
+    .carousel {
+        .slick-slide {
+            min-height: 300px;
+            img {
+                width: 128px;
+            }
+        }
+    }
 }
 
 section[data-section="check-price"] {
@@ -1007,6 +1031,11 @@ section[data-section="check-price"] {
 
     .wrapper {        
         color: @color-hose;
+    }
+    .ui.form .fields {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -1026,9 +1055,40 @@ section[data-section="technologies"] {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
 
-    .wrapper {        
+    .wrapper {
+        z-index: 3;
+        position: relative;
+    }
+    .reveal-button {
+        padding-right: 20px;
+    }
+}
+section[data-section="faq"] {
+    background-image: url('../img/bg_section-9-karkas.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .wrapper {
         color: @color-hose;
+    }
+    .accordion {
+        .title {
+            background-color: @color-hose;
+            border: @color-wood 1px solid;
+        }
+        .content {
+            background-color: fade(@color-hose, 20%);
+        }
+        .title,
+        .content p {
+            padding: 1rem 2rem;
+        }
     }
 }
 
@@ -1086,16 +1146,16 @@ footer {
 button,
 .button {
     outline: 0;
+    min-height: 1em;
     cursor: pointer;
     display: inline-block;
-    min-height: 1em;
     text-align: center;
     text-transform: uppercase;
     font-size: 18px;
-    font-family: @font-podkova;
     font-weight: bold;
     padding: 20px 40px;
     border-radius: none;
+    font-family: @font-podkova;
     -webkit-tap-highlight-color: transparent;
     webkit-user-select: none;
     -moz-user-select: none;
