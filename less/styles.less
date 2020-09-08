@@ -923,11 +923,6 @@ section.question {
             input {
                 padding: 0.5rem;
             }
-            button {
-                min-width: 260px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
             a {
                 color: @color-blin; 
             }
@@ -982,6 +977,12 @@ section.question {
             font-size: 1.25rem;
             margin-bottom: 2rem;
         }
+        .reversed {
+            .card {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
     }
 }
 
@@ -992,7 +993,7 @@ section[data-section="houses"] {
     background-size: cover;
     background-repeat: no-repeat;
     .slick-slide {
-        min-height: 234px;
+        min-height: 278px;
     }
     h3 {
         font-size: 1.25rem;
@@ -1004,8 +1005,26 @@ section[data-section="packages"] {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    .wrapper {
-        min-height: 100vh;
+    
+    h3 {
+        position: relative;
+        margin-bottom: 60px;
+        &::after {
+            content: '';
+            display: block;
+            left: 40%;
+            position: absolute;
+            right: 40%;
+            border-bottom: @color-sun 4px solid;
+            bottom: -30px;
+        }
+    }
+    .lead {
+        max-width: 480px;
+        margin-bottom: 2rem;
+    }
+    .card {
+        box-shadow: @shadow;
     }
 }
 
@@ -1095,6 +1114,56 @@ section[data-section="faq"] {
             padding: 1rem 2rem;
         }
     }
+}
+
+.description {
+    &.price {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-family: @font-podkova;
+        span {
+            font-weight: 100;
+            font-size: 1.5rem;
+            font-family: @font-raleway;
+        }
+    }
+}
+
+.modal {
+    & > .flexy.header .cancel.cross {
+        font-size: 2rem;
+        padding: 8px;
+    }
+    &.offer {
+        h3 {
+            text-transform: uppercase;
+        }
+        .disclamer {
+            color: @color-wood;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            &.bottom {
+                padding-top: 1rem;
+                border-top: @color-grey 1px solid;
+            }
+
+        }
+        .package {
+            height: ~'calc(100vh - 205px)';
+            overflow: hidden auto;
+        }
+        .price {
+            padding-top: 1rem;
+        }
+        .image {
+            
+            img {
+                display: block;
+                max-width: 100%;
+            }
+        }
+    }
+
 }
 
 footer {

@@ -1308,11 +1308,6 @@ section.question .dopustim {
 #karkas header form input {
   padding: 0.5rem;
 }
-#karkas header form button {
-  min-width: 260px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 #karkas header form a {
   color: #d1a10e;
 }
@@ -1355,6 +1350,10 @@ section.question .dopustim {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
+#karkas section.technology .reversed .card {
+  margin-right: 0;
+  margin-left: auto;
+}
 section[data-section="houses"] {
   background-image: url('../img/bg_section-1-karkas.jpg');
   background-position: center center;
@@ -1362,7 +1361,7 @@ section[data-section="houses"] {
   background-repeat: no-repeat;
 }
 section[data-section="houses"] .slick-slide {
-  min-height: 234px;
+  min-height: 278px;
 }
 section[data-section="houses"] h3 {
   font-size: 1.25rem;
@@ -1373,8 +1372,25 @@ section[data-section="packages"] {
   background-size: cover;
   background-repeat: no-repeat;
 }
-section[data-section="packages"] .wrapper {
-  min-height: 100vh;
+section[data-section="packages"] h3 {
+  position: relative;
+  margin-bottom: 60px;
+}
+section[data-section="packages"] h3::after {
+  content: '';
+  display: block;
+  left: 40%;
+  position: absolute;
+  right: 40%;
+  border-bottom: #fac011 4px solid;
+  bottom: -30px;
+}
+section[data-section="packages"] .lead {
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+section[data-section="packages"] .card {
+  box-shadow: 0px 2px 2px rgba(89, 89, 89, 0.5);
 }
 section[data-section="services"] {
   background-image: url('../img/bg_section-5-karkas.jpg');
@@ -1451,6 +1467,43 @@ section[data-section="faq"] .accordion .content {
 section[data-section="faq"] .accordion .title,
 section[data-section="faq"] .accordion .content p {
   padding: 1rem 2rem;
+}
+.description.price {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'Podkova', serif;
+}
+.description.price span {
+  font-weight: 100;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+}
+.modal > .flexy.header .cancel.cross {
+  font-size: 2rem;
+  padding: 8px;
+}
+.modal.offer h3 {
+  text-transform: uppercase;
+}
+.modal.offer .disclamer {
+  color: #5d2a1f;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+.modal.offer .disclamer.bottom {
+  padding-top: 1rem;
+  border-top: #aaa699 1px solid;
+}
+.modal.offer .package {
+  height: calc(100vh - 205px);
+  overflow: hidden auto;
+}
+.modal.offer .price {
+  padding-top: 1rem;
+}
+.modal.offer .image img {
+  display: block;
+  max-width: 100%;
 }
 footer a {
   color: #5d2a1f;

@@ -288,6 +288,28 @@ $(document).ready(function () {
         });
     };
 
+    var resetModalData = function () {
+         $('.modal .package').hide();
+    };
+
+    // Offer modal
+    var clickOfferItem = function () {
+        $('.offer-modal').click(function () {
+            resetModalData();
+            var target = $(this).data('target');
+            var destination = $('[data-source="' + target + '"]');
+            $('.offer.modal').modal('show');
+            $(destination).show();
+            return false;
+        });
+    };
+    
+    $('.modal.offer .cancel').click(function () {
+        resetModalData();
+        $('.modal.offer').modal('hide');
+    });
+
+
     // ScrollTop
     var goToTop = function () {
         $('.gotop').on('click', function (event) {
@@ -327,6 +349,8 @@ $(document).ready(function () {
     });
     
     clickMenu();
-    goToTop();
+    goToTop();    
+    clickOfferItem();
+    resetModalData();
 
 });
