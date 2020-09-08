@@ -11,10 +11,12 @@ if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQ
 if($_POST){
 
     $sender_name    = filter_var($_POST["fieldname"], FILTER_SANITIZE_STRING); //capture sender name
-    $sender_phone   = filter_var($_POST["fieldphone"], FILTER_SANITIZE_STRING); //capture sender email
+    $sender_phone   = filter_var($_POST["fieldphone"], FILTER_SANITIZE_STRING); //capture sender phone
+    $sender_mail   = filter_var($_POST["fieldmail"], FILTER_SANITIZE_STRING); //capture sender email
     $message        = filter_var($_POST["fieldmessage"], FILTER_SANITIZE_STRING); //capture message
     $message .= "\n Имя: " . $sender_name;
     $message .= "\n Телефон: " . $sender_phone;
+    $message .= "\n Электронная почта: " . $sender_mail;
 
     //php validation
     // if(strlen($sender_name)<2){ // If length is less than 2 it will output JSON error.
