@@ -1231,6 +1231,10 @@ section.question fieldset {
 section.question .dopustim {
   display: none;
 }
+.lead {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
 #karkas .back {
   top: 0;
   left: 0;
