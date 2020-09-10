@@ -1387,7 +1387,8 @@ section.question .dopustim {
 #karkas .slick-slide.ui.card {
   background-color: #fbf5e8;
 }
-#karkas .slick-slide.ui.card:focus {
+#karkas .slick-slide.ui.card:focus,
+#karkas .slick-slide.unfocus:focus {
   outline: none;
 }
 #karkas .text-card.ui.card {
