@@ -459,9 +459,16 @@ section.tendency {
     }
 }
 
-section.guarantee {
-    background: @color-green url("../img/bg_section-5.jpg") center bottom no-repeat;
+section.guarantee {    
     background-size: cover;
+
+    #brus & {
+        background: @color-green url("../img/bg_section-5.jpg") center bottom no-repeat;
+    }
+
+    #karkas & {
+        background: @color-green url("../img/bg_section-7-karkas.jpg") center bottom no-repeat;
+    }
 
     .column {
         p {
@@ -1150,10 +1157,6 @@ section[data-section="faq"] {
                 border-top: @color-grey 1px solid;
             }
 
-        }
-        .package {
-            // height: ~'calc(100vh - 205px)';
-            // overflow: hidden auto;
         }
         .price {
             padding-top: 1rem;

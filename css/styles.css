@@ -881,8 +881,13 @@ section.tendency .pic img {
   max-width: 100px;
 }
 section.guarantee {
-  background: #7bb111 url("../img/bg_section-5.jpg") center bottom no-repeat;
   background-size: cover;
+}
+#brus section.guarantee {
+  background: #7bb111 url("../img/bg_section-5.jpg") center bottom no-repeat;
+}
+#karkas section.guarantee {
+  background: #7bb111 url("../img/bg_section-7-karkas.jpg") center bottom no-repeat;
 }
 section.guarantee .column p {
   padding-bottom: 3rem;
