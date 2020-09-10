@@ -128,11 +128,7 @@
             }
         }
     }
-    section[data-section="services"] {
-        .slick-track {
-            
-        }
-    }
+    
     footer {
         .phone {
             font-size: 36px;
@@ -149,6 +145,19 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: stretch;
+            }
+        }
+    }
+    section[data-section="houses"],
+    section[data-section="services"] {
+        .card {
+            display: flex;
+            align-items: stretch;
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
             }
         }
     }

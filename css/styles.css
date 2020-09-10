@@ -1336,6 +1336,9 @@ section.question .dopustim {
 #karkas .slick-slide.ui.card {
   background-color: #fbf5e8;
 }
+#karkas .slick-slide.ui.card:focus {
+  outline: none;
+}
 #karkas .text-card.ui.card {
   min-width: 100%;
   background-color: #fbf5e8;
@@ -1356,9 +1359,9 @@ section.question .dopustim {
 }
 section[data-section="houses"] {
   background-image: url('../img/bg_section-1-karkas.jpg');
-  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 section[data-section="houses"] .slick-slide {
   min-height: 278px;
@@ -1368,20 +1371,20 @@ section[data-section="houses"] h3 {
 }
 section[data-section="packages"] {
   background-image: url('../img/bg_section-4-karkas.jpg');
-  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 section[data-section="packages"] h3 {
   position: relative;
   margin-bottom: 60px;
 }
 section[data-section="packages"] h3::after {
+  left: 40%;
+  right: 40%;
   content: '';
   display: block;
-  left: 40%;
   position: absolute;
-  right: 40%;
   border-bottom: #fac011 4px solid;
   bottom: -30px;
 }
@@ -1535,6 +1538,10 @@ footer .logo p {
   overflow: hidden;
   visibility: hidden;
 }
+footer .address p:first-child {
+  margin-bottom: 0;
+  margin-top: 1.325rem;
+}
 footer .contacts,
 footer .address {
   font-size: 18px;
@@ -1553,8 +1560,8 @@ button,
   outline: 0;
   min-height: 1em;
   cursor: pointer;
-  display: inline-block;
   text-align: center;
+  display: inline-block;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
@@ -1942,6 +1949,18 @@ form fieldset {
     flex-wrap: wrap;
     align-items: stretch;
   }
+  section[data-section="houses"] .card,
+  section[data-section="services"] .card {
+    display: flex;
+    align-items: stretch;
+  }
+  section[data-section="houses"] .card .content,
+  section[data-section="services"] .card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
 }
 @media only screen and (min-width: 1280px) {
   header .back {
@@ -2041,6 +2060,9 @@ form fieldset {
   section.wood-house {
     background-size: cover;
   }
+  section[data-section="houses"] .slick-slide {
+    min-height: 253px;
+  }
 }
 .only,
 .only.ui.menu {
@@ -2113,5 +2135,10 @@ form fieldset {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  section[data-section="houses"] .slick-slide {
+    min-height: 230px;
   }
 }

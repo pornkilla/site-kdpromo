@@ -45,7 +45,7 @@ $(document).ready(function () {
                     prompt: 'Мы не уверены, что такие короткие номера вообще бывают'
                 }]
             },
-            fieldphone: {
+            fieldmail: {
                 identifier: 'fieldmail',
                 rules: [{
                     type: 'empty',

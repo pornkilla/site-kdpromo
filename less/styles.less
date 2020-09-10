@@ -958,6 +958,9 @@ section.question {
 
         &.ui.card {
             background-color: @color-hose;
+            &:focus {
+                outline: none;
+            }
         }
     }
 
@@ -989,9 +992,9 @@ section.question {
 // karkas sections
 section[data-section="houses"] {
     background-image: url('../img/bg_section-1-karkas.jpg');
-    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     .slick-slide {
         min-height: 278px;
     }
@@ -1002,19 +1005,19 @@ section[data-section="houses"] {
 
 section[data-section="packages"] {
     background-image: url('../img/bg_section-4-karkas.jpg');
-    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     
     h3 {
         position: relative;
         margin-bottom: 60px;
         &::after {
+            left: 40%;
+            right: 40%;
             content: '';
             display: block;
-            left: 40%;
             position: absolute;
-            right: 40%;
             border-bottom: @color-sun 4px solid;
             bottom: -30px;
         }
@@ -1197,6 +1200,12 @@ footer {
             .text-hidden();
         }
     }
+    .address p {
+        &:first-child {
+            margin-bottom: 0;
+            margin-top: 1.325rem;
+        }
+    }
 
     .contacts,
     .address {
@@ -1222,8 +1231,8 @@ button,
     outline: 0;
     min-height: 1em;
     cursor: pointer;
-    display: inline-block;
     text-align: center;
+    display: inline-block;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: bold;
