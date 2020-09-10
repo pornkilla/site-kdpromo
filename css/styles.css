@@ -963,6 +963,18 @@ section.guarantee p {
   text-align: center;
   line-height: 1.54;
 }
+section.sheet-quiz {
+  background: #1f1d17 url("../img/bg_section-2-karkas.jpg") center bottom no-repeat;
+  min-height: 100vh;
+  color: #fbf5e8;
+  background-size: cover;
+}
+section.sheet-quiz .wrapper {
+  padding-top: 6rem;
+}
+section.sheet-quiz .marquiz__container {
+  padding-top: 30vh;
+}
 section.plan {
   padding-left: 0;
   padding-right: 0;
@@ -2111,6 +2123,9 @@ form fieldset {
   }
   section.wood-house {
     background-size: cover;
+  }
+  section.sheet-quiz .marquiz__container {
+    padding-top: 50vh;
   }
   section[data-section="houses"] .slick-slide {
     min-height: 253px;
