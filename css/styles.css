@@ -1494,10 +1494,6 @@ section[data-section="faq"] .accordion .content p {
   padding-top: 1rem;
   border-top: #aaa699 1px solid;
 }
-.modal.offer .package {
-  height: calc(100vh - 205px);
-  overflow: hidden auto;
-}
 .modal.offer .price {
   padding-top: 1rem;
 }
