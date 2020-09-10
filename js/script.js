@@ -249,6 +249,25 @@ $(document).ready(function () {
         }]
     });
 
+    $('.carousel-third').slick({
+        dots: true,
+        infinite: false,
+        centerMode: true,
+        centerPadding: '10px',
+        slidesToShow: 3,
+        autoplay: true,
+        responsive: [{
+            breakpoint: mobileBreakpoint,
+            settings: {
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                centerPadding: '5px',
+                slidesToShow: 1,
+            }
+        }]
+    });
+
     var clickOnTechButton = function () {
         $('#karkas .technology').slideToggle('slow');
     }
