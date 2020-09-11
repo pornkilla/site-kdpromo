@@ -470,9 +470,50 @@ section.tendency {
     }
 }
 
-section.guarantee {
-    background: @color-green url("../img/bg_section-5.jpg") center bottom no-repeat;
+section.guarantee {    
     background-size: cover;
+
+    #brus & {
+        background: @color-green url("../img/bg_section-5.jpg") center bottom no-repeat;
+    }
+
+    #karkas & {
+        background: @color-green url("../img/bg_section-7-karkas.jpg") center bottom no-repeat;
+        padding: 0 0 4rem;
+        .wrapper {
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-bottom: 4rem;
+        }
+        h3 {
+            font-weight: 900;
+            text-shadow: @shadow;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 2.25rem;
+        }
+        .column {
+            padding-top: 5rem;
+            p {
+                max-width: 330px;
+                .centered();
+            }
+        }
+
+        .carousel {
+            margin-bottom: 0;
+            transform: translateY(-50px);
+            background-color: rgba(79, 153, 69, .6);
+            .slick-slide {
+                text-align: center;
+            }
+            .slick-dots {
+                bottom: -36px;
+            }
+        }
+    }
 
     .column {
         p {
@@ -484,11 +525,11 @@ section.guarantee {
         .centered();
         width: 80px;
         height: 80px;
-        position: relative;
         z-index: 2;
         font-size: 36px;
-        font-family: @font-podkova;
+        position: relative;
         font-weight: bold;
+        font-family: @font-podkova;
         line-height: 80px;
         margin-bottom: 20px;
 
@@ -521,6 +562,18 @@ section.guarantee {
     }
 }
 
+section.sheet-quiz {
+    background: @color-night url("../img/bg_section-2-karkas.jpg") center bottom no-repeat;
+    min-height: 100vh;
+    color: @color-hose;
+    background-size: cover;
+    .wrapper {
+        padding-top: 6rem;
+    }
+    .marquiz__container {
+        padding-top: 30vh;
+    }    
+}
 section.plan {
     padding-left: 0;
     padding-right: 0;
@@ -969,10 +1022,13 @@ section.question {
 
         &.ui.card {
             background-color: @color-hose;
+        }
+        &.ui.card, &.unfocus {
             &:focus {
                 outline: none;
             }
         }
+
     }
 
     .text-card {
@@ -1161,10 +1217,6 @@ section[data-section="faq"] {
                 border-top: @color-grey 1px solid;
             }
 
-        }
-        .package {
-            // height: ~'calc(100vh - 205px)';
-            // overflow: hidden auto;
         }
         .price {
             padding-top: 1rem;
