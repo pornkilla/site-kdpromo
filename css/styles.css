@@ -630,6 +630,14 @@ header .header.item.badge {
   min-height: 80px;
   background-color: #fbf5e8;
 }
+header .contacts a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+header .address {
+  display: block;
+  padding-top: 0.5rem;
+}
 header .menu.main {
   border: none;
   align-items: stretch;
@@ -682,12 +690,11 @@ header .menu.main .special {
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 1.75rem;
 }
 header .menu.main .special a {
   font-size: 1rem;
-  padding-top: 0.5rem;
   white-space: nowrap;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 header .menu.main.sticky {
@@ -727,8 +734,8 @@ header .menu.main.opened a {
   font-family: 'Podkova', serif;
 }
 .underhead .list {
-  list-style-type: none;
   font-size: 14px;
+  list-style-type: none;
 }
 .underhead .list .item {
   line-height: 1.4;
@@ -755,9 +762,9 @@ header .menu.main.opened a {
 }
 .underhead .videobox .features {
   text-align: left;
+  position: relative;
   padding: 30px 20px;
   color: #392119;
-  position: relative;
   font-family: 'Raleway', sans-serif;
 }
 .underhead .videobox .features::after {
@@ -838,17 +845,17 @@ section.benefits li {
   padding-right: 10px;
 }
 section.benefits li::before {
+  display: block;
   font-size: 36px;
   padding-bottom: 20px;
   counter-increment: bCounter;
   content: counter(bCounter);
-  display: block;
 }
 section.technology p {
-  text-align: justify;
   line-height: 1.54;
   margin-left: auto;
   margin-right: auto;
+  text-align: justify;
 }
 section.technology .grid {
   margin-bottom: 4rem;
@@ -1870,8 +1877,9 @@ form fieldset {
   header .menu.main ul li:not(.unbordered) {
     border-top-color: transparent;
   }
-  header .menu.main ul .concacts,
-  header .menu.main ul .special {
+  header .menu.main ul .contacts,
+  header .menu.main ul .special,
+  header .menu.main ul .address {
     display: none;
   }
   #karkas header .content {
@@ -1984,9 +1992,12 @@ form fieldset {
   header .menu.main .contacts {
     text-align: right;
   }
-  header .menu.main .concacts,
+  header .menu.main .contacts,
   header .menu.main .special {
     display: block;
+  }
+  header .menu.main .address {
+    display: none;
   }
   header .price {
     top: 290px;
@@ -2100,6 +2111,11 @@ form fieldset {
   }
   .modal .header .cancel {
     margin-right: -15px;
+  }
+}
+@media only screen and (min-width: 375px) {
+  header .special {
+    padding-top: 1rem;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1100px) {

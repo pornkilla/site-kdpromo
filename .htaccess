@@ -1,7 +1,7 @@
 AddType 'text/html; charset=utf-8' .html .htm .shtml
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.best.karelianhouse.ru
-RewriteRule (.*) http://best.karelianhouse.ru/$1 [R=301,L]
+RewriteRule (.*) https://best.karelianhouse.ru/$1 [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^(www.)?brus.karelianhouse.ru$
 RewriteCond %{REQUEST_URI} !^/brus/

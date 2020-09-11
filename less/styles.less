@@ -156,6 +156,18 @@ header {
         background-color: @color-hose;
     }
 
+    .contacts {
+        a {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .address {
+        display: block;
+        padding-top: 0.5rem;
+    }
+
     .menu.main {
         border: none;
         align-items: stretch;
@@ -212,11 +224,10 @@ header {
             text-align: center;
             padding-left: 1rem;
             padding-right: 1rem;
-            padding-top: 1.75rem;
             a {
                 font-size: 1rem;
-                padding-top: 0.5rem;
                 white-space: nowrap;
+                padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
             }
         }
@@ -262,8 +273,8 @@ header {
     }
 
     .list {
-        list-style-type: none;
         font-size: 14px;
+        list-style-type: none;
 
         .item {
             line-height: 1.4;
@@ -295,9 +306,9 @@ header {
 
         .features {
             text-align: left;
+            position: relative;
             padding: 30px 20px;
             color: @color-terra;
-            position: relative;
             font-family: @font-raleway;
 
             &::after {
@@ -398,11 +409,11 @@ section.benefits {
         padding-right: 10px;
 
         &::before {
+            display: block;
             font-size: 36px;
             padding-bottom: 20px;
             counter-increment: bCounter;
             content: counter(bCounter);
-            display: block;
         }
     }
 
@@ -410,10 +421,10 @@ section.benefits {
 
 section.technology {
     p {
-        text-align: justify;
         line-height: 1.54;
         margin-left: auto;
         margin-right: auto;
+        text-align: justify;
     }
 
     .grid {
