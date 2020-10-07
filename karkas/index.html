@@ -129,7 +129,8 @@
           <div class="ui card">
             <h3>Оставьте заявку</h3>
             <p class="lead">И получите каталог каркасных домов</p>
-            <form class="ui massive form catalog" id="form-one">
+            <form class="ui massive form catalog" id="form-one" 
+                  onclick="ym(67087375, 'reachGoal', 'form1'); return true;">
               <fieldset>
                 <div class="field">
                   <input type="text" name="fieldname" placeholder="Ваше имя">
@@ -148,8 +149,7 @@
                         данных</a></label>
                   </div>
                 </div>
-                <button type="submit" class="yellow"
-                  onclick="ym(67087375, 'reachGoal', 'form1'); return true;">Получить каталог</button>
+                <button type="submit" class="yellow">Получить каталог</button>
               </fieldset>
               <div class="ui error message"></div>
               <div class="ui success message hidden"></div>
@@ -392,7 +392,7 @@
     <section class="assembling" data-section="check-price">
       <div class="wrapper">
         <h3>УЗНАЙТЕ<small>стоимость сборки</small></h3>
-        <form class="ui massive form callback" id="form-three">
+        <form class="ui massive form callback" id="form-three" onsubmit="ym(67087375, 'reachGoal', 'form2'); return true;">
           <div class="two fields">
             <div class="field">
               <input type="text" name="fieldname" placeholder="Ваше имя">
@@ -401,8 +401,7 @@
               <input type="tel" name="fieldphone" placeholder="Телефон">
             </div>
           </div>
-          <button type="submit" class="yellow wide" onclick="ym(67087375, 'reachGoal', 'form2'); return true;">Позвоните
-            мне</button>
+          <button type="submit" class="yellow wide">Позвоните мне</button>
           <div class="centered">
             <div class="ui error message"></div>
             <div class="ui success message hidden"></div>
@@ -618,7 +617,8 @@
         <p>Наш специалист перезвонит Вам в самое ближайшее время</p>
       </div>
       <div class="fillmeharder karkas">
-        <form class="ui massive form contact" id="form-four">
+        <form class="ui massive form contact" id="form-four" 
+              onsubmit="ym(67087375, 'reachGoal', 'form3'); return true;">
           <fieldset>
             <div class="field">
               <input type="text" name="fieldname" placeholder="Ваше имя">
@@ -641,8 +641,7 @@
                     данных</a></label>
               </div>
             </div>
-            <button type="submit" class="yellow wide"
-              onclick="ym(67087375, 'reachGoal', 'form3'); return true;">отправить вопрос</button>
+            <button type="submit" class="yellow wide">отправить вопрос</button>
           </fieldset>
           <div class="ui error message"></div>
           <div class="ui success message hidden"></div>

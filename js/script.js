@@ -14,11 +14,18 @@ $(document).ready(function () {
         $('.ui.modal').modal('hide');
     });
 
-    $('.ui.form.catalog').form({
+    $('.ui.form').form({
         inline: true,
         on: 'blur',
         transition: 'fade down',
-        onSuccess: nowIsValid,
+        onSuccess: function(e) {
+            var allForms = $("body .ui.form");
+            allForms.removeClass("current");
+            $(this).addClass("current");
+            e.preventDefault();
+            nowIsValid();
+            return false;
+        },
         fields: {
             fieldname: {
                 identifier: 'fieldname',
@@ -67,90 +74,9 @@ $(document).ready(function () {
             }
         }
     });
-    $('.ui.form.contact').form({
-        inline: true,
-        on: 'blur',
-        transition: 'fade down',
-        onSuccess: nowIsValid,
-        fields: {
-            fieldname: {
-                identifier: 'fieldname',
-                rules: [{
-                        type: 'empty',
-                        prompt: 'Назовите себя, пожалуйста'
-                    },
-                    {
-                        type: 'minLength[2]',
-                        prompt: 'Введите хотя бы две буквы'
-                    }
-                ]
-            },
-            fieldphone: {
-                identifier: 'fieldphone',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Пожалуйста, укажите телефон для связи'
-                }, {
-                    type: 'number',
-                    prompt: 'Допускаются только цифры'
-                }, {
-                    type: 'minLength[5]',
-                    prompt: 'Мы не уверены, что такие короткие номера вообще бывают'
-                }]
-            },
-            terms: {
-                identifier: 'terms',
-                rules: [{
-                    type: 'checked',
-                    prompt: 'Поле обязательно для подтверждения'
-                }]
-            }
-        }
-    });
-    $('.ui.form.callback').form({
-        inline: true,
-        on: 'blur',
-        transition: 'fade down',
-        onSuccess: nowIsValid,
-        fields: {
-            fieldname: {
-                identifier: 'fieldname',
-                rules: [{
-                        type: 'empty',
-                        prompt: 'Назовите себя, пожалуйста'
-                    },
-                    {
-                        type: 'minLength[2]',
-                        prompt: 'Введите хотя бы две буквы'
-                    }
-                ]
-            },
-            fieldphone: {
-                identifier: 'fieldphone',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Пожалуйста, укажите телефон для связи'
-                }, {
-                    type: 'number',
-                    prompt: 'Допускаются только цифры'
-                }, {
-                    type: 'minLength[5]',
-                    prompt: 'Мы не уверены, что такие короткие номера вообще бывают'
-                }]
-            }
-        }
-    });
-
-    function reportSuccess(data) {
-        var targetSuccess = $(".form.current .success");
-        targetSuccess.removeClass("hidden");
-        targetSuccess.html('<p class="centered">' + data.text + '</p>').slideDown();
-        $(".form.current input[type=text], .form.current input[type=tel], .form.current textarea").val('');
-        $(".form.current").removeClass("current");
-    }
 
     function nowIsValid() {
-        var myform = $('.ui.form.current');
+        var myform = $('.current.success');
         $.ajax({
             type: 'POST',
             url: '../sendmail.php',
@@ -168,13 +94,20 @@ $(document).ready(function () {
             }
         });
     }
-    setTimeout(nowIsValid(), 200);
 
-    // stop the form from submitting normally 
-    $('.ui.form').submit(function () {
-        $(this).addClass("current");
-        return false;
-    });
+    function reportSuccess(data) {
+        var targetSuccess = $(".form.current .success");
+        targetSuccess.removeClass("hidden");
+        targetSuccess.html('<p class="centered">' + data.text + '</p>').slideDown();
+        $(".form.current input, .form.current textarea").val('');
+        setTimeout(function() {
+             targetSuccess.slideUp("slow", function() {
+                $(".form.current").removeClass("success");
+                $(".form.current").removeClass("current");
+                return true;
+            });
+        }, 3200);
+    }
 
     var videoItem = $('#spaceforvideo video');
     var videoMenuItem = $('#spaceforvideo .menu .item');
