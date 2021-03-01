@@ -146,13 +146,29 @@ $(document).ready(function () {
         context: 'parent'
     });
     $('.ui.accordion').accordion();
-    $('.ui.checkbox').checkbox();
-
+    $('.ui.checkbox').checkbox();        
     $('.carousel-first').slick({
         infinite: true,
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 8,
+        autoplay: true,
+        responsive: [{
+            breakpoint: mobileBreakpoint,
+            settings: {
+                dots: true,
+                arrows: false,
+                centerPadding: '5px',
+                slidesToShow: 1,
+            }
+        }]
+    });
+
+    $('.carousel-brus').slick({
+        infinite: true,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 6,
         autoplay: true,
         responsive: [{
             breakpoint: mobileBreakpoint,

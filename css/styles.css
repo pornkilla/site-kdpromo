@@ -4,35 +4,35 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v17/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
 }
 .color-sun {
   color: #fac011;
@@ -521,13 +521,7 @@ a:hover {
 }
 header {
   position: relative;
-}
-header .back {
-  position: relative;
   z-index: 1;
-  background: #7bb111 url("../img/bg_header.jpg") 20% 0 no-repeat;
-  background-size: auto 100%;
-  height: 420px;
 }
 header .logo {
   background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
@@ -713,79 +707,63 @@ header .menu.main.opened {
 header .menu.main.opened a {
   color: #4e3329;
 }
-.underhead {
-  z-index: 3;
-  margin-top: -70px;
-  position: relative;
-}
-.underhead .woodbox {
-  width: 320px;
+header .list {
   margin: 0 auto;
-  color: #fbf5e8;
-  padding-top: 150px;
-  padding-left: 140px;
-  padding-right: 28px;
-  padding-bottom: 24px;
-  background: transparent url("../img/pic_woodbox-mobile.png") 0 0 no-repeat;
+  max-width: 400px;
 }
-.underhead h2 {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: 'Podkova', serif;
-}
-.underhead .list {
-  font-size: 14px;
-  list-style-type: none;
-}
-.underhead .list .item {
-  line-height: 1.4;
-  margin-bottom: 4px;
-}
-.underhead h2,
-.underhead .list {
-  text-transform: uppercase;
-}
-.underhead .marked {
-  color: #fff43c;
-}
-.underhead .videobox {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 30px auto;
-  flex-direction: column;
-}
-.underhead .videobox video {
-  width: 100% !important;
-  height: auto !important;
-  box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.4);
-}
-.underhead .videobox .features {
+header .list .item {
   text-align: left;
+  margin-bottom: 1rem;
+}
+header .list .icon {
+  padding-right: 1rem;
+}
+header .list span {
+  padding-top: 5px;
+  display: table-cell;
+}
+header .content {
+  z-index: 3;
   position: relative;
-  padding: 30px 20px;
-  color: #392119;
-  font-family: 'Raleway', sans-serif;
+  padding-top: 10rem;
 }
-.underhead .videobox .features::after {
-  position: absolute;
-  right: 5%;
-  content: '';
-  display: block;
-  bottom: 25px;
-  width: 40px;
-  height: 170px;
-  background: transparent url("../img/pic_tools-2.png") center center no-repeat;
+header .teaser {
+  text-align: center;
+  color: #fbf5e8;
 }
-.underhead .videobox .features h3 {
-  font-family: inherit;
-  font-size: 24px;
+header .teaser h2 .upper {
+  font-weight: 900;
+}
+header h3 {
+  line-height: 1;
   font-weight: bold;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
-.underhead .videobox .features p {
-  font-weight: normal;
-  font-size: 18px;
+header form .field {
+  margin-bottom: 0.75rem;
+}
+header form input {
+  padding: 0.5rem;
+}
+header form a {
+  color: #d1a10e;
+}
+header form .checkbox label {
+  text-align: left;
+}
+header .back {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  bottom: 0;
+  height: auto;
+  margin: auto;
+  display: block;
+  position: absolute;
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 main h3 {
   font-size: 2.25rem;
@@ -818,9 +796,6 @@ main .green {
 section.why-choose {
   background: url("../img/bg_section-1-small.jpg") center bottom no-repeat;
   background-size: cover;
-}
-section.why-choose p {
-  text-align: justify;
 }
 section.benefits {
   padding-left: 20px;
@@ -1094,7 +1069,7 @@ section.specs h2 {
   font-size: 30px;
   text-transform: uppercase;
 }
-section.specs h3 {
+section.specs h3:not(.heading) {
   font-weight: 700;
   font-size: 18px;
   margin: 2rem 0;
@@ -1102,9 +1077,10 @@ section.specs h3 {
 section.specs h4 {
   min-height: 50px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 20px;
   padding: 0 8px;
+  text-transform: uppercase;
 }
 section.specs .column .white {
   padding: 1rem;
@@ -1147,17 +1123,23 @@ section.specs .price {
   background: transparent url("../img/pic_offer-yellow.png") center center no-repeat;
   background-size: 250px auto;
   margin-top: 1rem;
-  margin-bottom: 2rem;
-  line-height: 77px;
+  margin-bottom: 1rem;
   max-width: 277px;
+  min-width: 252px;
   margin-left: auto;
   margin-right: auto;
-}
-section.specs .price strong {
-  font-size: 24px;
+  border-color: transparent;
 }
 section.specs .price.gray {
   background-image: url("../img/pic_offer-gray.png");
+  border-top: transparent 4px solid;
+  border-bottom: transparent 4px solid;
+}
+section.specs .description {
+  font-family: 'Podkova', serif;
+}
+section.specs .description strong {
+  font-size: 24px;
 }
 section.specs .addition {
   margin-top: 3rem;
@@ -1293,117 +1275,13 @@ section.question .dopustim {
   font-weight: 900;
   font-size: 1.25rem;
 }
-#karkas .back {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  bottom: 0;
-  height: auto;
-  margin: auto;
-  display: block;
-  position: absolute;
-  background-image: none;
-  background-color: rgba(0, 0, 0, 0.6);
+#brus header {
+  background: #7bb111 url("../img/bg_header.jpg") 20% 0 no-repeat;
+  background-size: cover;
 }
 #karkas header {
   background: #ccc4b7 url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
   background-size: cover;
-  z-index: 1;
-}
-#karkas header .list {
-  margin: 0 auto;
-  max-width: 400px;
-}
-#karkas header .list .item {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-#karkas header .list .icon {
-  padding-right: 1rem;
-}
-#karkas header .list span {
-  padding-top: 5px;
-  display: table-cell;
-}
-#karkas header .grid {
-  margin-left: auto;
-  margin-right: auto;
-}
-#karkas header .content {
-  z-index: 3;
-  position: relative;
-  padding-top: 10rem;
-}
-#karkas header .card {
-  padding: 1rem;
-  margin: 2rem auto;
-  text-align: center;
-  background-color: #fbf5e8;
-}
-#karkas header .teaser {
-  text-align: center;
-  color: #fbf5e8;
-}
-#karkas header .teaser h2 {
-  font-size: 2rem;
-  font-weight: 100;
-  line-height: 1.125;
-  margin-bottom: 2rem;
-}
-#karkas header .teaser h2 .upper {
-  font-weight: 900;
-}
-#karkas header h3 {
-  line-height: 1;
-  font-weight: bold;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-#karkas header form .field {
-  margin-bottom: 0.75rem;
-}
-#karkas header form input {
-  padding: 0.5rem;
-}
-#karkas header form a {
-  color: #d1a10e;
-}
-#karkas header form .checkbox label {
-  text-align: left;
-}
-#karkas .carousel {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-#karkas .carousel .header {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-#karkas .carousel .description {
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-bottom: 2rem;
-}
-#karkas .carousel .icon.green {
-  background-color: transparent;
-}
-#karkas .slick-slide {
-  margin: 0 2rem;
-}
-#karkas .slick-slide.ui.card {
-  background-color: #fbf5e8;
-}
-#karkas .slick-slide.ui.card:focus,
-#karkas .slick-slide.unfocus:focus {
-  outline: none;
-}
-#karkas .text-card.ui.card {
-  min-width: 100%;
-  background-color: #fbf5e8;
-}
-#karkas .text-card.ui.card .content {
-  padding: 2rem;
 }
 #karkas section.technology {
   display: none;
@@ -1416,11 +1294,65 @@ section.question .dopustim {
   margin-right: 0;
   margin-left: auto;
 }
-section[data-section="houses"] {
-  background-image: url('../img/bg_section-1-karkas.jpg');
+#karkas section[data-section="packages"] {
+  background-image: url('../img/bg_section-4-karkas.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.allpages .grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+.allpages .card {
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #fbf5e8;
+}
+.allpages .ui.list .list > .item > i.icon:only-child,
+.allpages .ui.list > .item > i.icon:only-child {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.allpages .ui.list .list > .item,
+.allpages .ui.list > .item,
+.allpages ol.ui.list li,
+.allpages ul.ui.list li {
+  line-height: 1.4285714em;
+}
+.allpages .carousel {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.allpages .carousel .header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.allpages .carousel .description {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 2rem;
+}
+.allpages .carousel .icon.green {
+  background-color: transparent;
+}
+.allpages .slick-slide {
+  margin: 0 2rem;
+}
+.allpages .slick-slide.ui.card {
+  background-color: #fbf5e8;
+}
+.allpages .slick-slide.ui.card:focus,
+.allpages .slick-slide.unfocus:focus {
+  outline: none;
+}
+.allpages .text-card.ui.card {
+  min-width: 100%;
+  background-color: #fbf5e8;
+}
+.allpages .text-card.ui.card .content {
+  padding: 2rem;
 }
 section[data-section="houses"] .slick-slide {
   min-height: 278px;
@@ -1428,8 +1360,8 @@ section[data-section="houses"] .slick-slide {
 section[data-section="houses"] h3 {
   font-size: 1.25rem;
 }
-section[data-section="packages"] {
-  background-image: url('../img/bg_section-4-karkas.jpg');
+section[data-section="houses"]:not(.why-choose) {
+  background-image: url('../img/bg_section-1-karkas.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1628,7 +1560,6 @@ button,
   border-radius: none;
   font-family: 'Podkova', serif;
   -webkit-tap-highlight-color: transparent;
-  webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -1677,10 +1608,16 @@ form fieldset {
   margin: 0 auto 2rem auto;
   min-width: 0;
 }
+#fast-contacts {
+  bottom: 15px;
+  right: 15px;
+  left: auto;
+  width: auto;
+}
+.opened #fast-contacts {
+  display: none;
+}
 @media only screen and (min-width: 480px) {
-  header .back {
-    height: 560px;
-  }
   header .logo.brus {
     top: 64px;
   }
@@ -1750,77 +1687,16 @@ form fieldset {
   }
 }
 @media only screen and (min-width: 768px) {
-  header .back {
-    height: 640px;
-    background-size: cover;
-    background-position-x: center;
-  }
-  header .logo.brus {
-    width: 190px;
-    height: 70px;
-    top: 80px;
-  }
-  header .price {
-    left: 80px;
-    right: auto;
-    padding: 64px;
-    width: 50%;
-  }
-  header .price span {
-    line-height: 1.47;
-  }
-  #karkas header .teaser {
+  header .teaser {
     text-align: left;
   }
-  #karkas header .teaser h2 {
+  header .teaser h2 {
     padding-top: 1.25rem;
     font-size: 2.5rem;
   }
-  #karkas header .grid {
+  header .grid {
     width: 80%;
     max-width: 1100px;
-  }
-  .underhead h2 {
-    font-size: 48px;
-  }
-  .underhead .woodbox {
-    width: 600px;
-    margin-right: 80px;
-    margin-left: auto;
-    padding-bottom: 58px;
-    padding-top: 170px;
-    padding-left: 200px;
-  }
-  .underhead .list {
-    font-size: 18px;
-  }
-  .underhead .videobox {
-    text-align: left;
-    margin-top: -40px;
-    margin-left: 80px;
-    margin-right: 80px;
-    padding-left: 0;
-    position: relative;
-  }
-  .underhead .videobox::before {
-    position: absolute;
-    left: 0;
-    content: '';
-    display: block;
-    top: -85px;
-    width: 110px;
-    height: 50px;
-    background: transparent url("../img/pic_tools-1.png") 0 0 no-repeat;
-    background-size: 100% auto;
-  }
-  .underhead .videobox .video {
-    max-width: 500px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .underhead .videobox .features {
-    padding-left: 40px;
-    padding-top: 75px;
   }
   main h3 {
     font-size: 48px;
@@ -1892,17 +1768,6 @@ form fieldset {
   }
 }
 @media only screen and (min-width: 960px) {
-  header .back {
-    height: 720px;
-  }
-  header .price {
-    top: 240px;
-    width: 560px;
-  }
-  header .price .middle .amount {
-    font-size: 100px;
-    line-height: 1.1;
-  }
   header .burger {
     display: none;
   }
@@ -1934,30 +1799,21 @@ form fieldset {
   header .menu.main ul .address {
     display: none;
   }
-  #karkas header .content {
+  header .content {
     padding-top: 14rem;
     padding-bottom: 8rem;
   }
-  #karkas header .teaser h2 {
+  header .teaser h2 {
     font-size: 3.5rem;
   }
-  .underhead {
-    margin-top: -210px;
+  .allpages .carousel .slick-slide {
+    flex: 1 1 47%;
+    margin: 8px;
   }
-  .underhead .woodbox {
-    width: 680px;
-  }
-  .underhead .videobox {
-    flex-direction: row;
+  .allpages .carousel .slick-track {
+    display: flex;
     flex-wrap: wrap;
-  }
-  .underhead .videobox::before {
-    width: 150px;
-    height: 70px;
-  }
-  .underhead .videobox .video {
-    max-width: 560px;
-    flex-shrink: 0;
+    align-items: stretch;
   }
   section.benefits {
     padding-bottom: 380px;
@@ -1999,15 +1855,6 @@ form fieldset {
   }
   footer .phone {
     font-size: 36px;
-  }
-  #karkas .carousel .slick-slide {
-    flex: 1 1 47%;
-    margin: 8px;
-  }
-  #karkas .carousel .slick-track {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
   }
   #karkas section.guarantee .wrapper {
     padding-bottom: 6rem;
@@ -2056,6 +1903,7 @@ form fieldset {
   }
   header .menu.main .contacts {
     text-align: right;
+    padding-top: 1rem;
   }
   header .menu.main .contacts,
   header .menu.main .special {

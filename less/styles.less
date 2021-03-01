@@ -40,16 +40,8 @@ a:hover {
 
 //header 
 header {
-    position: relative;    
-
-    .back {
-        position: relative;
-        z-index: 1;
-        background: @color-green url("../img/bg_header.jpg") 20% 0 no-repeat;
-        background-size: auto 100%;
-        height: 420px;
-    }    
-
+    position: relative;
+    z-index: 1;
     .logo {
         background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
         background-size: 100% auto;
@@ -248,92 +240,87 @@ header {
             }
         }
     }
-}
-
-.underhead {
-    z-index: 3;
-    margin-top: -70px;
-    position: relative;
-
-    .woodbox {
-        width: 320px;
-        margin: 0 auto;
-        color: @color-hose;
-        padding-top: 150px;
-        padding-left: 140px;
-        padding-right: 28px;
-        padding-bottom: 24px;
-        background: transparent url("../img/pic_woodbox-mobile.png") 0 0 no-repeat;
-    }
-
-    h2 {
-        font-size: 18px;
-        font-weight: 400;
-        font-family: @font-podkova;
-    }
 
     .list {
-        font-size: 14px;
-        list-style-type: none;
+        margin: 0 auto;
+        max-width: 400px;
 
         .item {
-            line-height: 1.4;
-            margin-bottom: 4px;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .icon {
+            padding-right: 1rem;
+        }
+
+        span {
+            padding-top: 5px;
+            display: table-cell;
         }
     }
 
-    h2,
-    .list {
+    .content {
+        z-index: 3;
+        position: relative;
+        padding-top: 10rem;
+    }
+
+    .teaser {
+        text-align: center;
+        color: @color-hose;
+
+        h2 {
+            // font-size: 2rem;
+            // font-weight: 100;
+            // line-height: 1.125;
+            // margin-bottom: 2rem;
+
+            .upper {
+                font-weight: 900;
+            }
+        }
+    }
+
+    h3 {
+        line-height: 1;
+        font-weight: bold;
+        font-size: 2.5rem;
         text-transform: uppercase;
     }
 
-    .marked {
-        color: @color-lemon;
+    form {
+        .field {
+            margin-bottom: 0.75rem;
+        }
+
+        input {
+            padding: 0.5rem;
+        }
+
+        a {
+            color: @color-blin;
+        }
+
+        .checkbox {
+            label {
+                text-align: left;
+            }
+        }
     }
 
-    .videobox {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 30px auto;
-        flex-direction: column;
-
-        video {
-            width: 100% !important;
-            height: auto !important;
-            box-shadow: 0px 4px 32px 6px rgba(32, 32, 32, 0.40);
-        }
-
-        .features {
-            text-align: left;
-            position: relative;
-            padding: 30px 20px;
-            color: @color-terra;
-            font-family: @font-raleway;
-
-            &::after {
-                position: absolute;
-                right: 5%;
-                content: '';
-                display: block;
-                bottom: 25px;
-                width: 40px;
-                height: 170px;
-                background: transparent url("../img/pic_tools-2.png") center center no-repeat;
-            }
-
-            h3 {
-                font-family: inherit;
-                font-size: 24px;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-
-            p {
-                font-weight: normal;
-                font-size: 18px;
-            }
-        }
+    .back {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        bottom: 0;
+        height: auto;
+        margin: auto;
+        display: block;
+        position: absolute;
+        background-image: none;
+        background-color: rgba(0, 0, 0, 60%);
     }
 }
 
@@ -379,10 +366,6 @@ main {
 section.why-choose {
     background: url("../img/bg_section-1-small.jpg") center bottom no-repeat;
     background-size: cover;
-
-    p {
-        text-align: justify;
-    }
 }
 
 section.benefits {
@@ -574,6 +557,7 @@ section.sheet-quiz {
         padding-top: 30vh;
     }    
 }
+
 section.plan {
     padding-left: 0;
     padding-right: 0;
@@ -690,7 +674,7 @@ section.specs {
         font-size: 30px;
         text-transform: uppercase;
     }
-    h3 {
+    h3:not(.heading) {
         font-weight: 700;
         font-size: 18px;
         margin: 2rem 0;
@@ -698,9 +682,10 @@ section.specs {
     h4 {
         min-height: 50px;
         text-align: center;
-        font-weight: 700;
+        font-weight: 300;
         font-size: 20px;
         padding: 0 8px;
+        text-transform: uppercase;
     }
     .column {        
         .white {
@@ -745,16 +730,22 @@ section.specs {
         background: transparent url("../img/pic_offer-yellow.png") center center no-repeat;
         background-size: 250px auto;
         margin-top: 1rem;
-        margin-bottom: 2rem;
-        line-height: 77px;
+        margin-bottom: 1rem;        
         max-width: 277px;
+        min-width: 252px;
         margin-left: auto;
         margin-right: auto;
-        strong {
-            font-size: 24px;
-        }
+        border-color: transparent;
         &.gray {
             background-image: url("../img/pic_offer-gray.png");
+            border-top: transparent 4px solid;
+            border-bottom: transparent 4px solid;
+        }
+    }
+    .description {
+        font-family: @font-podkova;
+        strong {
+            font-size: 24px;
         }
     }
     .addition {
@@ -907,96 +898,69 @@ section.question {
         display: none;
     }    
 }
-
 .lead {
     font-weight: 900;
     font-size: 1.25rem;
 }
 
-#karkas {
-   .back {
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        bottom: 0;
-        height: auto;
-        margin: auto;
-        display: block;
-        position: absolute;
-        background-image: none;
-        background-color: rgba(0, 0, 0, 60%); 
+#brus {
+    header {
+        background: @color-green url("../img/bg_header.jpg") 20% 0 no-repeat;
+        background-size: cover;
     }
+}
+
+#karkas {
     header {
         background: @color-mocca url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
         background-size: cover;
-        z-index: 1;
-        .list {
-            margin: 0 auto;
-            max-width: 400px;
-            .item {
-                text-align: left;
-                margin-bottom: 1rem;
-            }
-            .icon {
-                padding-right: 1rem;
-            }
-            span {
-                padding-top: 5px;
-                display: table-cell;
-            }
+    }
+    section.technology {
+        display: none;
+        h4 {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
         }
-        .grid {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .content {
-            z-index: 3;
-            position: relative;
-            padding-top: 10rem;
-        }
-        .card {
-            padding: 1rem;
-            margin: 2rem auto;
-            text-align: center;
-            background-color: @color-hose;
-        }
-        .teaser {
-            text-align: center;
-            color: @color-hose;
-            h2 {
-                font-size: 2rem;
-                font-weight: 100;
-                line-height: 1.125;
-                margin-bottom: 2rem;
-                .upper {
-                    font-weight: 900;
-                }
-            }
-        }
-        h3 {
-            line-height: 1;
-            font-weight: bold;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-        }
-        form {
-            .field {
-                margin-bottom: 0.75rem;
-            }
-            input {
-                padding: 0.5rem;
-            }
-            a {
-                color: @color-blin; 
-            }
-            .checkbox {
-                label {
-                    text-align: left;
-                }
+        .reversed {
+            .card {
+                margin-right: 0;
+                margin-left: auto;
             }
         }
     }
+    section[data-section="packages"] {
+        background-image: url('../img/bg_section-4-karkas.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.allpages {
+    .grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        padding: 1rem;
+        margin: 2rem auto;
+        text-align: center;
+        background-color: @color-hose;
+    }
+
+    .ui.list .list>.item>i.icon:only-child,
+    .ui.list>.item>i.icon:only-child {
+        vertical-align: middle;
+        margin-right: 6px;
+    }
+
+    .ui.list .list>.item,
+    .ui.list>.item,
+    ol.ui.list li,
+    ul.ui.list li {
+        line-height: 1.4285714em;
+    }
+
     .carousel {
         margin-top: 2rem;
         margin-bottom: 4rem;
@@ -1023,7 +987,9 @@ section.question {
         &.ui.card {
             background-color: @color-hose;
         }
-        &.ui.card, &.unfocus {
+
+        &.ui.card,
+        &.unfocus {
             &:focus {
                 outline: none;
             }
@@ -1041,27 +1007,11 @@ section.question {
             }
         }
     }
-    section.technology {
-        display: none;
-        h4 {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-        .reversed {
-            .card {
-                margin-right: 0;
-                margin-left: auto;
-            }
-        }
-    }
 }
+
 
 // karkas sections
 section[data-section="houses"] {
-    background-image: url('../img/bg_section-1-karkas.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     .slick-slide {
         min-height: 278px;
     }
@@ -1069,12 +1019,14 @@ section[data-section="houses"] {
         font-size: 1.25rem;
     }
 }
-
-section[data-section="packages"] {
-    background-image: url('../img/bg_section-4-karkas.jpg');
+section[data-section="houses"]:not(.why-choose) {
+    background-image: url('../img/bg_section-1-karkas.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+section[data-section="packages"] {
     
     h3 {
         position: relative;
@@ -1269,7 +1221,6 @@ footer {
             margin-top: 1.325rem;
         }
     }
-
     .contacts,
     .address {
         font-size: 18px;
@@ -1303,7 +1254,6 @@ button,
     border-radius: none;
     font-family: @font-podkova;
     -webkit-tap-highlight-color: transparent;
-    webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -1361,6 +1311,16 @@ form fieldset {
     padding: 0.01em 0 0 0;
     margin: 0 auto 2rem auto;
     min-width: 0;
+}
+
+#fast-contacts {
+    bottom: 15px;
+    right: 15px;
+    left: auto;
+    width: auto;
+    .opened & {
+        display: none;
+    }
 }
 
 @import 'media';

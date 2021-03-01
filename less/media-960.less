@@ -1,19 +1,6 @@
 // out: false
 @media only screen and (min-width: 960px) {
     header {        
-        .back {
-            height: 720px;
-        }
-        .price {
-            top: 240px; 
-            width: 560px;       
-            .middle {
-                .amount {
-                    font-size: 100px;
-                    line-height: 1.1;
-                }
-            }
-        }
         .burger {
             display: none;
         }
@@ -47,33 +34,46 @@
                 }
             }
         }
-        #karkas & {
-            .content {
-                padding-top: 14rem;
-                padding-bottom: 8rem;
-            }
-            .teaser {
-                h2 {
-                    font-size: 3.5rem;
-                }
+        .content {
+            padding-top: 14rem;
+            padding-bottom: 8rem;
+        }
+
+        .teaser {
+            h2 {
+                font-size: 3.5rem;
             }
         }
     }
-    .underhead {
-        margin-top: -210px;
-        .woodbox {
-            width: 680px;
-        }
-        .videobox {
-            flex-direction: row;
-            flex-wrap: wrap;
-            &::before {
-                width: 150px;
-                height: 70px;
+    // .underhead {
+    //     margin-top: -210px;
+    //     .woodbox {
+    //         width: 680px;
+    //     }
+    //     .videobox {
+    //         flex-direction: row;
+    //         flex-wrap: wrap;
+    //         &::before {
+    //             width: 150px;
+    //             height: 70px;
+    //         }
+    //         .video {
+    //             max-width: 560px;
+    //             flex-shrink: 0;
+    //         }
+    //     }
+    // }
+    .allpages {
+        .carousel {
+            .slick-slide {
+                flex: 1 1 47%;
+                margin: 8px;
             }
-            .video {
-                max-width: 560px;
-                flex-shrink: 0;
+
+            .slick-track {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
             }
         }
     }
@@ -134,19 +134,7 @@
             font-size: 36px;
         }
     }
-    #karkas {
-        .carousel {
-            .slick-slide {
-                flex: 1 1 47%;
-                margin: 8px;
-            }
-
-            .slick-track {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: stretch;
-            }
-        }
+    #karkas {        
         section.guarantee {
             .wrapper {
                 padding-bottom: 6rem;
