@@ -218,7 +218,7 @@ $(document).ready(function () {
     });
 
     var clickOnTechButton = function () {
-        $('#karkas .technology').slideToggle('slow');
+        $('.allpages .technology').slideToggle('slow');
     }
 
     $(".tech-revealer .chevron.up").hide();

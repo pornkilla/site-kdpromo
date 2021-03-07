@@ -752,19 +752,6 @@ header form a {
 header form .checkbox label {
   text-align: left;
 }
-header .back {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  bottom: 0;
-  height: auto;
-  margin: auto;
-  display: block;
-  position: absolute;
-  background-image: none;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 main h3 {
   font-size: 2.25rem;
   line-height: 1.1;
@@ -792,6 +779,73 @@ main .dark .ui.list li::before {
 main .green {
   color: #fbf5e8;
   background-color: #7bb111;
+}
+.allpages .grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+.allpages .card {
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: #fbf5e8;
+}
+.allpages .back {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  bottom: 0;
+  height: auto;
+  margin: auto;
+  display: block;
+  position: absolute;
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.allpages .ui.list .list > .item > i.icon:only-child,
+.allpages .ui.list > .item > i.icon:only-child {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.allpages .ui.list .list > .item,
+.allpages .ui.list > .item,
+.allpages ol.ui.list li,
+.allpages ul.ui.list li {
+  line-height: 1.4285714em;
+}
+.allpages .carousel {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+.allpages .carousel .header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.allpages .carousel .description {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 2rem;
+}
+.allpages .carousel .icon.green {
+  background-color: transparent;
+}
+.allpages .slick-slide {
+  margin: 0 2rem;
+}
+.allpages .slick-slide.ui.card {
+  background-color: #fbf5e8;
+}
+.allpages .slick-slide.ui.card:focus,
+.allpages .slick-slide.unfocus:focus {
+  outline: none;
+}
+.allpages .text-card.ui.card {
+  min-width: 100%;
+  background-color: #fbf5e8;
+}
+.allpages .text-card.ui.card .content {
+  padding: 2rem;
 }
 section.why-choose {
   background: url("../img/bg_section-1-small.jpg") center bottom no-repeat;
@@ -863,46 +917,41 @@ section.tendency .pic img {
   max-width: 100px;
 }
 section.guarantee {
-  background-size: cover;
-}
-#brus section.guarantee {
-  background: #7bb111 url("../img/bg_section-5.jpg") center bottom no-repeat;
-}
-#karkas section.guarantee {
   background: #7bb111 url("../img/bg_section-7-karkas.jpg") center bottom no-repeat;
+  background-size: cover;
   padding: 0 0 4rem;
 }
-#karkas section.guarantee .wrapper {
+section.guarantee .wrapper {
   padding-left: 15%;
   padding-right: 15%;
   padding-bottom: 4rem;
 }
-#karkas section.guarantee h3 {
+section.guarantee h3 {
   font-weight: 900;
   text-shadow: 0px 2px 2px rgba(89, 89, 89, 0.5);
 }
-#karkas section.guarantee h4 {
+section.guarantee h4 {
   font-weight: 400;
   font-size: 2.25rem;
 }
-#karkas section.guarantee .column {
+section.guarantee .column {
   padding-top: 5rem;
 }
-#karkas section.guarantee .column p {
+section.guarantee .column p {
   max-width: 330px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-#karkas section.guarantee .carousel {
+section.guarantee .carousel {
   margin-bottom: 0;
   transform: translateY(-50px);
   background-color: rgba(79, 153, 69, 0.6);
 }
-#karkas section.guarantee .carousel .slick-slide {
+section.guarantee .carousel .slick-slide {
   text-align: center;
 }
-#karkas section.guarantee .carousel .slick-dots {
+section.guarantee .carousel .slick-dots {
   bottom: -36px;
 }
 section.guarantee .column p {
@@ -1009,10 +1058,10 @@ section.plan .step-list {
   justify-content: center;
 }
 section.plan .step-list .column {
-  margin: 20px auto;
-  padding: 56px 32px;
   height: 310px;
   max-width: 220px;
+  margin: 20px auto;
+  padding: 56px 32px;
   background-position: center 150px;
   background-size: 145px auto;
   background-repeat: no-repeat;
@@ -1300,62 +1349,14 @@ section.question .dopustim {
   background-repeat: no-repeat;
   background-position: center center;
 }
-.allpages .grid {
-  margin-left: auto;
-  margin-right: auto;
-}
-.allpages .card {
-  padding: 1rem;
-  margin: 2rem auto;
-  text-align: center;
-  background-color: #fbf5e8;
-}
-.allpages .ui.list .list > .item > i.icon:only-child,
-.allpages .ui.list > .item > i.icon:only-child {
-  vertical-align: middle;
-  margin-right: 6px;
-}
-.allpages .ui.list .list > .item,
-.allpages .ui.list > .item,
-.allpages ol.ui.list li,
-.allpages ul.ui.list li {
-  line-height: 1.4285714em;
-}
-.allpages .carousel {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-}
-.allpages .carousel .header {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-}
-.allpages .carousel .description {
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-bottom: 2rem;
-}
-.allpages .carousel .icon.green {
-  background-color: transparent;
-}
-.allpages .slick-slide {
-  margin: 0 2rem;
-}
-.allpages .slick-slide.ui.card {
-  background-color: #fbf5e8;
-}
-.allpages .slick-slide.ui.card:focus,
-.allpages .slick-slide.unfocus:focus {
-  outline: none;
-}
-.allpages .text-card.ui.card {
-  min-width: 100%;
-  background-color: #fbf5e8;
-}
-.allpages .text-card.ui.card .content {
-  padding: 2rem;
-}
 section[data-section="houses"] .slick-slide {
   min-height: 278px;
+}
+section[data-section="houses"] .carousel .description p {
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Podkova', serif;
 }
 section[data-section="houses"] h3 {
   font-size: 1.25rem;
@@ -1425,7 +1426,6 @@ section[data-section="about"] .wrapper {
   color: #fbf5e8;
 }
 section[data-section="technologies"] {
-  background-image: url('../img/bg_section-8-karkas.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1442,25 +1442,36 @@ section[data-section="technologies"] .wrapper {
 section[data-section="technologies"] .reveal-button {
   padding-right: 20px;
 }
-section[data-section="faq"] {
+#karkas section[data-section="technologies"] {
+  background-image: url('../img/bg_section-8-karkas.jpg');
+}
+#brus section[data-section="technologies"] {
+  background-image: url('../img/bg_section-8-brublur.jpg');
+}
+section[data-section="faq"] .accordion .title {
+  background-color: #fbf5e8;
+}
+section[data-section="faq"] .accordion .title,
+section[data-section="faq"] .accordion .content p {
+  padding: 1rem 2rem;
+}
+#brus section[data-section="faq"] .title p {
+  margin-top: 1.25rem;
+}
+#karkas section[data-section="faq"] {
   background-image: url('../img/bg_section-9-karkas.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-section[data-section="faq"] .wrapper {
+#karkas section[data-section="faq"] .wrapper {
   color: #fbf5e8;
 }
-section[data-section="faq"] .accordion .title {
-  background-color: #fbf5e8;
+#karkas section[data-section="faq"] .accordion .title {
   border: #5d2a1f 1px solid;
 }
-section[data-section="faq"] .accordion .content {
+#karkas section[data-section="faq"] .accordion .content {
   background-color: rgba(251, 245, 232, 0.2);
-}
-section[data-section="faq"] .accordion .title,
-section[data-section="faq"] .accordion .content p {
-  padding: 1rem 2rem;
 }
 .description.price {
   margin-bottom: 1rem;
@@ -1633,31 +1644,6 @@ form fieldset {
   }
   header .price .middle .amount {
     font-size: 64px;
-  }
-  .underhead {
-    margin-top: -170px;
-  }
-  .underhead .woodbox {
-    width: auto;
-    padding-top: 180px;
-    padding-left: 180px;
-    padding-bottom: 36px;
-    margin: 0 40px 0 20px;
-    background-image: url("../img/pic_woodbox.png");
-  }
-  .underhead h2 {
-    font-size: 28px;
-    line-height: 1.1;
-  }
-  .underhead .videobox {
-    align-items: flex-start;
-  }
-  .underhead .videobox .features {
-    padding: 40px;
-  }
-  .underhead .videobox .video {
-    margin-left: 40px;
-    margin-right: 40px;
   }
   main section {
     padding-left: 15%;
@@ -1856,14 +1842,14 @@ form fieldset {
   footer .phone {
     font-size: 36px;
   }
-  #karkas section.guarantee .wrapper {
+  section.guarantee .wrapper {
     padding-bottom: 6rem;
     padding-top: 8rem;
   }
-  #karkas section.guarantee .carousel .slick-track {
+  section.guarantee .carousel .slick-track {
     flex-wrap: nowrap;
   }
-  #karkas section.guarantee .carousel .slick-list {
+  section.guarantee .carousel .slick-list {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
@@ -1883,9 +1869,6 @@ form fieldset {
   }
 }
 @media only screen and (min-width: 1280px) {
-  header .back {
-    height: 920px;
-  }
   header .logo.brus {
     width: 18vw;
     height: 12vw;
@@ -1903,7 +1886,7 @@ form fieldset {
   }
   header .menu.main .contacts {
     text-align: right;
-    padding-top: 1rem;
+    padding-top: 0.875rem;
   }
   header .menu.main .contacts,
   header .menu.main .special {
@@ -1920,18 +1903,6 @@ form fieldset {
   }
   header .price .middle .amount {
     font-size: 120px;
-  }
-  .underhead .woodbox {
-    margin-right: auto;
-    margin-left: 41%;
-  }
-  .underhead .videobox {
-    margin-right: 35%;
-    margin-right: auto;
-  }
-  .underhead .videobox .features {
-    padding-top: 120px;
-    padding-left: 80px;
   }
   section.benefits {
     padding-bottom: 400px;
