@@ -238,8 +238,15 @@ header {
 			}
 		}
 
+		.gotop {
+			visibility: hidden;
+		}
+
 		&.sticky {
 			background-color: #ffffff;
+			.gotop {
+				visibility: visible;
+			}
 		}
 
 		&:not(.sticky) {
@@ -290,6 +297,8 @@ header {
 		color: @color-hose;
 
 		h2 {
+			font-weight: 100;
+			line-height: 1.125;
 			.upper {
 				font-weight: 900;
 			}
@@ -301,26 +310,6 @@ header {
 		font-weight: bold;
 		font-size: 2.5rem;
 		text-transform: uppercase;
-	}
-
-	form {
-		.field {
-			margin-bottom: 0.75rem;
-		}
-
-		input {
-			padding: 0.5rem;
-		}
-
-		a {
-			color: @color-blin;
-		}
-
-		.checkbox {
-			label {
-				text-align: left;
-			}
-		}
 	}
 }
 
@@ -370,7 +359,7 @@ main {
 		margin-right: auto;
 	}
 
-	.card {
+	header .card {
 		padding: 1rem;
 		margin: 2rem auto;
 		text-align: center;
@@ -492,6 +481,19 @@ section.benefits {
 }
 
 section.technology {
+	display: none;
+
+	h4 {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+	}
+
+	.reversed {
+		.card {
+			margin-right: 0;
+			margin-left: auto;
+		}
+	}
 	p {
 		line-height: 1.54;
 		margin-left: auto;
@@ -646,6 +648,9 @@ section.sheet-quiz {
 
 	.marquiz__container {
 		padding-top: 30vh;
+	}
+	.marquiz__button {
+		font-family: @font-podkova;
 	}
 }
 
@@ -1052,22 +1057,6 @@ section.question {
 		background-size: cover;
 	}
 
-	section.technology {
-		display: none;
-
-		h4 {
-			font-size: 1.25rem;
-			margin-bottom: 2rem;
-		}
-
-		.reversed {
-			.card {
-				margin-right: 0;
-				margin-left: auto;
-			}
-		}
-	}
-
 	section[data-section="packages"] {
 		background-image: url('../img/bg_section-4-karkas.jpg');
 		background-size: cover;
@@ -1076,17 +1065,40 @@ section.question {
 	}
 }
 
-// karkas sections
+#brus, #karkas {
+	header form {
+		.field {
+			margin-bottom: 0.75rem;
+		}
+
+		input {
+			padding: 0.5rem;
+		}
+
+		a {
+			color: @color-blin;
+		}
+
+		.checkbox {
+			label {
+				text-align: left;
+			}
+		}
+	}
+}
+
 section[data-section="houses"] {
+
 	.slick-slide {
 		min-height: 278px;
 	}
+	
 	.carousel {
 		.description p {
 			line-height: 1.2;
 			font-weight: bold;
 			text-transform: uppercase;
-			font-family: @font-podkova;
+			font-family: @font-podkova;			
 		}
 	}
 
@@ -1433,11 +1445,24 @@ form fieldset {
 }
 
 #fast-contacts {
+	position: fixed;
 	bottom: 15px;
 	right: 15px;
-	left: auto;
-	width: auto;
-
+	button {
+		display: block;		
+		border-top-color: @color-sun;
+		border-bottom-color: @color-blin;
+	}
+	.callmenu {
+		margin-top: 0.75rem;
+	}
+	.gotop {
+		border-top-width: 1px;
+		background-color: @color-hose !important;
+		i {
+			color: @color-blin;
+		}
+	}
 	.opened & {
 		display: none;
 	}

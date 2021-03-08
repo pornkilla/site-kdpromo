@@ -691,8 +691,14 @@ header .menu.main .special a {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+header .menu.main .gotop {
+  visibility: hidden;
+}
 header .menu.main.sticky {
   background-color: #ffffff;
+}
+header .menu.main.sticky .gotop {
+  visibility: visible;
 }
 header .menu.main:not(.sticky) {
   box-shadow: none;
@@ -731,6 +737,10 @@ header .teaser {
   text-align: center;
   color: #fbf5e8;
 }
+header .teaser h2 {
+  font-weight: 100;
+  line-height: 1.125;
+}
 header .teaser h2 .upper {
   font-weight: 900;
 }
@@ -739,18 +749,6 @@ header h3 {
   font-weight: bold;
   font-size: 2.5rem;
   text-transform: uppercase;
-}
-header form .field {
-  margin-bottom: 0.75rem;
-}
-header form input {
-  padding: 0.5rem;
-}
-header form a {
-  color: #d1a10e;
-}
-header form .checkbox label {
-  text-align: left;
 }
 main h3 {
   font-size: 2.25rem;
@@ -784,7 +782,7 @@ main .green {
   margin-left: auto;
   margin-right: auto;
 }
-.allpages .card {
+.allpages header .card {
   padding: 1rem;
   margin: 2rem auto;
   text-align: center;
@@ -879,6 +877,17 @@ section.benefits li::before {
   padding-bottom: 20px;
   counter-increment: bCounter;
   content: counter(bCounter);
+}
+section.technology {
+  display: none;
+}
+section.technology h4 {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+section.technology .reversed .card {
+  margin-right: 0;
+  margin-left: auto;
 }
 section.technology p {
   line-height: 1.54;
@@ -1332,22 +1341,27 @@ section.question .dopustim {
   background: #ccc4b7 url("../img/bg_header-karkas.jpg") 0 0 no-repeat;
   background-size: cover;
 }
-#karkas section.technology {
-  display: none;
-}
-#karkas section.technology h4 {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-#karkas section.technology .reversed .card {
-  margin-right: 0;
-  margin-left: auto;
-}
 #karkas section[data-section="packages"] {
   background-image: url('../img/bg_section-4-karkas.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+#brus header form .field,
+#karkas header form .field {
+  margin-bottom: 0.75rem;
+}
+#brus header form input,
+#karkas header form input {
+  padding: 0.5rem;
+}
+#brus header form a,
+#karkas header form a {
+  color: #d1a10e;
+}
+#brus header form .checkbox label,
+#karkas header form .checkbox label {
+  text-align: left;
 }
 section[data-section="houses"] .slick-slide {
   min-height: 278px;
@@ -1620,10 +1634,24 @@ form fieldset {
   min-width: 0;
 }
 #fast-contacts {
+  position: fixed;
   bottom: 15px;
   right: 15px;
-  left: auto;
-  width: auto;
+}
+#fast-contacts button {
+  display: block;
+  border-top-color: #fac011;
+  border-bottom-color: #d1a10e;
+}
+#fast-contacts .callmenu {
+  margin-top: 0.75rem;
+}
+#fast-contacts .gotop {
+  border-top-width: 1px;
+  background-color: #fbf5e8 !important;
+}
+#fast-contacts .gotop i {
+  color: #d1a10e;
 }
 .opened #fast-contacts {
   display: none;
@@ -1998,6 +2026,9 @@ form fieldset {
   }
   .modal .header .cancel {
     margin-right: -15px;
+  }
+  section[data-section="houses"] .carousel .description p {
+    word-break: break-all;
   }
 }
 @media only screen and (min-width: 375px) {

@@ -16,7 +16,7 @@
 	<meta name="city" content="Petrozavodsk">
 	<meta name="country" content="Russian Federation">
 	<meta name="keywords"
-		content="Каркасный дом, каркас, дом из бруса, деревянный дом, клееный брус, из бруса, деревянное строительство, дома, финское качество, коттедж, баня, сблокированный, Карелия, Петрозаводск, карельский домик, банька, экологически чистый, строительство, постройка, жилье, загородный, вилла, качество">
+		content="Каркасный дом, каркас, деревянный дом, из бруса, деревянное строительство, дома, финское качество, коттедж, баня, сблокированный, Карелия, Петрозаводск, карельский домик, банька, экологически чистый, строительство, постройка, жилье, загородный, вилла, качество">
 	<meta name="description"
 		content="Мы строим, собираем и продаем каркасные дома. Проекты домов отвечают высочайшему стандарту качества и новейшим технологиям строительства в Карелии">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,16 +47,25 @@
 	</noscript>
 	<!-- /Yandex.Metrika counter -->
 	<!-- Marquiz script start -->
-	<!-- <script src="//script.marquiz.ru/v1.js" type="application/javascript"></script> -->
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			Marquiz.init({
-				host: '//quiz.marquiz.ru',
-				id: '5f2b0512096074005572174f',
-				autoOpen: false,
-				autoOpenFreq: 'once',
-				openOnExit: false
-			});
+		(function (w, d, s, o) {
+			var j = d.createElement(s);
+			j.async = true;
+			j.src = '//script.marquiz.ru/v2.js';
+			j.onload = function () {
+				if (document.readyState !== 'loading') Marquiz.init(o);
+				else document.addEventListener("DOMContentLoaded", function () {
+					Marquiz.init(o);
+				});
+			};
+			d.head.insertBefore(j, d.head.firstElementChild);
+		})(window, document, 'script', {
+			host: '//quiz.marquiz.ru',
+			id: '5f2b0512096074005572174f',
+			autoOpen: false,
+			autoOpenFreq: 'once',
+			openOnExit: false,
+			disableOnMobile: false
 		});
 	</script>
 	<!-- Marquiz script end -->
@@ -65,6 +74,27 @@
 <body id="karkas" class="allpages">
 	<header>
 		<nav class="ui borderless fixed navi main menu">
+
+			<div id="fast-contacts">
+				<button class="ui icon yellow basic button gotop" type="button">
+					<i class="chevron up icon"></i>
+				</button>
+				<button class="ui floating dropdown icon yellow button callmenu" type="button">
+					<i class="phone icon"></i>
+					<div class="menu">
+						<a class="item" href="viber://chat?number=%2B79535332396" title="Связаться в Viber">
+							<i class="large viber icon"></i> Viber
+						</a>
+						<a class="item" href="https://wa.me/79535332396" title="Связаться в Whatsapp">
+							<i class="large whatsapp icon"></i> Whatsapp
+						</a>
+						<a class="item" href="tel:+79535332396" title="Позвонить">
+							<i class="phone icon"></i> +7 953 533-23-96
+						</a>
+					</div>
+				</button>
+			</div>
+
 			<div class="header item badge">
 				<a href="https://best.karelianhouse.ru" title="К выбору раздела">
 					<div class="logo">
@@ -85,19 +115,8 @@
 				<span class="contacts">
 					<a href="mailto:karelianhaus@yandex.ru">
 						<i class="envelope outline icon"></i>
-						<span>karelianhaus@yandex.ru</span>
+						<span>Напишите нам</span>
 					</a>
-					<div>
-						<a class="unbordered" href="viber://chat?number=%2B79535332396" title="Связаться в Viber">
-							<i class="large viber icon"></i>
-						</a>
-						<a class="unbordered" href="https://wa.me/79535332396" title="Связаться в Whatsapp">
-							<i class="large whatsapp icon"></i>
-						</a>
-						<a class="unbordered" href="tel:+79535332396" title="+7 953 533-23-96">
-							<i class="phone icon"></i>
-						</a>
-					</div>
 				</span>
 				<span class="address">
 					<p>185013, Карелия, г. Петрозаводск,<br>
@@ -114,7 +133,8 @@
 		<div class="content">
 			<div class="ui stackable two column grid">
 				<div class="column teaser">
-					<h2>Построим теплый <br><span class="upper">КАРКАСНЫЙ ДОМ</span> <br>от <span class="color-sun">19,5 т.
+					<h2>Построим теплый <br><span class="upper">КАРКАСНЫЙ ДОМ</span> <br>от <span class="color-sun">19,5
+							т.
 							р.</span> за м<sup>2</sup> в Карелии!</h2>
 					<div class="features">
 						<ul class="ui list">
@@ -124,7 +144,8 @@
 							</li>
 							<li class="item">
 								<i class="large check circle yellow icon"></i>
-								<span>Минимальные сроки строительства, возведение дома занимает от полутора недель</span>
+								<span>Минимальные сроки строительства, возведение дома занимает от полутора
+									недель</span>
 							</li>
 							<li class="item">
 								<i class="large check circle yellow icon"></i>
@@ -148,7 +169,8 @@
 								<div class="field">
 									<div class="ui checkbox">
 										<input type="checkbox" tabindex="0" name="terms">
-										<label>Я согласен с <a href="javascript:void(0)" class="show-legal">политикой обработки
+										<label>Я согласен с <a href="javascript:void(0)" class="show-legal">политикой
+												обработки
 												персональных
 												данных</a></label>
 									</div>
@@ -170,9 +192,12 @@
 			<div class="wrapper">
 				<h3>Наши клиенты выбирают<br> энергоэффективные дома<br> из экологически чистых материалов</h3>
 				<p class="centered">Мы строим каркасные дома, в которых продумана каждая мелочь! Технологии каркасного
-					домостроения существуют вот уже более 5 веков. Наша компания одной из первых в Карелии начинала развивать эту
-					технологию строительства. Многолетний опыт работы и сотрудничества с финскими компаниями позволил довести
-					уровень строительства до Европейских стандартов. При строительстве наших домов применяются только новейшие
+					домостроения существуют вот уже более 5 веков. Наша компания одной из первых в Карелии начинала
+					развивать эту
+					технологию строительства. Многолетний опыт работы и сотрудничества с финскими компаниями позволил
+					довести
+					уровень строительства до Европейских стандартов. При строительстве наших домов применяются только
+					новейшие
 					технологии и материалы. Убедитесь сами в преимуществах каркасного домостроения! </p>
 				<div class="carousel carousel-first">
 					<div class="ui card">
@@ -195,7 +220,8 @@
 
 					<div class="ui card">
 						<div class="content">
-							<div class="center aligned header"><i class="circular olive big clock outline icon"></i></div>
+							<div class="center aligned header"><i class="circular olive big clock outline icon"></i>
+							</div>
 							<div class="center aligned description">
 								<p>Короткий срок строительства &mdash; от 1,5 недель</p>
 							</div>
@@ -223,7 +249,8 @@
 
 					<div class="ui card">
 						<div class="content">
-							<div class="center aligned header"><i class="circular yellow big paint brush icon"></i></div>
+							<div class="center aligned header"><i class="circular yellow big paint brush icon"></i>
+							</div>
 							<div class="center aligned description">
 								<p>Полная свобода в планировке и во внутренней отделке</p>
 							</div>
@@ -252,10 +279,14 @@
 				<div class="ui centered card text-card bg-hose">
 					<div class="content">
 						<div class="center aligned description">
-							<p>Строительство дома – процесс трудоемкий, требующий времени, финансов и сил. Панельные каркасные дома
-								открывают целый ряд возможностей. За короткий срок вы получите надежную, утеплённую конструкцию.
-								Заводское изготовление каркасно-панельных домов с применением специализированных материалов гарантирует
-								высокое качество каждой детали. А правильная технология позволит собрать из этих элементов тёплый дом.
+							<p>Строительство дома – процесс трудоемкий, требующий времени, финансов и сил. Панельные
+								каркасные дома
+								открывают целый ряд возможностей. За короткий срок вы получите надежную, утеплённую
+								конструкцию.
+								Заводское изготовление каркасно-панельных домов с применением специализированных
+								материалов гарантирует
+								высокое качество каждой детали. А правильная технология позволит собрать из этих
+								элементов тёплый дом.
 							</p>
 
 							<p class="color-blin"><strong>Помните, что настоящий стиль заключается в большей степени в
@@ -268,17 +299,27 @@
 		<section class="sheet-quiz" data-section="selection">
 			<div class="wrapper">
 				<h3>Пройдите тест и получите скидку</h3>
-				<div class="marquiz__container centered">
-					<a class="button yellow wide marquiz__button marquiz__button_blicked"
-						href="#popup:marquiz_5f2b0512096074005572174f" data-fixed-side="" data-alpha-color="rgba(250, 192, 17, 0.5)"
-						data-color="#fac011" data-text-color="#5d2a1f">Пройти тест</a>
-				</div>
+				<div data-marquiz-id="5f2b0512096074005572174f"></div>
+				<script>
+					(function (t, p) {
+						window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function () {
+							Marquiz.add([t, p])
+						})
+					})('Button', {
+						id: '5f2b0512096074005572174f',
+						buttonText: 'Пройти тест',
+						bgColor: '#fac011',
+						textColor: '#5d2a1f',
+						blicked: true
+					})
+				</script>
 			</div>
 		</section>
 		<section class="offers" data-section="packages">
 			<div class="wrapper">
 				<h3>Готовые решения</h3>
-				<p class="lead centered">Предлагаем Вам ознакомиться с комплектациями наших домокомплектов и ценами на них</p>
+				<p class="lead centered">Предлагаем Вам ознакомиться с комплектациями наших домокомплектов и ценами на
+					них</p>
 
 				<div class="ui doubling stackable three column grid">
 					<div class="column">
@@ -439,7 +480,8 @@
 		<section class="technology">
 			<div class="wrapper">
 				<div class="centered">
-					<h4>Компания «Карельский Дом» расширила линейку продаж домов для индивидуального жилищного строительства</h4>
+					<h4>Компания «Карельский Дом» расширила линейку продаж домов для индивидуального жилищного
+						строительства</h4>
 				</div>
 
 				<div class="ui stackable two column grid">
@@ -447,16 +489,22 @@
 						<p>Как сказал французский литератор Жак Пеше «Всё новое — это хорошо забытое старое»!</p>
 						<p>Вы можете купить у нас комплект каркасного дома – изготовленный на европейском
 							оборудовании
-							в заводских условиях по оригинальной и проверенной десятилетиями финской панельно-каркасной технологии -
+							в заводских условиях по оригинальной и проверенной десятилетиями финской панельно-каркасной
+							технологии -
 							“Low-energy wall” и “Low-energy corner”.</p>
-						<p>При производстве домов в качестве несущего каркаса стеновых панелей используются деревянные сухие
-							гладко-строганные стойки с применением технологии терморазрыв. Также в стеновую панель укладывается
+						<p>При производстве домов в качестве несущего каркаса стеновых панелей используются деревянные
+							сухие
+							гладко-строганные стойки с применением технологии терморазрыв. Также в стеновую панель
+							укладывается
 							бесшовный
-							слой утеплителя. Утеплитель внутри стен не проседает даже спустя десятилетия. Для домов постоянного
+							слой утеплителя. Утеплитель внутри стен не проседает даже спустя десятилетия. Для домов
+							постоянного
 							проживания
-							толщина утеплителя для наружной стены предусмотрена 250мм. Благодаря этому коэффициент теплопроводности
+							толщина утеплителя для наружной стены предусмотрена 250мм. Благодаря этому коэффициент
+							теплопроводности
 							стены
-							равен 0,16 В/м2*К. Технология исключает изменение геометрических размеров древесины при перепадах
+							равен 0,16 В/м2*К. Технология исключает изменение геометрических размеров древесины при
+							перепадах
 							температуры
 							и влажности.</p>
 					</div>
@@ -471,15 +519,22 @@
 				</div>
 				<div class="ui computer reversed stackable two column grid">
 					<div class="column text">
-						<p>Ограждающими конструкциями стеновых панелей являются ветрозащитная древесноволокнистая плита Isoplaat
-							толщиной 12 мм и сверхпрочный гипсокартон Gyproc толщиной 15 мм. На панели выполнена специальная фреза,
+						<p>Ограждающими конструкциями стеновых панелей являются ветрозащитная древесноволокнистая плита
+							Isoplaat
+							толщиной 12 мм и сверхпрочный гипсокартон Gyproc толщиной 15 мм. На панели выполнена
+							специальная фреза,
 							которая упрощает монтаж дома.</p>
-						<p>Стеновые панели каркасного дома могут быть отделаны различными строительными материалами: тонкопилённой
-							скандинавской доской, кирпичом, имитацией бруса, листами аквапанелей с последующим оштукатуриванием.
-							Размеры стеновых панелей фиксированы и стандартны, что исключает человеческий фактор при производстве
+						<p>Стеновые панели каркасного дома могут быть отделаны различными строительными материалами:
+							тонкопилённой
+							скандинавской доской, кирпичом, имитацией бруса, листами аквапанелей с последующим
+							оштукатуриванием.
+							Размеры стеновых панелей фиксированы и стандартны, что исключает человеческий фактор при
+							производстве
 							панели, увеличивают качество и долговечность заметно облегчают строительство.</p>
-						<p>Финская технология по которой изготовлен каркасный дом прекрасно подходит для проживания даже в самом
-							суровом климате. Благодаря высокоэффективной теплоизоляции каркасные дома позволяют снизить затраты на
+						<p>Финская технология по которой изготовлен каркасный дом прекрасно подходит для проживания даже
+							в самом
+							суровом климате. Благодаря высокоэффективной теплоизоляции каркасные дома позволяют снизить
+							затраты на
 							отопление до 50%.</p>
 					</div>
 					<div class="column pic">
@@ -493,11 +548,15 @@
 
 				<div class="ui stackable two column grid">
 					<div class="column text">
-						<p>В комплекте со стеновыми панелями поставляются кровельные конструкции: стропильные фермы и балки
+						<p>В комплекте со стеновыми панелями поставляются кровельные конструкции: стропильные фермы и
+							балки
 							заводского изготовления на метало - зубчатых пластинах.</p>
-						<p>Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж
-							на вашем участке займет всего-навсего от полутора до четырех недель. На ваш дом будет действовать гарантия
-							в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой бюджет и вкус.</p>
+						<p>Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца.
+							Непосредственный монтаж
+							на вашем участке займет всего-навсего от полутора до четырех недель. На ваш дом будет
+							действовать гарантия
+							в течение 10 лет на все несущие конструкции. Мы поможем подобрать проект дома на любой
+							бюджет и вкус.</p>
 
 					</div>
 					<div class="column pic">
@@ -530,7 +589,8 @@
 				<div class="column unfocus">
 					<div class="count">3</div>
 					<h4>Нормы</h4>
-					<p>Мы гарантируем, что все материалы, включенные в состав домокомплекта отвечают всем современным нормам и
+					<p>Мы гарантируем, что все материалы, включенные в состав домокомплекта отвечают всем современным
+						нормам и
 						положениям.</p>
 				</div>
 				<div class="column unfocus">
@@ -548,7 +608,8 @@
 				<div class="column unfocus">
 					<div class="count">6</div>
 					<h4>Стабильность</h4>
-					<p>Мы не увеличиваем сметную стоимость строительства и гарантируем стабильность расчётной стоимости.</p>
+					<p>Мы не увеличиваем сметную стоимость строительства и гарантируем стабильность расчётной стоимости.
+					</p>
 				</div>
 
 				<div class="column unfocus">
@@ -579,9 +640,12 @@
 						Что нужно для того, чтобы начать строительство каркасного дома?
 					</div>
 					<div class="active content">
-						<p>Для этого необходимо выбрать проект, определится с комплектацией, с отделочными материалами, всё
-							продумать и согласовать с менеджерами. Далее мы определяемся со сроками и с финансированием. После этого
-							подписываем договор. Чем раньше и подробнее все будет согласовано, тем быстрее начнется и закончится
+						<p>Для этого необходимо выбрать проект, определится с комплектацией, с отделочными материалами,
+							всё
+							продумать и согласовать с менеджерами. Далее мы определяемся со сроками и с финансированием.
+							После этого
+							подписываем договор. Чем раньше и подробнее все будет согласовано, тем быстрее начнется и
+							закончится
 							строительство.</p>
 					</div>
 
@@ -591,7 +655,8 @@
 					</div>
 					<div class="content">
 						<p>Мы строим каркасные дома как по типовым проектам, так и по индивидуальным проектам наших
-							заказчиков. Таким образом наши специалисты могут доработать любой типовой проект в соответствии с
+							заказчиков. Таким образом наши специалисты могут доработать любой типовой проект в
+							соответствии с
 							пожеланиями заказчика, либо создать индивидуальный проект “с нуля”.</p>
 					</div>
 
@@ -600,10 +665,14 @@
 						Будет ли каркасный дом экологически безопасным?
 					</div>
 					<div class="content">
-						<p>С точки зрения экологии, преимущества деревянного каркасного дома неоспоримы. Дерево является наиболее
-							здоровым строительным материалом. Доказано, что проживание в деревянных домах улучшает сон, нормализует
-							артериальное давление, функцию легких, повышает работоспособность, снимает стрессы и даже стимулирует
-							память. Недаром деревянные каркасные дома так популярны в США, Канаде, Скандинавии и Японии - в странах с
+						<p>С точки зрения экологии, преимущества деревянного каркасного дома неоспоримы. Дерево является
+							наиболее
+							здоровым строительным материалом. Доказано, что проживание в деревянных домах улучшает сон,
+							нормализует
+							артериальное давление, функцию легких, повышает работоспособность, снимает стрессы и даже
+							стимулирует
+							память. Недаром деревянные каркасные дома так популярны в США, Канаде, Скандинавии и Японии
+							- в странах с
 							наиболее высокими стандартами экологической чистоты и безопасности.</p>
 					</div>
 
@@ -612,7 +681,8 @@
 						Есть ли гарантия, что каркасный дом будет прочным и долговечным?
 					</div>
 					<div class="content">
-						<p>Расчетный срок службы качественных домов – более 100 лет. Однако опыт зарубежных коллег доказывает, что
+						<p>Расчетный срок службы качественных домов – более 100 лет. Однако опыт зарубежных коллег
+							доказывает, что
 							каркасные дома с легкостью могут простоять и 120 и 150 лет.</p>
 					</div>
 
@@ -621,7 +691,8 @@
 						В какие сроки можно построить каркасный дом?
 					</div>
 					<div class="content">
-						<p>Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца. Непосредственный монтаж
+						<p>Изготовление каркасного дома занимает у завода изготовителя полтора-два месяца.
+							Непосредственный монтаж
 							на Вашем участке займет всего-навсего полторы-две недели.</p>
 					</div>
 
@@ -630,10 +701,14 @@
 						Можно ли жить в каркасном доме круглый год?
 					</div>
 					<div class="content">
-						<p>Финская технология создана для строительства домов круглогодичного проживания в суровом климате
-							скандинавских стран. Благодаря высокоэффективной теплоизоляции каркасные дома позволяют снизить затраты на
-							отопление относительно коттеджей аналогичной площади, построенных из других материалов. Таким образом, в
-							климатических условиях Северо-Запада России дома по финской технологии обеспечивают максимально комфортные
+						<p>Финская технология создана для строительства домов круглогодичного проживания в суровом
+							климате
+							скандинавских стран. Благодаря высокоэффективной теплоизоляции каркасные дома позволяют
+							снизить затраты на
+							отопление относительно коттеджей аналогичной площади, построенных из других материалов.
+							Таким образом, в
+							климатических условиях Северо-Запада России дома по финской технологии обеспечивают
+							максимально комфортные
 							условия для жизни даже в самые холодные зимы.</p>
 					</div>
 
@@ -760,7 +835,8 @@
 						<div class="description price">
 							от 19 500 <span>₽</span> / м<sup>2</sup>
 						</div>
-						<div class="disclamer">Цена указана в соответствии с расчётом дома площадью 100 м<sup>2</sup></div>
+						<div class="disclamer">Цена указана в соответствии с расчётом дома площадью 100 м<sup>2</sup>
+						</div>
 					</div>
 					<div class="column">
 						<h3>наружные стены - панели</h3>
@@ -795,22 +871,29 @@
 
 						<h3>материалы для возведения</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> анкерные гвозди для крепления ферм крыши
+							<div class="item"><i class="small orange asterisk icon"></i> анкерные гвозди для крепления
+								ферм крыши
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата для изоляции швов элементов
+							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата для изоляции
+								швов элементов
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> поддерживающие кровлю деревянные стойки</div>
-							<div class="item"><i class="small orange asterisk icon"></i> опорный брус на цоколь под заводские элементы
+							<div class="item"><i class="small orange asterisk icon"></i> поддерживающие кровлю
+								деревянные стойки</div>
+							<div class="item"><i class="small orange asterisk icon"></i> опорный брус на цоколь под
+								заводские элементы
 							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> комплект уплотнений</div>
-							<div class="item"><i class="small orange asterisk icon"></i> скотч для герметизации пароизоляционной
+							<div class="item"><i class="small orange asterisk icon"></i> скотч для герметизации
+								пароизоляционной
 								пленки
 							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> метизы</div>
 						</div>
 					</div>
-					<p class="disclamer bottom">Данная информация, носит исключительно информационный характер и ни при каких
-						условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского Кодекса Российской
+					<p class="disclamer bottom">Данная информация, носит исключительно информационный характер и ни при
+						каких
+						условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского Кодекса
+						Российской
 						Федерации, а так же не может использоваться в рекламных целях.</p>
 				</div>
 			</div>
@@ -824,13 +907,15 @@
 						<div class="description price">
 							от 24 500 <span>₽</span> / м<sup>2</sup>
 						</div>
-						<div class="disclamer">Цена указана в соответствии с расчётом дома площадью 100 м<sup>2</sup></div>
+						<div class="disclamer">Цена указана в соответствии с расчётом дома площадью 100 м<sup>2</sup>
+						</div>
 					</div>
 					<div class="column">
 						<h3>наружные стены - панели</h3>
 						<div class="ui list">
 							<div class="item"><i class="small orange asterisk icon"></i> ветрозащитная плита 12 мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x200 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x200 мм
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата 250 мм</div>
 							<div class="item"><i class="small orange asterisk icon"></i> пароизоляционная мембрана</div>
 						</div>
@@ -838,7 +923,8 @@
 						<h3>конструкции крыши</h3>
 						<div class="ui list">
 							<div class="item"><i class="small orange asterisk icon"></i> стропильные фермы, балки</div>
-							<div class="item"><i class="small orange asterisk icon"></i> контр обрешетка (вент брусок)</div>
+							<div class="item"><i class="small orange asterisk icon"></i> контр обрешетка (вент брусок)
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> обрешетка под кровлю</div>
 							<div class="item"><i class="small orange asterisk icon"></i> влагозащитная пленка</div>
 							<div class="item"><i class="small orange asterisk icon"></i> ветрозащитная плита 12 мм</div>
@@ -846,64 +932,84 @@
 
 						<h3>перекрытие - потолок</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> пластик пароизоляции 0,2 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> пластик пароизоляции 0,2 мм
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> обрешетка 45х45мм</div>
 						</div>
 
 						<h3>внутренние стены</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x120 мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x95 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x120 мм
+							</div>
+							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x95 мм
+							</div>
 						</div>
 
 						<h3>фасад</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> доска тонкопиленая uyv 20х145мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> доска для свесов карнизов окрашена на один
+							<div class="item"><i class="small orange asterisk icon"></i> доска тонкопиленая uyv 20х145мм
+							</div>
+							<div class="item"><i class="small orange asterisk icon"></i> доска для свесов карнизов
+								окрашена на один
 								слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> лобовая доска окрашена на один слой</div>
-							<div class="item"><i class="small orange asterisk icon"></i> доска ограждения террасы окрашена на один
+							<div class="item"><i class="small orange asterisk icon"></i> лобовая доска окрашена на один
+								слой</div>
+							<div class="item"><i class="small orange asterisk icon"></i> доска ограждения террасы
+								окрашена на один
 								слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> наличники на окна и двери окрашены на один
+							<div class="item"><i class="small orange asterisk icon"></i> наличники на окна и двери
+								окрашены на один
 								слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> откосы окон и дверей окрашены на один слой
+							<div class="item"><i class="small orange asterisk icon"></i> откосы окон и дверей окрашены
+								на один слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> обрешетка 20х45мм не окрашена</div>
-							<div class="item"><i class="small orange asterisk icon"></i> углы дома 20х95 / 20х120мм окрашены на 1 слой
+							<div class="item"><i class="small orange asterisk icon"></i> обрешетка 20х45мм не окрашена
+							</div>
+							<div class="item"><i class="small orange asterisk icon"></i> углы дома 20х95 / 20х120мм
+								окрашены на 1 слой
 							</div>
 						</div>
 
 						<h3>окна</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет белый</div>
+							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет
+								белый</div>
 						</div>
 
 						<h3>наружные двери</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет белый</div>
+							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет
+								белый</div>
 						</div>
 
 						<h3>материалы для возведения</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> анкерные гвозди для крепления ферм крыши
+							<div class="item"><i class="small orange asterisk icon"></i> анкерные гвозди для крепления
+								ферм крыши
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата для изоляции швов элементов
+							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата для изоляции
+								швов элементов
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> поддерживающие кровлю деревянные стойки</div>
-							<div class="item"><i class="small orange asterisk icon"></i> опорный брус на цоколь под заводские элементы
+							<div class="item"><i class="small orange asterisk icon"></i> поддерживающие кровлю
+								деревянные стойки</div>
+							<div class="item"><i class="small orange asterisk icon"></i> опорный брус на цоколь под
+								заводские элементы
 							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> комплект уплотнений</div>
-							<div class="item"><i class="small orange asterisk icon"></i> скотч для герметизации пароизоляционной
+							<div class="item"><i class="small orange asterisk icon"></i> скотч для герметизации
+								пароизоляционной
 								пленки
 							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> метизы</div>
 						</div>
 					</div>
-					<p class="disclamer bottom">Данная информация, носит исключительно информационный характер и ни при каких
-						условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского Кодекса Российской
+					<p class="disclamer bottom">Данная информация, носит исключительно информационный характер и ни при
+						каких
+						условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского Кодекса
+						Российской
 						Федерации, а так же не может использоваться в рекламных целях.</p>
 				</div>
 			</div>
@@ -917,24 +1023,29 @@
 						<div class="description price">
 							цена по запросу
 						</div>
-						<div class="disclamer">Цена указана в соответствии с расчётом дома площадью 100 м<sup>2</sup></div>
+						<div class="disclamer">Цена указана в соответствии с расчётом дома площадью 100 м<sup>2</sup>
+						</div>
 					</div>
 					<div class="column">
 						<h3>наружные стены - панели</h3>
 						<div class="ui list">
 							<div class="item"><i class="small orange asterisk icon"></i> ветрозащитная плита 12 мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x200 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x200 мм
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата 250 мм</div>
 							<div class="item"><i class="small orange asterisk icon"></i> пароизоляционная мембрана</div>
-							<div class="item"><i class="small orange asterisk icon"></i> плита гипсокартона Gyproc сверхпрочная, 15 мм
+							<div class="item"><i class="small orange asterisk icon"></i> плита гипсокартона Gyproc
+								сверхпрочная, 15 мм
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> гофра электрическая, стакан</div>
+							<div class="item"><i class="small orange asterisk icon"></i> гофра электрическая, стакан
+							</div>
 						</div>
 
 						<h3>конструкции крыши</h3>
 						<div class="ui list">
 							<div class="item"><i class="small orange asterisk icon"></i> стропильные фермы, балки</div>
-							<div class="item"><i class="small orange asterisk icon"></i> контр обрешетка (вент брусок)</div>
+							<div class="item"><i class="small orange asterisk icon"></i> контр обрешетка (вент брусок)
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> обрешетка под кровлю</div>
 							<div class="item"><i class="small orange asterisk icon"></i> влагозащитная пленка</div>
 							<div class="item"><i class="small orange asterisk icon"></i> ветрозащитная плита 12 мм</div>
@@ -942,68 +1053,89 @@
 
 						<h3>перекрытие - потолок</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> пластик пароизоляции 0,2 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> пластик пароизоляции 0,2 мм
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> обрешетка 45х45мм</div>
 							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата 400 мм</div>
 						</div>
 
 						<h3>внутренние стены</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x120 мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x95 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x120 мм
+							</div>
+							<div class="item"><i class="small orange asterisk icon"></i> деревянный каркас 45x95 мм
+							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> гипсокартон Gyproc 15 мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата 100/125 мм</div>
+							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата 100/125 мм
+							</div>
 						</div>
 
 						<h3>фасад</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> доска тонкопиленая uyv 20х145мм</div>
-							<div class="item"><i class="small orange asterisk icon"></i> доска для свесов карнизов окрашена на один
+							<div class="item"><i class="small orange asterisk icon"></i> доска тонкопиленая uyv 20х145мм
+							</div>
+							<div class="item"><i class="small orange asterisk icon"></i> доска для свесов карнизов
+								окрашена на один
 								слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> лобовая доска окрашена на один слой</div>
-							<div class="item"><i class="small orange asterisk icon"></i> доска ограждения террасы окрашена на один
+							<div class="item"><i class="small orange asterisk icon"></i> лобовая доска окрашена на один
+								слой</div>
+							<div class="item"><i class="small orange asterisk icon"></i> доска ограждения террасы
+								окрашена на один
 								слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> наличники на окна и двери окрашены на один
+							<div class="item"><i class="small orange asterisk icon"></i> наличники на окна и двери
+								окрашены на один
 								слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> откосы окон и дверей окрашены на один слой
+							<div class="item"><i class="small orange asterisk icon"></i> откосы окон и дверей окрашены
+								на один слой
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> обрешетка 20х45мм не окрашена</div>
-							<div class="item"><i class="small orange asterisk icon"></i> углы дома 20х95 / 20х120мм окрашены на 1 слой
+							<div class="item"><i class="small orange asterisk icon"></i> обрешетка 20х45мм не окрашена
+							</div>
+							<div class="item"><i class="small orange asterisk icon"></i> углы дома 20х95 / 20х120мм
+								окрашены на 1 слой
 							</div>
 						</div>
 
 						<h3>окна</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет белый</div>
+							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет
+								белый</div>
 						</div>
 
 						<h3>наружные двери</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет белый</div>
+							<div class="item"><i class="small orange asterisk icon"></i> установлены на заводе, цвет
+								белый</div>
 						</div>
 
 						<h3>материалы для возведения</h3>
 						<div class="ui list">
-							<div class="item"><i class="small orange asterisk icon"></i> анкерные гвозди для крепления ферм крыши
+							<div class="item"><i class="small orange asterisk icon"></i> анкерные гвозди для крепления
+								ферм крыши
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата для изоляции швов элементов
+							<div class="item"><i class="small orange asterisk icon"></i> минеральная вата для изоляции
+								швов элементов
 							</div>
-							<div class="item"><i class="small orange asterisk icon"></i> поддерживающие кровлю деревянные стойки</div>
-							<div class="item"><i class="small orange asterisk icon"></i> опорный брус на цоколь под заводские элементы
+							<div class="item"><i class="small orange asterisk icon"></i> поддерживающие кровлю
+								деревянные стойки</div>
+							<div class="item"><i class="small orange asterisk icon"></i> опорный брус на цоколь под
+								заводские элементы
 							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> комплект уплотнений</div>
-							<div class="item"><i class="small orange asterisk icon"></i> скотч для герметизации пароизоляционной
+							<div class="item"><i class="small orange asterisk icon"></i> скотч для герметизации
+								пароизоляционной
 								пленки
 							</div>
 							<div class="item"><i class="small orange asterisk icon"></i> метизы</div>
 						</div>
 					</div>
-					<p class="disclamer bottom">Данная информация, носит исключительно информационный характер и ни при каких
+					<p class="disclamer bottom">Данная информация, носит исключительно информационный характер и ни при
+						каких
 						условиях не
-						является публичной офертой, определяемой положениями Статьи 437 Гражданского Кодекса Российской Федерации, а
+						является публичной офертой, определяемой положениями Статьи 437 Гражданского Кодекса Российской
+						Федерации, а
 						так же не может использоваться в рекламных целях.</p>
 				</div>
 			</div>

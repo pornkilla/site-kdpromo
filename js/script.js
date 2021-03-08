@@ -217,6 +217,17 @@ $(document).ready(function () {
         }]
     });
 
+    $('#fast-contacts .callmenu').dropdown();
+    $('#fast-contacts .callmenu').popup({
+        position : 'left center',
+        content  : 'Связаться с нами'
+    });
+
+    $('#fast-contacts .gotop').popup({
+        position : 'left center',
+        content  : 'Вернуться наверх страницы'
+    });
+
     var clickOnTechButton = function () {
         $('.allpages .technology').slideToggle('slow');
     }
@@ -284,17 +295,6 @@ $(document).ready(function () {
             event.preventDefault();
             scrollToTop();
             return false;
-        });
-
-        $(window).scroll(function () {
-
-            var $win = $(window);
-            if ($win.scrollTop() > 200) {
-                $('.to-top').addClass('active');
-            } else {
-                $('.to-top').removeClass('active');
-            }
-
         });
     };
     function scrollToTop() {
