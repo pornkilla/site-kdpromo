@@ -803,8 +803,8 @@ main .green {
 }
 .allpages .ui.list .list > .item > i.icon:only-child,
 .allpages .ui.list > .item > i.icon:only-child {
-  vertical-align: middle;
   margin-right: 6px;
+  vertical-align: middle;
 }
 .allpages .ui.list .list > .item,
 .allpages .ui.list > .item,
@@ -1000,8 +1000,8 @@ section.guarantee .count::after {
   margin: 10px;
 }
 section.guarantee p {
-  text-align: center;
   line-height: 1.54;
+  text-align: center;
 }
 section.sheet-quiz {
   background: #1f1d17 url("../img/bg_section-2-karkas.jpg") center bottom no-repeat;
@@ -1015,14 +1015,21 @@ section.sheet-quiz .wrapper {
 section.sheet-quiz .marquiz__container {
   padding-top: 30vh;
 }
+section.sheet-quiz .marquiz__button {
+  font-family: 'Podkova', serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 section.plan {
   padding-left: 0;
   padding-right: 0;
 }
 section.plan h3 {
-  position: relative;
   max-width: 340px;
   margin-left: auto;
+  position: relative;
   margin-right: auto;
 }
 section.plan h3::before,
@@ -2028,7 +2035,7 @@ form fieldset {
     margin-right: -15px;
   }
   section[data-section="houses"] .carousel .description p {
-    word-break: break-all;
+    hyphens: auto;
   }
 }
 @media only screen and (min-width: 375px) {
