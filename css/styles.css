@@ -1004,10 +1004,18 @@ section.guarantee p {
   text-align: center;
 }
 section.sheet-quiz {
-  background: #1f1d17 url("../img/bg_section-2-karkas.jpg") center bottom no-repeat;
   min-height: 100vh;
   color: #fbf5e8;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #1f1d17;
   background-size: cover;
+}
+#karkas section.sheet-quiz {
+  background-image: url("../img/bg_section-2-karkas.jpg");
+}
+#brus section.sheet-quiz {
+  background-image: url("../img/bg_section-2-brus.jpg");
 }
 section.sheet-quiz .wrapper {
   padding-top: 6rem;

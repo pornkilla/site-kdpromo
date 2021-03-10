@@ -637,10 +637,20 @@ section.guarantee {
 }
 
 section.sheet-quiz {
-	background: @color-night url("../img/bg_section-2-karkas.jpg") center bottom no-repeat;
 	min-height: 100vh;
 	color: @color-hose;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-color: @color-night;
 	background-size: cover;
+
+	#karkas & {
+		background-image: url("../img/bg_section-2-karkas.jpg");
+	}
+
+	#brus & {
+		background-image: url("../img/bg_section-2-brus.jpg");
+	}
 
 	.wrapper {
 		padding-top: 6rem;
