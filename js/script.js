@@ -315,9 +315,16 @@ $(document).ready(function () {
             sticky.removeClass('sticky');
         }
     });
+
+    var getCurrentYear = function () {
+        var currentYear = (new Date).getFullYear();
+        $('#year').text(currentYear);
+    };
+    
     
     clickMenu();
-    goToTop();    
+    goToTop();
+    getCurrentYear();    
     clickOfferItem();
     resetModalData();
 
