@@ -3,6 +3,8 @@ $(document).ready(function () {
     const mobileBreakpoint = 960;
     const stickyOffset = 90;
     const scrollShift = 64;
+    const startYear = 2002;
+    const currentYear = (new Date).getFullYear();
 
     $('.learn-more').click(function () {
         $('.tiny.modal').modal('show');
@@ -316,15 +318,18 @@ $(document).ready(function () {
         }
     });
 
-    var getCurrentYear = function () {
-        var currentYear = (new Date).getFullYear();
+    var getCurrentYear = function () {        
         $('#year').text(currentYear);
     };
-    
+
+    var getEstimation = function () {        
+        $('#eta-year').text(currentYear - startYear);
+    };    
     
     clickMenu();
     goToTop();
     getCurrentYear();    
+    getEstimation();    
     clickOfferItem();
     resetModalData();
 
