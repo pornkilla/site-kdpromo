@@ -4,35 +4,35 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v25/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWtFzfUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v25/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWt3zfUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v25/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWubyvUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v25/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWuiyvUyGI4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Podkova';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/podkova/v18/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/podkova/v25/K2FufZ1EmftJSV9VQpXb1lo9vC3nZWvFyvUyGI4.ttf) format('truetype');
 }
 .color-sun {
   color: #fac011;
@@ -1838,11 +1838,6 @@ form fieldset {
   .allpages .carousel .slick-slide {
     flex: 1 1 47%;
     margin: 8px;
-  }
-  .allpages .carousel .slick-track {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
   }
   section.benefits {
     padding-bottom: 380px;

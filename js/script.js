@@ -77,6 +77,12 @@ $(document).ready(function () {
         }
     });
 
+    function deleteModal() {
+        $('.ui.basic.modal').each(function() {
+            $(this).remove();
+        });
+    }
+    
     function nowIsValid() {
         var myform = $('.current.success');
         $.ajax({
@@ -152,8 +158,8 @@ $(document).ready(function () {
     $('.carousel-first').slick({
         infinite: true,
         centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 8,
+        centerPadding: '40px',
+        slidesToShow: 2,
         autoplay: true,
         responsive: [{
             breakpoint: mobileBreakpoint,
@@ -169,9 +175,8 @@ $(document).ready(function () {
     $('.carousel-brus').slick({
         infinite: true,
         centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 6,
-        autoplay: true,
+        centerPadding: '40px',
+        slidesToShow: 2,
         responsive: [{
             breakpoint: mobileBreakpoint,
             settings: {
@@ -183,11 +188,44 @@ $(document).ready(function () {
         }]
     });
 
+    $('.gallery-carousel-brus').slick({
+        centerMode: false,
+        slidesToShow: 4,
+        arrows: true,
+        autoplay: true,
+        responsive: [{
+            breakpoint: mobileBreakpoint,
+            settings: {
+                arrows: true,
+                centerPadding: '15px',
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 720,
+            settings: {
+                arrows: true,
+                centerPadding: '10px',
+                slidesToShow: 1,
+            }
+        }]
+    });
+
+    $('.gallery-carousel-brus img').click(function() {
+        // Delete any modals hanging around
+        deleteModal();
+
+        var image = $(this).attr('src');
+        var bigImg = image.replace("thumb-","");
+        $('body').append('<div class="ui basic modal"><div class="image content"><img src="'+bigImg+'" width="100%" class="image" /></div><div class="actions"><div class="centered"><div class="button cancel ui">Закрыть</div></div></div></div>');
+        $('.ui.basic.modal')
+        .modal('show');
+    });
+
     $('.carousel-second').slick({
         infinite: true,
         centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 6,
+        centerPadding: '40px',
+        slidesToShow: 2,
         autoplay: true,
         responsive: [{
             breakpoint: mobileBreakpoint,
@@ -203,7 +241,6 @@ $(document).ready(function () {
     $('.carousel-third').slick({
         dots: true,
         infinite: false,
-        centerMode: true,
         centerPadding: '10px',
         slidesToShow: 3,
         autoplay: true,
