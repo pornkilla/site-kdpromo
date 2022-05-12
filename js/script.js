@@ -76,12 +76,6 @@ $(document).ready(function () {
             }
         }
     });
-
-    function deleteModal() {
-        $('.ui.basic.modal').each(function() {
-            $(this).remove();
-        });
-    }
     
     function nowIsValid() {
         var myform = $('.current.success');
@@ -189,8 +183,9 @@ $(document).ready(function () {
     });
 
     $('.gallery-carousel-brus').slick({
-        centerMode: false,
+        lazyLoad: 'progressive',
         slidesToShow: 4,
+        slidesToScroll: 1,
         arrows: true,
         autoplay: true,
         responsive: [{
@@ -210,14 +205,34 @@ $(document).ready(function () {
         }]
     });
 
+    function deleteModal() {
+        $('.ui.basic.modal').each(function() {
+            $(this).remove();
+        });
+    }
+
     $('.gallery-carousel-brus img').click(function() {
         // Delete any modals hanging around
         deleteModal();
 
         var image = $(this).attr('src');
+        console.log('src: ' + image)
+        
         var bigImg = image.replace("thumb-","");
-        $('body').append('<div class="ui basic modal"><div class="image content"><img src="'+bigImg+'" width="100%" class="image" /></div><div class="actions"><div class="centered"><div class="button cancel ui">Закрыть</div></div></div></div>');
+
+        var leftButton = '<button class="ui icon white circular big modal-navi left button" type="button" onclick="navigate(`left`)"><i class="chevron left icon"></i></button>';
+
+        var rightButton = '<button class="ui icon white circular big modal-navi right button" type="button" onclick="navigate(`right`)"><i class="chevron right icon"></i></button>';
+
+        $('body').append('<div class="ui basic modal lb-modal"><div class="image content"><img src="'+bigImg+'" class="lb-image" /></div><div class="actions">'+leftButton+'<div class="centered"><div class="button cancel ui">Закрыть</div></div>'+rightButton+'</div></div>');
         $('.ui.basic.modal')
+        .modal({
+            dimmerSettings : {
+                className : {
+                    active    : 'active lb-dimmer',
+                }
+            }
+        })
         .modal('show');
     });
 
