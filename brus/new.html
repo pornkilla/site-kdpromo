@@ -22,7 +22,7 @@
 		content="Мы строим, собираем и продаем дома из клееного бруса. Проекты домов отвечают высочайшему стандарту качества и новейшим технологиям строительства в Карелии">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/styles.css?v20210310">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css?v20220513">
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (m, e, t, r, i, k, a) {
@@ -66,10 +66,45 @@
 		});
 	</script>
 	<!-- Marquiz script end -->
+	<script>
+		function navigate(side) {
+			let image = document.getElementsByClassName('lb-image')[0];
+			let src = image.getAttribute('src');
+			let srcId = src.substring(10, src.length - 4);
+			let prefix = src.substring(0,10);
+			let suffix = src.substring(src.length - 4);
+			
+			if (side === 'left') {
+				let newSrcId = parseInt(srcId) - 1;
+			
+				if (newSrcId > 0) {
+					image.removeAttribute('src');
+					let newRes = prefix + newSrcId + suffix;
+					image.setAttribute('src', newRes);
+				} else {
+					image.removeAttribute('src');
+					let newRes = prefix + '12' + suffix;
+					image.setAttribute('src', newRes);
+				}
+			} else if (side === 'right') {
+				let newSrcId = parseInt(srcId) + 1;
+			
+				if (newSrcId <= 12) {
+					image.removeAttribute('src');
+					let newRes = prefix + newSrcId + suffix;
+					image.setAttribute('src', newRes);
+				} else {
+					image.removeAttribute('src');
+					let newRes = prefix + '1' + suffix;
+					image.setAttribute('src', newRes);
+				}
+			}
+		}
+	</script>
 </head>
 
 <body id="brus" class="allpages">
-	<header style="position: relative; z-index: 2;">
+	<header>
 		<nav class="ui borderless fixed navi main menu">
 			<div id="fast-contacts">
 				<button class="ui icon yellow basic button gotop" type="button">
@@ -300,27 +335,17 @@
 		</section>
 		<section class="sheet-quiz" data-section="selection">
 			<div class="wrapper">
-        <div style="
-          display: flex;
-          align-items: center;
-          flex-direction: column-reverse;
-          ">
-        <h2 style="margin-top: 2rem">Как Вам поможет этот тест?</h2>
+        <div class="quiz-title">
+        <h2>Как Вам поможет этот тест?</h2>
         <h3>Пройдите тест и получите скидку</h3>
       </div>
         
-        <ul class="ui bulleted list" style="
-          background-color: rgba(31, 29, 23, 0.8);
-          padding: 2rem;
-          border-radius: 0.25rem;
-        ">
+        <ul class="ui bulleted list">
           <li class="item">Мы сможем понять, чего вы ожидаете от работы с нами</li>
           <li class="item">Определим сроки и бюджет на строительство при первом звонке</li>
           <li class="item">Вы получите список готовых решений для домов из клееного бруса</li>
         </ul>
-				<div data-marquiz-id="602e489e627fef004465cbfb" style="
-          padding-top: 10vh;
-        "></div>
+				<div data-marquiz-id="602e489e627fef004465cbfb"></div>
 				<script>
 					(function (t, p) {
 						window.Marquiz ? Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function () {
@@ -343,7 +368,7 @@
 					<div class="column">
 						<div class="white">
 							<div class="title pic">
-								<img src="../img/pic_offer-title-4.jpg" alt="Дома постоянного проживания">
+								<img src="../img/pic_offer-title-1-4.jpg" alt="Дома постоянного проживания">
 							</div>
 							<h4>Дома <br>постоянного проживания</h4>
 							<div class="centered">
@@ -360,7 +385,7 @@
 					<div class="column">
 						<div class="white">
 							<div class="title pic">
-								<img src="../img/pic_offer-title-5.jpg" alt="Дома сезонного проживания">
+								<img src="../img/pic_offer-title-1-5.jpg" alt="Дома сезонного проживания">
 							</div>
 							<h4>Дома <br>сезонного проживания</h4>
 							<div class="centered">
@@ -399,7 +424,7 @@
 					
 				</div>
 
-				<div class="ui centered container" style="padding-top: 3rem;">
+				<div class="ui centered container catalog-button-container">
 					<a href="https://karelianhouse.ru/catalog/" target="_blank" class="yellow button">Каталог
 						домов <i class="chevron right icon"></i></a>
 				</div>
@@ -598,7 +623,7 @@
 					Словом, клееный брус – именно тот материал, который позволяет архитектору воплотить в реальность
 					представления человека о доме мечты.</p>
 
-				<div class="ui centered container" style="padding-top: 3rem;">
+				<div class="ui centered container catalog-button-container">
 					<a href="https://karelianhouse.ru/catalog/" target="_blank" class="wide yellow button">Каталог
 						домов</a>
 				</div>
@@ -666,26 +691,12 @@
 		</section>
 		<section class="faq" data-section="faq">
 			<div class="wrapper">
-				<h3 class="flexy" style="
-          align-items: center;
-          justify-content: center;
-        ">
-          <span style="
-            display: inline-block;
-            margin-right: 2rem;
-            width: 36px;
-            height: 36px;
-            line-height: 0.6;
-            border-radius: 50%;
-            border: #ffffff 2px solid;
-            text-align: center;
-            background-color: #fac011;
-            transform: scale(1.5);
-          "><svg baseProfile="tiny" height="24" version="1.2" width="24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+				<h3 class="flexy flexy-center">
+          <span class="info-icon"><svg baseProfile="tiny" height="24" version="1.2" width="24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
             <path fill="#392119" d="M13.839 17.525c-.006.002-.559.186-1.039.186-.265 0-.372-.055-.406-.079-.168-.117-.48-.336.054-1.4l1-1.994c.593-1.184.681-2.329.245-3.225-.356-.733-1.039-1.236-1.92-1.416a4.776 4.776 0 0 0-.958-.097c-1.849 0-3.094 1.08-3.146 1.126a.5.5 0 0 0 .493.848c.005-.002.559-.187 1.039-.187.263 0 .369.055.402.078.169.118.482.34-.051 1.402l-1 1.995c-.594 1.185-.681 2.33-.245 3.225.356.733 1.038 1.236 1.921 1.416.314.063.636.097.954.097 1.85 0 3.096-1.08 3.148-1.126a.5.5 0 0 0-.491-.849z"/>
             <circle fill="#392119" cx="13" cy="6.001" r="2.5"/>
           </svg></span>
-          <span>Часто задаваемые вопросы</span>
+          <span class="spaced-left-double">Часто задаваемые вопросы</span>
         </h3>
 				<div class="ui accordion white">
 					<div class="title active">
@@ -807,34 +818,16 @@
 	</main>
 
 	<footer>
-    <div class="map" style="position: relative; z-index: 1;">
-      <div class="baloon" style="
-        position: absolute;
-        left: 10%;
-        top: 48px;
-        bottom: 48px;
-        margin: auto;
-        width: 340px;
-        border-radius: 8px;
-        background-color: #fff;
-        box-shadow: 0px 10px 30px 0px rgba(34, 60, 80, 0.2);
-        padding: 2rem;
-        z-index: 2;
-        text-align: center;
-      ">
+    <div class="map">
+      <div class="baloon">
         <div class="logo">
           <p>Карельский дом</p>
         </div>
-        <div class="address" style="
-          padding-top: 0;
-          font-size: 1rem
-        ">
+        <div class="address mini">
           <p>185013, Республика Карелия</p>
           <p>город Петрозаводск, <br>улица Пограничная, 22</p>
         </div>
-        <div class="phone" style="
-          margin: 1rem 0;
-        ">
+        <div class="phone spaced">
           <a href="tel:+79535332396">+7 953 533 23 96</a>
         </div>
         <div class="link">
@@ -843,7 +836,7 @@
             karelianhaus@yandex.ru</a>
         </div>
       </div>
-      <div id="map" style="width: 100%; height: 520px; z-index: 1;"></div>
+      <div id="map" class="yandex-map-widget"></div>
 
       <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
       <script type="text/javascript">
@@ -870,14 +863,12 @@
 				<div class="row">
 					<div class="column">
 						<div class="text-small">
-							<a href="../policy.html" target="_blank">Политика конфиденциальности</a> <span class="color-blin" style="
-								padding: 0 1rem;
-							">|</span> <a
+							<a href="../policy.html" target="_blank">Политика конфиденциальности</a> <span class="color-blin divider">|</span> <a
 								href="https://karelianhouse.ru/technology/index.php?p=1&id=11" target="_blank">Лицензии</a>
 						</div>
 						<div class="copy text-small">
-							<span id="year" style="padding-right: 0.25rem;"></span>
-							<span class="color-blin" style="padding-right: 0.25rem;">&copy;</span>
+							<span id="year" class="padded-right-quarter"></span>
+							<span class="color-blin padded-right-quarter">&copy;</span>
 							<span>Компания «Карельский Дом»</span>
 						</div>
           </div>
@@ -891,133 +882,6 @@
 			</div>
 			<p class="text-small centered color-blin">Информация не является публичной офертой</p>
 		</div>
-		<script>
-    	function navigate(side) {
-				let image = document.getElementsByClassName('lb-image')[0];
-				let src = image.getAttribute('src');
-				let srcId = src.substring(10, src.length - 4);
-				let prefix = src.substring(0,10);
-				let suffix = src.substring(src.length - 4);
-				
-				if (side === 'left') {
-					let newSrcId = parseInt(srcId) - 1;
-				
-					if (newSrcId > 0) {
-						image.removeAttribute('src');
-						let newRes = prefix + newSrcId + suffix;
-						image.setAttribute('src', newRes);
-					} else {
-						image.removeAttribute('src');
-						let newRes = prefix + '12' + suffix;
-						image.setAttribute('src', newRes);
-					}
-				} else if (side === 'right') {
-					let newSrcId = parseInt(srcId) + 1;
-				
-					if (newSrcId <= 12) {
-						image.removeAttribute('src');
-						let newRes = prefix + newSrcId + suffix;
-						image.setAttribute('src', newRes);
-					} else {
-						image.removeAttribute('src');
-						let newRes = prefix + '1' + suffix;
-						image.setAttribute('src', newRes);
-					}
-				}
-    	}
-		</script>
-		<style>			
-			.gallery-carousel-brus .slick-active:hover {
-				cursor: pointer;
-			}
-			.underline {
-				text-decoration: underline;
-			}
-			section[data-section="houses"] .slick-slide {
-				display: flex;
-				align-items: center;
-				flex-direction: row;
-			}
-			footer .text-small {
-				font-size: 0.875rem;
-			}
-			.lb-image {
-				width: 100%;
-			}
-			.lb-modal .actions {
-				position: relative;
-    		z-index: 3;
-				display: flex;
-				align-items: center;
-			}
-			.lb-modal .image.content {
-				justify-content: center;
-				align-items: center;
-			}
-			@media only screen and (min-width: 1180px) {
-				section.assembling .wrapper {
-					padding-top: 6rem;
-					padding-bottom: 8rem;
-				}
-			}
-			@media only screen and (min-width: 1280px) {
-				header .menu.main ul {
-					width: auto;
-				}
-			}
-			@media only screen and (min-width: 1980px) {
-				html, body {
-					font-size: 20px;
-				}
-			}
-			@media only screen and (min-width: 960px) {
-				.lb-modal .lb-image img {
-						min-height: 455px;
-				}
-			}
-			@media only screen and (max-width: 960px) {
-				.ui.button.modal-navi, .lb-modal .actions .button {
-    			background-color: rgba(255,255,255,0.3);
-					z-index: 2;
-				}
-			}
-			@media only screen and (orientation: landscape) and (max-width: 960px) {
-				.lb-modal .actions {
-					bottom: 0;
-					top: auto;
-					left: 0;
-					right: 0;
-					position: absolute;
-				}
-				.lb-modal .image.content {
-					bottom: 0;
-					top: 0;
-					left: 0;
-					right: auto;
-					position: absolute;
-					padding: 0;
-					z-index: 1;
-				}
-				.lb-modal .button.cancel {
-					z-index: 3;
-				}
-				.lb-modal {
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					width: 100%;
-				}
-				.lb-dimmer.modals.active {
-					padding: 0;
-				}
-			}
-			@media only screen and (min-width: 768px) {
-				footer .desktop-right {
-					text-align: right;
-				}
-			}
-		</style>
 	</footer>
 
 	<div class="ui tiny modal">
@@ -1054,7 +918,7 @@
 		</div>
 	</div>
 
-	<div class="ui offer longer modal">
+	<div class="ui offer longer large modal">
 		<div class="header flexy">
 			<h3>Подробнее о комплектации</h3>
 			<span class="cross cancel">&times;</span>

@@ -42,7 +42,7 @@ a:hover {
 //header 
 header {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 
 	.logo {
 		background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
@@ -77,7 +77,7 @@ header {
 		color: @color-hose;
 		margin: auto;
 		top: 160px;
-		font-size: 18px;
+		font-size: 1.125rem;
 		font-weight: 500;
 		background-color: @color-shade;
 
@@ -90,12 +90,12 @@ header {
 			padding: 10px 0;
 
 			span {
-				font-size: 18px;
+				font-size: 1.125rem;
 			}
 
 			.amount {
 				font-family: @font-podkova;
-				font-size: 54px;
+				font-size: 3.375rem;
 				letter-spacing: -2px;
 				color: @color-sun;
 			}
@@ -462,12 +462,12 @@ section.benefits {
 	li {
 		color: #ffffff;
 		list-style: none;
-		font-size: 18px;
+		font-size: 1.125rem;
 		text-align: left;
 		font-weight: 300;
-		padding-left: 10px;
-		margin-bottom: 40px;
-		padding-right: 10px;
+		padding-left: 0.625em;
+		margin-bottom: 2.5em;
+		padding-right: 0.625em;
 
 		&::before {
 			display: block;
@@ -600,7 +600,7 @@ section.guarantee {
 		width: 80px;
 		height: 80px;
 		z-index: 2;
-		font-size: 36px;
+		font-size: 2rem;
 		position: relative;
 		font-weight: bold;
 		font-family: @font-podkova;
@@ -652,8 +652,23 @@ section.sheet-quiz {
 		background-image: url("../img/bg_section-2-brus.jpg");
 	}
 
+	.quiz-title {
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		h2 {
+			margin-top: 2rem;
+		}
+	}
+
 	.wrapper {
 		padding-top: 6rem;
+	}
+
+	.list {
+		background-color: rgba(31, 29, 23, 0.8);
+		padding: 2rem;
+		border-radius: 0.25rem;
 	}
 
 	.marquiz__container {
@@ -665,6 +680,10 @@ section.sheet-quiz {
 		font-weight: 600;
     	padding-left: 2.5rem;
     	padding-right: 2.5rem;
+	}
+
+	div[data-marquiz-id] {
+		padding-top: 10vh;
 	}
 }
 
@@ -731,14 +750,14 @@ section.plan {
 			height: 310px;
 			max-width: 220px;
 			margin: 20px auto;
-			padding: 56px 32px;
+			padding: 3.5em 2em;
 			background-position: center 150px;
 			background-size: 145px auto;
 			background-repeat: no-repeat;
 			color: @color-coffee;
 			list-style: none;
 			border-radius: 10px;
-			font-size: 18px;
+			font-size: 1.125rem;
 			text-align: left;
 			position: relative;
 			font-weight: 600;
@@ -755,7 +774,7 @@ section.plan {
 				border-radius: 0 10px 0 10px;
 				background: @color-mocca;
 				color: @color-hose;
-				font-size: 30px;
+				font-size: 1.875rem;
 				counter-increment: bCounter;
 				content: counter(bCounter);
 				display: block;
@@ -794,22 +813,22 @@ section.specs {
 	padding-right: 10px;
 
 	h2 {
-		font-size: 30px;
+		font-size: 1.875rem;
 		text-transform: uppercase;
 	}
 
 	h3:not(.heading) {
 		font-weight: 700;
-		font-size: 18px;
+		font-size: 1.125rem;
 		margin: 2rem 0;
 	}
 
 	h4 {
-		min-height: 50px;
+		min-height: 3.125em;
 		text-align: center;
 		font-weight: 300;
-		font-size: 20px;
-		padding: 0 8px;
+		font-size: 1.125rem;
+		padding: 0 0.5em;
 		text-transform: uppercase;
 	}
 
@@ -835,7 +854,7 @@ section.specs {
 		}
 
 		.note {
-			font-size: 12px;
+			font-size: 0.75rem;
 		}
 
 		.accordion {
@@ -883,7 +902,7 @@ section.specs {
 		font-family: @font-podkova;
 
 		strong {
-			font-size: 24px;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -914,7 +933,7 @@ section.specs {
 	.disclaim {
 		margin-top: 2rem;
 		text-align: left;
-		font-size: 12px;
+		font-size: 0.75rem;
 	}
 }
 
@@ -925,12 +944,12 @@ section.assembling {
 	h3 {
 		color: #ffffff;
 		font-weight: 500;
-		font-size: 48px;
+		font-size: 3rem;
 
 		small {
 			text-transform: lowercase;
 			display: block;
-			font-size: 36px;
+			font-size: 2rem;
 		}
 	}
 
@@ -962,7 +981,7 @@ section.faq {
 
 		h4 {
 			font-family: @font-raleway;
-			margin-bottom: 4px;
+			margin-bottom: 0.25em;
 			font-weight: 700;
 		}
 	}
@@ -977,14 +996,14 @@ section.question {
 	}
 
 	h2 {
-		font-size: 48px;
+		font-size: 3rem;
 		font-weight: bold;
 		text-transform: uppercase;
 
 		small {
 			line-height: 1;
 			text-transform: initial;
-			font-size: 28px;
+			font-size: 1.75rem;
 			font-weight: normal;
 			display: block;
 		}
@@ -1105,6 +1124,9 @@ section[data-section="houses"] {
 
 	.slick-slide {
 		min-height: 278px;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
 	}
 	
 	.carousel {
@@ -1153,6 +1175,24 @@ section[data-section="packages"] {
 	.card {
 		box-shadow: @shadow;
 	}
+}
+
+.catalog-button-container {
+	padding-top: 3rem;
+}
+
+.info-icon {
+	display: inline-flex;
+	width: 36px;
+	height: 36px;
+	line-height: 0.6;
+	border-radius: 50%;
+	border: #ffffff 2px solid;
+	background-color: #fac011;
+	transform: scale(1.5);
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
 }
 
 section[data-section="services"] {
@@ -1338,11 +1378,31 @@ footer {
 	}
 
 	.smallest {
-		font-size: 14px;
+		font-size: 0.875rem;
 
 		a {
 			text-decoration: underline;
 		}
+	}
+
+	.map {
+		position: relative;
+		z-index: 1;
+	}
+
+	.baloon {
+		left: 10%;
+		top: 48px;
+		bottom: 48px;
+		margin: auto;
+		width: 340px;
+		position: absolute;
+		border-radius: 8px;
+		background-color: #fff;
+		box-shadow: 0px 10px 30px 0px rgba(34, 60, 80, 0.2);
+		padding: 2rem;
+		z-index: 2;
+		text-align: center;
 	}
 
 	.logo {
@@ -1356,21 +1416,36 @@ footer {
 		}
 	}
 
-	.address p {
-		&:first-child {
-			margin-bottom: 0;
-			margin-top: 1.325rem;
+	.address {
+		&.mini {
+			padding-top: 0;
+			font-size: 75%;
+		}
+		p {
+			&:first-child {
+				margin-bottom: 0;
+				margin-top: 1.325rem;
+			}
 		}
 	}
 
 	.contacts, .address {
-		font-size: 18px;
+		font-size: 1.125rem;
 		padding-top: 40px;
 	}
 
 	.phone {
-		font-size: 28px;
+		font-size: 36px;
 		font-family: @font-podkova;
+		&.spaced {
+			margin: 1rem 0;
+		}
+	}
+
+	.yandex-map-widget {
+		width: 100%; 
+		height: 520px; 
+		z-index: 1;
 	}
 
 	.contacts {
@@ -1378,6 +1453,10 @@ footer {
 			display: inline-block;
 			margin-bottom: 12px;
 		}
+	}
+
+	.divider {
+		padding: 0 1rem;
 	}
 }
 
@@ -1389,9 +1468,9 @@ button,
 	text-align: center;
 	display: inline-block;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-weight: bold;
-	padding: 20px 40px;
+	padding: 1.25em 2.5em;
 	border-radius: none;
 	font-family: @font-podkova;
 	-webkit-tap-highlight-color: transparent;
@@ -1425,10 +1504,30 @@ button,
 	}
 }
 
+.gallery-carousel-brus {
+	.slick-active:hover {
+		cursor: pointer;
+	}
+}
+
 .modal {
 	.header .cancel {
 		cursor: pointer;
 	}
+}
+
+.lb-image {
+	width: 100%;
+}
+.lb-modal .actions {
+	z-index: 3;
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+.lb-modal .image.content {
+	justify-content: center;
+	align-items: center;
 }
 
 .ui.form {

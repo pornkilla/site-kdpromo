@@ -54,54 +54,6 @@
   overflow: hidden;
   visibility: hidden;
 }
-.spaced-left {
-  margin-left: 1rem;
-}
-.spaced-left-half {
-  margin-left: 0.5rem;
-}
-.spaced-left-quarter {
-  margin-left: 0.25rem;
-}
-.spaced-left-double {
-  margin-left: 2rem;
-}
-.spaced-right {
-  margin-right: 1rem;
-}
-.spaced-right-half {
-  margin-right: 0.5rem;
-}
-.spaced-right-quarter {
-  margin-right: 0.25rem;
-}
-.spaced-right-double {
-  margin-right: 2rem;
-}
-.padded-left {
-  padding-left: 1rem;
-}
-.padded-left-half {
-  padding-left: 0.5rem;
-}
-.padded-left-quarter {
-  padding-left: 0.25rem;
-}
-.padded-left-double {
-  padding-left: 2rem;
-}
-.padded-right {
-  padding-right: 1rem;
-}
-.padded-right-half {
-  padding-right: 0.5rem;
-}
-.padded-right-quarter {
-  padding-right: 0.25rem;
-}
-.padded-right-double {
-  padding-right: 2rem;
-}
 .centered {
   margin-left: auto;
   margin-right: auto;
@@ -127,11 +79,7 @@
   padding: 5px 10px;
   width: auto;
   height: auto;
-  font-size: 1rem;
-}
-.flexy-center {
-  align-items: center;
-  justify-content: center;
+  font-size: 16px;
 }
 .v-space {
   margin-top: 1rem;
@@ -148,12 +96,6 @@
 .v-space.quad {
   margin-top: 4rem;
   margin-bottom: 4rem;
-}
-.text-small {
-  font-size: 0.875rem;
-}
-.underline {
-  text-decoration: underline;
 }
 /* Slider */
 .slick-loading .slick-list {
@@ -579,7 +521,7 @@ a:hover {
 }
 header {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 header .logo {
   background: transparent url("../img/logo-fullcolor-new.svg") center 0 no-repeat;
@@ -618,7 +560,7 @@ header .price {
   color: #fbf5e8;
   margin: auto;
   top: 160px;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 500;
   background-color: rgba(20, 26, 13, 0.6);
 }
@@ -630,11 +572,11 @@ header .price .middle {
   padding: 10px 0;
 }
 header .price .middle span {
-  font-size: 1.125rem;
+  font-size: 18px;
 }
 header .price .middle .amount {
   font-family: 'Podkova', serif;
-  font-size: 3.375rem;
+  font-size: 54px;
   letter-spacing: -2px;
   color: #fac011;
 }
@@ -922,12 +864,12 @@ section.benefits ol {
 section.benefits li {
   color: #ffffff;
   list-style: none;
-  font-size: 1.125rem;
+  font-size: 18px;
   text-align: left;
   font-weight: 300;
-  padding-left: 0.625em;
-  margin-bottom: 2.5em;
-  padding-right: 0.625em;
+  padding-left: 10px;
+  margin-bottom: 40px;
+  padding-right: 10px;
 }
 section.benefits li::before {
   display: block;
@@ -1031,7 +973,7 @@ section.guarantee .count {
   width: 80px;
   height: 80px;
   z-index: 2;
-  font-size: 2rem;
+  font-size: 36px;
   position: relative;
   font-weight: bold;
   font-family: 'Podkova', serif;
@@ -1075,21 +1017,8 @@ section.sheet-quiz {
 #brus section.sheet-quiz {
   background-image: url("../img/bg_section-2-brus.jpg");
 }
-section.sheet-quiz .quiz-title {
-  display: flex;
-  align-items: center;
-  flex-direction: column-reverse;
-}
-section.sheet-quiz .quiz-title h2 {
-  margin-top: 2rem;
-}
 section.sheet-quiz .wrapper {
   padding-top: 6rem;
-}
-section.sheet-quiz .list {
-  background-color: rgba(31, 29, 23, 0.8);
-  padding: 2rem;
-  border-radius: 0.25rem;
 }
 section.sheet-quiz .marquiz__container {
   padding-top: 30vh;
@@ -1100,9 +1029,6 @@ section.sheet-quiz .marquiz__button {
   font-weight: 600;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-section.sheet-quiz div[data-marquiz-id] {
-  padding-top: 10vh;
 }
 section.plan {
   padding-left: 0;
@@ -1159,14 +1085,14 @@ section.plan .step-list .column {
   height: 310px;
   max-width: 220px;
   margin: 20px auto;
-  padding: 3.5em 2em;
+  padding: 56px 32px;
   background-position: center 150px;
   background-size: 145px auto;
   background-repeat: no-repeat;
   color: #4e3329;
   list-style: none;
   border-radius: 10px;
-  font-size: 1.125rem;
+  font-size: 18px;
   text-align: left;
   position: relative;
   font-weight: 600;
@@ -1183,7 +1109,7 @@ section.plan .step-list .column::before {
   border-radius: 0 10px 0 10px;
   background: #ccc4b7;
   color: #fbf5e8;
-  font-size: 1.875rem;
+  font-size: 30px;
   counter-increment: bCounter;
   content: counter(bCounter);
   display: block;
@@ -1213,20 +1139,20 @@ section.specs {
   padding-right: 10px;
 }
 section.specs h2 {
-  font-size: 1.875rem;
+  font-size: 30px;
   text-transform: uppercase;
 }
 section.specs h3:not(.heading) {
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 18px;
   margin: 2rem 0;
 }
 section.specs h4 {
-  min-height: 3.125em;
+  min-height: 50px;
   text-align: center;
   font-weight: 300;
-  font-size: 1.125rem;
-  padding: 0 0.5em;
+  font-size: 20px;
+  padding: 0 8px;
   text-transform: uppercase;
 }
 section.specs .column .white {
@@ -1246,7 +1172,7 @@ section.specs .column .desc {
   margin-bottom: 1rem;
 }
 section.specs .column .note {
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 section.specs .column .accordion {
   margin-top: 12px;
@@ -1286,7 +1212,7 @@ section.specs .description {
   font-family: 'Podkova', serif;
 }
 section.specs .description strong {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 section.specs .addition {
   margin-top: 3rem;
@@ -1311,7 +1237,7 @@ section.specs .woodline {
 section.specs .disclaim {
   margin-top: 2rem;
   text-align: left;
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 section.assembling {
   background: #5d2a1f url("../img/bg_section-7.jpg") center center no-repeat;
@@ -1320,12 +1246,12 @@ section.assembling {
 section.assembling h3 {
   color: #ffffff;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 48px;
 }
 section.assembling h3 small {
   text-transform: lowercase;
   display: block;
-  font-size: 2rem;
+  font-size: 36px;
 }
 section.assembling form {
   text-align: center;
@@ -1347,7 +1273,7 @@ section.faq .row.white {
 }
 section.faq .row h4 {
   font-family: 'Raleway', sans-serif;
-  margin-bottom: 0.25em;
+  margin-bottom: 4px;
   font-weight: 700;
 }
 section.question {
@@ -1358,14 +1284,14 @@ section.question a {
   color: #5d2a1f;
 }
 section.question h2 {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: bold;
   text-transform: uppercase;
 }
 section.question h2 small {
   line-height: 1;
   text-transform: initial;
-  font-size: 1.75rem;
+  font-size: 28px;
   font-weight: normal;
   display: block;
 }
@@ -1454,9 +1380,6 @@ section.question .dopustim {
 }
 section[data-section="houses"] .slick-slide {
   min-height: 278px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
 }
 section[data-section="houses"] .carousel .description p {
   line-height: 1.2;
@@ -1492,22 +1415,6 @@ section[data-section="packages"] .lead {
 }
 section[data-section="packages"] .card {
   box-shadow: 0px 2px 2px rgba(89, 89, 89, 0.5);
-}
-.catalog-button-container {
-  padding-top: 3rem;
-}
-.info-icon {
-  display: inline-flex;
-  width: 36px;
-  height: 36px;
-  line-height: 0.6;
-  border-radius: 50%;
-  border: #ffffff 2px solid;
-  background-color: #fac011;
-  transform: scale(1.5);
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
 }
 section[data-section="services"] {
   background-image: url('../img/bg_section-5-karkas.jpg');
@@ -1638,28 +1545,10 @@ footer .wrapper {
   padding: 6rem 20px 3rem;
 }
 footer .smallest {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 footer .smallest a {
   text-decoration: underline;
-}
-footer .map {
-  position: relative;
-  z-index: 1;
-}
-footer .baloon {
-  left: 10%;
-  top: 48px;
-  bottom: 48px;
-  margin: auto;
-  width: 340px;
-  position: absolute;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0px 10px 30px 0px rgba(34, 60, 80, 0.2);
-  padding: 2rem;
-  z-index: 2;
-  text-align: center;
 }
 footer .logo {
   margin-left: auto;
@@ -1680,37 +1569,22 @@ footer .logo p {
   overflow: hidden;
   visibility: hidden;
 }
-footer .address.mini {
-  padding-top: 0;
-  font-size: 75%;
-}
 footer .address p:first-child {
   margin-bottom: 0;
   margin-top: 1.325rem;
 }
 footer .contacts,
 footer .address {
-  font-size: 1.125rem;
+  font-size: 18px;
   padding-top: 40px;
 }
 footer .phone {
-  font-size: 36px;
+  font-size: 28px;
   font-family: 'Podkova', serif;
-}
-footer .phone.spaced {
-  margin: 1rem 0;
-}
-footer .yandex-map-widget {
-  width: 100%;
-  height: 520px;
-  z-index: 1;
 }
 footer .contacts a {
   display: inline-block;
   margin-bottom: 12px;
-}
-footer .divider {
-  padding: 0 1rem;
 }
 button,
 .button {
@@ -1720,9 +1594,9 @@ button,
   text-align: center;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: bold;
-  padding: 1.25em 2.5em;
+  padding: 20px 40px;
   border-radius: none;
   font-family: 'Podkova', serif;
   -webkit-tap-highlight-color: transparent;
@@ -1749,24 +1623,8 @@ button.wide,
   width: 100%;
   min-height: 400px;
 }
-.gallery-carousel-brus .slick-active:hover {
-  cursor: pointer;
-}
 .modal .header .cancel {
   cursor: pointer;
-}
-.lb-image {
-  width: 100%;
-}
-.lb-modal .actions {
-  z-index: 3;
-  display: flex;
-  position: relative;
-  align-items: center;
-}
-.lb-modal .image.content {
-  justify-content: center;
-  align-items: center;
 }
 .ui.form input:not([type]),
 .ui.form input[type=date],
@@ -1825,10 +1683,10 @@ form fieldset {
     padding: 40px;
   }
   header .price .middle {
-    padding: 0.25em 0;
+    padding: 4px 0;
   }
   header .price .middle .amount {
-    font-size: 4rem;
+    font-size: 64px;
   }
   main section {
     padding-left: 15%;
@@ -1870,7 +1728,7 @@ form fieldset {
     max-width: 1100px;
   }
   main h3 {
-    font-size: 3rem;
+    font-size: 48px;
   }
   main section .wrapper {
     padding: 80px 0;
@@ -1933,9 +1791,6 @@ form fieldset {
   }
   footer .row {
     text-align: left;
-  }
-  footer .desktop-right {
-    text-align: right;
   }
   section[data-section="houses"] h3 {
     font-size: 2.5rem;
@@ -2023,7 +1878,7 @@ form fieldset {
     margin-right: 0;
   }
   footer .phone {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
   section.guarantee .wrapper {
     padding-bottom: 6rem;
@@ -2049,9 +1904,6 @@ form fieldset {
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-  }
-  .lb-modal .lb-image img {
-    min-height: 455px;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -2081,9 +1933,6 @@ form fieldset {
   header .menu.main .address {
     display: none;
   }
-  header .menu.main ul {
-    width: auto;
-  }
   header .price {
     top: 290px;
     left: auto;
@@ -2091,7 +1940,7 @@ form fieldset {
     padding: 90px;
   }
   header .price .middle .amount {
-    font-size: 7.5rem;
+    font-size: 120px;
   }
   section.benefits {
     padding-bottom: 400px;
@@ -2154,44 +2003,6 @@ form fieldset {
 .only,
 .only.ui.menu {
   display: none;
-}
-@media only screen and (max-width: 960px) {
-  .ui.button.modal-navi,
-  .lb-modal .actions .button {
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: 2;
-  }
-}
-@media only screen and (orientation: landscape) and (max-width: 960px) {
-  .lb-modal .actions {
-    bottom: 0;
-    top: auto;
-    left: 0;
-    right: 0;
-    position: absolute;
-  }
-  .lb-modal .image.content {
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: auto;
-    position: absolute;
-    padding: 0;
-    z-index: 1;
-  }
-  .lb-modal .button.cancel {
-    z-index: 3;
-  }
-  .lb-modal {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-  }
-  .lb-dimmer.modals.active {
-    padding: 0;
-  }
 }
 @media only screen and (min-width: 320px) {
   header .underhead .videobox .features {
@@ -2259,8 +2070,8 @@ form fieldset {
     margin-right: 4rem;
   }
   section.assembling .wrapper {
-    padding-top: 6rem;
-    padding-bottom: 8rem;
+    padding-top: 12rem;
+    padding-bottom: 16rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -2273,11 +2084,5 @@ form fieldset {
 @media only screen and (min-width: 1366px) {
   section[data-section="houses"] .slick-slide {
     min-height: 230px;
-  }
-}
-@media only screen and (min-width: 1980px) {
-  html,
-  body {
-    font-size: 20px;
   }
 }
