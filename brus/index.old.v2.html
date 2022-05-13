@@ -22,7 +22,7 @@
 		content="Мы строим, собираем и продаем дома из клееного бруса. Проекты домов отвечают высочайшему стандарту качества и новейшим технологиям строительства в Карелии">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/styles.css?v20220513">
+	<link rel="stylesheet" type="text/css" href="../css/styles.v1.css?v20210310">
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (m, e, t, r, i, k, a) {
@@ -46,7 +46,7 @@
 	<!-- Marquiz script start -->
 	<script>
 		(function (w, d, s, o) {
-			let j = d.createElement(s);
+			var j = d.createElement(s);
 			j.async = true;
 			j.src = '//script.marquiz.ru/v2.js';
 			j.onload = function () {
@@ -66,41 +66,6 @@
 		});
 	</script>
 	<!-- Marquiz script end -->
-	<script>
-		function navigate(side) {
-			let image = document.getElementsByClassName('lb-image')[0];
-			let src = image.getAttribute('src');
-			let srcId = src.substring(10, src.length - 4);
-			let prefix = src.substring(0,10);
-			let suffix = src.substring(src.length - 4);
-			
-			if (side === 'left') {
-				let newSrcId = parseInt(srcId) - 1;
-			
-				if (newSrcId > 0) {
-					image.removeAttribute('src');
-					let newRes = prefix + newSrcId + suffix;
-					image.setAttribute('src', newRes);
-				} else {
-					image.removeAttribute('src');
-					let newRes = prefix + '12' + suffix;
-					image.setAttribute('src', newRes);
-				}
-			} else if (side === 'right') {
-				let newSrcId = parseInt(srcId) + 1;
-			
-				if (newSrcId <= 12) {
-					image.removeAttribute('src');
-					let newRes = prefix + newSrcId + suffix;
-					image.setAttribute('src', newRes);
-				} else {
-					image.removeAttribute('src');
-					let newRes = prefix + '1' + suffix;
-					image.setAttribute('src', newRes);
-				}
-			}
-		}
-	</script>
 </head>
 
 <body id="brus" class="allpages">
@@ -109,6 +74,20 @@
 			<div id="fast-contacts">
 				<button class="ui icon yellow basic button gotop" type="button">
 					<i class="chevron up icon"></i>
+				</button>
+				<button class="ui floating dropdown icon yellow button callmenu" type="button">
+					<i class="phone icon"></i>
+					<div class="menu">
+						<a class="item" href="viber://chat?number=%2B79535332396" title="Связаться в Viber">
+							<i class="large viber icon"></i> Viber
+						</a>
+						<a class="item" href="https://wa.me/79535332396" title="Связаться в Whatsapp">
+							<i class="large whatsapp icon"></i> Whatsapp
+						</a>
+						<a class="item" href="tel:+79535332396" title="Позвонить">
+							<i class="phone icon"></i> +7 953 533-23-96
+						</a>
+					</div>
 				</button>
 			</div>
 
@@ -130,14 +109,9 @@
 			</ul>
 			<div class="special">
 				<span class="contacts">
-					<a href="mailto:karelianhaus@yandex.ru" title="Напишите нам">
+					<a href="mailto:karelianhaus@yandex.ru">
 						<i class="envelope outline icon"></i>
-					</a>
-					<a href="https://wa.me/79535332396" target="_blank" title="Связаться в Whatsapp">
-						<i class="whatsapp outline icon"></i>
-					</a>
-					<a href="tel:+79535332396" title="Позвонить:  +7 953 533-23-96">
-						<i class="phone icon"></i>
+						<span>Напишите нам</span>
 					</a>
 				</span>
 				<span class="address">
@@ -155,27 +129,27 @@
 			<div class="ui stackable two column grid">
 				<div class="column teaser">
 					<h2><small>Построим теплый дом</small> <br><span class="upper">из КЛЕЕНОГО БРУСА</span> <br>от <span
-							class="color-sun underline">26.5 т.р.</span> за м<sup>2</sup> <small>в Карелии!</small></h2>
+							class="color-sun">26.5 т.р.</span> за м<sup>2</sup> <small>в Карелии!</small></h2>
 					<div class="features">
 						<ul class="ui list">
 							<li class="item">
 								<i class="large check circle yellow icon"></i>
-								<span><u class="color-sun">Гарантия</u> на несущие конструкции 10 лет</span>
+								<span>Гарантия на несущие конструкции</span>
 							</li>
 							<li class="item">
 								<i class="large check circle yellow icon"></i>
-								<span>Минимальные сроки строительства, возведение дома занимает <u class="color-sun">от трёх недель</u></span>
+								<span>Минимальные сроки строительства, возведение дома занимает от трёх недель</span>
 							</li>
 							<li class="item">
 								<i class="large check circle yellow icon"></i>
-								<span><u class="color-sun">Отсутствие сезонных ограничений</u> для строительства дома из клееного бруса</span>
+								<span>Отсутствие сезонных ограничений для строительства дома из клееного бруса</span>
 							</li>
 					</div>
 				</div>
 				<div class="column">
 					<div class="ui card">
 						<h3>Оставьте заявку,</h3>
-						<p class="lead">и мы перезвоним вам:</p>
+						<p class="lead">а мы перезвоним вам:</p>
 						<form class="ui massive form catalog" id="form-one"
 							onclick="ym(67087375, 'reachGoal', 'form1'); return true;">
 							<fieldset>
@@ -210,7 +184,7 @@
 			<div class="wrapper">
 				<h3>почему наши клиенты<br>выбирают дома из клееного бруса</h3>
 				<h4 class="centered">МЫ СТРОИМ ДОМА ВАШЕЙ МЕЧТЫ</h4>
-				<p class="centered">Более, чем за 20 лет работы мы построили более двух десятков домов! Многолетний опыт работы и
+				<p class="centered">За 12 лет работы мы построили более двух десятков домов! Многолетний опыт работы и
 					сотрудничества с финскими компаниями позволил довести уровень строительства до Европейских
 					стандартов. При
 					строительстве наших домов применяются только новейшие технологии и материалы. Мы работаем для того,
@@ -218,7 +192,7 @@
 					был местом, где проходит лучшая часть жизни. Убедитесь сами в преимуществах домов из клееного бруса!
 				</p>
 
-				<div class="carousel carousel-brus carousel-wrap">
+				<div class="carousel carousel-brus">
 					<div class="ui card">
 						<div class="content">
 							<div class="center aligned header"><i class="circular green big tree icon"></i></div>
@@ -284,67 +258,9 @@
 				</div>
 			</div>
 		</section>
-		<section class="dark">
-			<div class="wrapper">
-				<h3>Наши трудовые будни</h3>
-				<div class="carousel gallery-carousel-brus ui fluid images">
-					<img data-lazy="gallery/1/thumb-1.jpg" alt="Картинка 1">
-					<img data-lazy="gallery/1/thumb-2.jpg" alt="Картинка 2">
-					<img data-lazy="gallery/1/thumb-3.jpg" alt="Картинка 3">
-					<img data-lazy="gallery/1/thumb-4.jpg" alt="Картинка 4">
-					<img data-lazy="gallery/1/thumb-5.jpg" alt="Картинка 5">
-					<img data-lazy="gallery/1/thumb-6.jpg" alt="Картинка 6">
-					<img data-lazy="gallery/1/thumb-7.jpg" alt="Картинка 7">
-					<img data-lazy="gallery/1/thumb-8.jpg" alt="Картинка 8">
-					<img data-lazy="gallery/1/thumb-9.jpg" alt="Картинка 9">
-					<img data-lazy="gallery/1/thumb-10.jpg" alt="Картинка 10">
-					<img data-lazy="gallery/1/thumb-11.jpg" alt="Картинка 11">
-					<img data-lazy="gallery/1/thumb-12.jpg" alt="Картинка 12">
-				</div>
-
-				<div class="carousel gallery-carousel-brus ui fluid images">
-					<img data-lazy="gallery/2/thumb-1.jpg" alt="Картинка 1">
-					<img data-lazy="gallery/2/thumb-2.jpg" alt="Картинка 2">
-					<img data-lazy="gallery/2/thumb-3.jpg" alt="Картинка 3">
-					<img data-lazy="gallery/2/thumb-4.jpg" alt="Картинка 4">
-					<img data-lazy="gallery/2/thumb-5.jpg" alt="Картинка 5">
-					<img data-lazy="gallery/2/thumb-6.jpg" alt="Картинка 6">
-					<img data-lazy="gallery/2/thumb-7.jpg" alt="Картинка 7">
-					<img data-lazy="gallery/2/thumb-8.jpg" alt="Картинка 8">
-					<img data-lazy="gallery/2/thumb-9.jpg" alt="Картинка 9">
-					<img data-lazy="gallery/2/thumb-10.jpg" alt="Картинка 10">
-					<img data-lazy="gallery/2/thumb-11.jpg" alt="Картинка 11">
-					<img data-lazy="gallery/2/thumb-12.jpg" alt="Картинка 12">
-				</div>
-
-				<div class="carousel gallery-carousel-brus ui fluid images">
-					<img data-lazy="gallery/3/thumb-1.jpg" alt="Картинка 1">
-					<img data-lazy="gallery/3/thumb-2.jpg" alt="Картинка 2">
-					<img data-lazy="gallery/3/thumb-3.jpg" alt="Картинка 3">
-					<img data-lazy="gallery/3/thumb-4.jpg" alt="Картинка 4">
-					<img data-lazy="gallery/3/thumb-5.jpg" alt="Картинка 5">
-					<img data-lazy="gallery/3/thumb-6.jpg" alt="Картинка 6">
-					<img data-lazy="gallery/3/thumb-7.jpg" alt="Картинка 7">
-					<img data-lazy="gallery/3/thumb-8.jpg" alt="Картинка 8">
-					<img data-lazy="gallery/3/thumb-9.jpg" alt="Картинка 9">
-					<img data-lazy="gallery/3/thumb-10.jpg" alt="Картинка 10">
-					<img data-lazy="gallery/3/thumb-11.jpg" alt="Картинка 11">
-					<img data-lazy="gallery/3/thumb-12.jpg" alt="Картинка 12">
-				</div>
-			</div>
-		</section>
 		<section class="sheet-quiz" data-section="selection">
 			<div class="wrapper">
-        <div class="quiz-title">
-        <h2>Как Вам поможет этот тест?</h2>
-        <h3>Пройдите тест и получите скидку</h3>
-      </div>
-        
-        <ul class="ui bulleted list">
-          <li class="item">Мы сможем понять, чего вы ожидаете от работы с нами</li>
-          <li class="item">Определим сроки и бюджет на строительство при первом звонке</li>
-          <li class="item">Вы получите список готовых решений для домов из клееного бруса</li>
-        </ul>
+				<h3>Пройдите тест и получите скидку</h3>
 				<div data-marquiz-id="602e489e627fef004465cbfb"></div>
 				<script>
 					(function (t, p) {
@@ -368,7 +284,7 @@
 					<div class="column">
 						<div class="white">
 							<div class="title pic">
-								<img src="../img/pic_offer-title-1-4.jpg" alt="Дома постоянного проживания">
+								<img src="../img/pic_offer-title-1.jpg" alt="Дома постоянного проживания">
 							</div>
 							<h4>Дома <br>постоянного проживания</h4>
 							<div class="centered">
@@ -385,7 +301,7 @@
 					<div class="column">
 						<div class="white">
 							<div class="title pic">
-								<img src="../img/pic_offer-title-1-5.jpg" alt="Дома сезонного проживания">
+								<img src="../img/pic_offer-title-2.jpg" alt="Дома сезонного проживания">
 							</div>
 							<h4>Дома <br>сезонного проживания</h4>
 							<div class="centered">
@@ -419,14 +335,32 @@
 
 				<div class="addition centered">
 					<img src="../img/pic_tools-6.png" class="padded" alt="Работы по сборке дома из клееного бруса">
-					<h2>Каталог домов</h2>
-          <p class="centered">Наши дома созданы в разных стилях. Все проекты тщательно выверены и достойны выбора. Каждый проект может быть оптимизирован и доработан с учетом пожеланий заказчика</p>
-					
+					<h2>Перечень работ по сборке комплекта дома на готовом фундаменте</h2>
+
+					<div class="ui list">
+						<div class="item">» устройство гидроизоляции под нижний венец дома</div>
+						<div class="item">» устройство обвязочной доски</div>
+						<div class="item">» устройство стен из клееного бруса, с установкой чашечного и меж венцового
+							уплотнителя</div>
+						<div class="item">» устройство стропильной системы–коньковая балка, стропила, опорные столбы из
+							клееных балок</div>
+						<div class="item">» устройство меж этажных балок перекрытия внутренних помещений 2-го этажа
+						</div>
+						<div class="item">» устройство несущих конструкций террас и балконов с установкой опорных
+							столбов</div>
+						<div class="item">» устройство оконных и дверных проемов с установкой обсадной доски</div>
+					</div>
+
+					<div class="woodline">
+						цена сборки комплекта &mdash; по запросу *
+					</div>
+
+					<p class="disclaim">* &mdash; Стоимость строительства &laquo;под ключ&raquo; &mdash; по запросу.</p>
 				</div>
 
-				<div class="ui centered container catalog-button-container">
+				<div class="ui centered container" style="padding-top: 3rem;">
 					<a href="https://karelianhouse.ru/catalog/" target="_blank" class="yellow button">Каталог
-						домов <i class="chevron right icon"></i></a>
+						домов</a>
 				</div>
 			</div>
 
@@ -526,7 +460,6 @@
 		<section data-section="technologies" class="dark tech-revealer">
 			<div class="wrapper">
 				<h3>Технологии домостроения</h3>
-        <p class="centered">Узнайте больше о технологиях производства, преимуществах использования и основных свойствах клееного бруса от наших поставщиков:</p>
 				<div class="centered">
 					<button class="reveal-button yellow wide" type="button"
 						onclick="ym(67087375, 'reachGoal', 'tech1'); return true;">
@@ -623,7 +556,7 @@
 					Словом, клееный брус – именно тот материал, который позволяет архитектору воплотить в реальность
 					представления человека о доме мечты.</p>
 
-				<div class="ui centered container catalog-button-container">
+				<div class="ui centered container" style="padding-top: 3rem;">
 					<a href="https://karelianhouse.ru/catalog/" target="_blank" class="wide yellow button">Каталог
 						домов</a>
 				</div>
@@ -689,15 +622,48 @@
 				</div>
 			</div>
 		</section>
+		<!-- <section class="plan" data-section="services">
+			<div class="wrapper">
+				<h3>Мы сделаем для Вас</h3>
+				<ol class="step-list">
+					<li class="column icon-1">Продумаем планировку дома</li>
+					<li class="column icon-2">Предложим профессиональный проект</li>
+					<li class="column icon-3">Создадим сруб из клееного бруса</li>
+					<li class="column icon-4">Соберем сруб на участке</li>
+				</ol>
+
+				<div class="ui centered container" style="padding-top: 3rem;">
+					<a href="https://karelianhouse.ru/catalog/" target="_blank" class="wide yellow button">Каталог
+						домов</a>
+				</div>
+			</div>
+		</section> -->
+		<!-- <section class="wood-house" data-section="selection">
+			<div class="wrapper">
+				<h3>Получите консультацию<small>по проекту будущего дома</small></h3>
+				<p class="desc">Наш специалист перезвонит Вам в течение 2 часов</p>
+				<form class="ui massive form callback" id="form-two">
+					<div class="two fields">
+						<div class="field">
+							<input type="text" name="fieldname" placeholder="Ваше имя">
+						</div>
+						<div class="field">
+							<input type="tel" name="fieldphone" placeholder="Телефон">
+						</div>
+					</div>
+					<button type="submit" class="yellow wide">Получить консультацию</button>
+					<div class="centered">
+						<div class="ui error message"></div>
+						<div class="ui success message hidden"></div>
+					</div>
+				</form>
+			</div>
+		</section> -->
+
+
 		<section class="faq" data-section="faq">
 			<div class="wrapper">
-				<h3 class="flexy flexy-center">
-          <span class="info-icon"><svg baseProfile="tiny" height="24" version="1.2" width="24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#392119" d="M13.839 17.525c-.006.002-.559.186-1.039.186-.265 0-.372-.055-.406-.079-.168-.117-.48-.336.054-1.4l1-1.994c.593-1.184.681-2.329.245-3.225-.356-.733-1.039-1.236-1.92-1.416a4.776 4.776 0 0 0-.958-.097c-1.849 0-3.094 1.08-3.146 1.126a.5.5 0 0 0 .493.848c.005-.002.559-.187 1.039-.187.263 0 .369.055.402.078.169.118.482.34-.051 1.402l-1 1.995c-.594 1.185-.681 2.33-.245 3.225.356.733 1.038 1.236 1.921 1.416.314.063.636.097.954.097 1.85 0 3.096-1.08 3.148-1.126a.5.5 0 0 0-.491-.849z"/>
-            <circle fill="#392119" cx="13" cy="6.001" r="2.5"/>
-          </svg></span>
-          <span class="spaced-left-double">Часто задаваемые вопросы</span>
-        </h3>
+				<h3>Часто задаваемые вопросы</h3>
 				<div class="ui accordion white">
 					<div class="title active">
 						<p>
@@ -818,69 +784,50 @@
 	</main>
 
 	<footer>
-    <div class="map">
-      <div class="baloon">
-        <div class="logo">
-          <p>Карельский дом</p>
-        </div>
-        <div class="address mini">
-          <p>185013, Республика Карелия</p>
-          <p>город Петрозаводск, <br>улица Пограничная, 22</p>
-        </div>
-        <div class="phone spaced">
-          <a href="tel:+79535332396">+7 953 533 23 96</a>
-        </div>
-        <div class="link">
-          <a href="mailto:karelianhaus@yandex.ru">
-            <i class="icon envelope"></i>
-            karelianhaus@yandex.ru</a>
-        </div>
-      </div>
-      <div id="map" class="yandex-map-widget"></div>
-
-      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-      <script type="text/javascript">
-        ymaps.ready(init);		
-        function init() {
-          let myMap = new ymaps.Map("map", {
-            center: [61.805262, 34.278878],
-            zoom: 17,
-            controls: ['zoomControl',  'fullscreenControl']
-          }, {
-            searchControlProvider: 'yandex#search'
-          });
-          let myPlacemark = new ymaps.Placemark([61.805287, 34.281068], {
-            iconCaption: 'Наш офис'
-          }, {
-            preset: 'islands#brownDotIcon'
-          });
-          myMap.geoObjects.add(myPlacemark); 
-        }
-      </script>
-    </div>
 		<div class="wrapper">
-			<div class="ui stackable two column grid">
+			<div class="ui stackable three column grid">
 				<div class="row">
 					<div class="column">
-						<div class="text-small">
-							<a href="../policy.html" target="_blank">Политика конфиденциальности</a> <span class="color-blin divider">|</span> <a
-								href="https://karelianhouse.ru/technology/index.php?p=1&id=11" target="_blank">Лицензии</a>
+						<div class="logo">
+							<p>Карельский дом</p>
 						</div>
-						<div class="copy text-small">
-							<span id="year" class="padded-right-quarter"></span>
-							<span class="color-blin padded-right-quarter">&copy;</span>
-							<span>Компания «Карельский Дом»</span>
-						</div>
-          </div>
+					</div>
 					<div class="column">
-						<div class="badge desktop-right">
+						<div class="address">
+							<p>185013, Республика Карелия</p>
+							<p>город Петрозаводск, <br>улица Пограничная, 22</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="contacts">
+							<div class="phone">
+								<a href="tel:+79535332396">+7 953 533 23 96</a>
+							</div>
+							<div class="link">
+								<a href="mailto:karelianhaus@yandex.ru">
+									<i class="icon envelope"></i>
+									karelianhaus@yandex.ru</a>
+							</div>
+							<!-- <div class="link">
+								<a href="https://instagram.com/karelskii_dom" target="_blank">
+									<i class="icon instagram"></i>
+									karelskii_dom</a>
+							</div> -->
+						</div>
+						<div class="badge">
 							<iframe src="https://yandex.ru/sprav/widget/rating-badge/1050227453" width="150" height="50"
 								frameborder="0"></iframe>
 						</div>
 					</div>
 				</div>
+				<div class="row smallest">
+					<div class="column centered">Информация не является публичной офертой</div>
+					<div class="column"><span id="year"></span> &copy; Компания «Карельский дом»</div>
+					<div class="column"><a href="../policy.html" target="_blank">Политика конфиденциальности</a> | <a
+							href="https://karelianhouse.ru/technology/index.php?p=1&id=11" target="_blank">Лицензии</a>
+					</div>
+				</div>
 			</div>
-			<p class="text-small centered color-blin">Информация не является публичной офертой</p>
 		</div>
 	</footer>
 
@@ -918,7 +865,7 @@
 		</div>
 	</div>
 
-	<div class="ui offer longer large modal">
+	<div class="ui offer longer modal">
 		<div class="header flexy">
 			<h3>Подробнее о комплектации</h3>
 			<span class="cross cancel">&times;</span>
@@ -928,7 +875,7 @@
 				<div class="ui stackable two column grid">
 					<div class="column">
 						<div class="image">
-							<img src="../img/pic_offer-title-4.jpg" alt="Дома постоянного проживания">
+							<img src="../img/pic_offer-title-1.jpg" alt="Дома постоянного проживания">
 						</div>
 						<div class="description price">
 							от 29 500 <span>₽</span> / м<sup>2</sup>
@@ -986,7 +933,7 @@
 				<div class="ui stackable two column grid">
 					<div class="column">
 						<div class="image">
-							<img src="../img/pic_offer-title-5.jpg" alt="Дома сезонного проживания">
+							<img src="../img/pic_offer-title-2.jpg" alt="Дома сезонного проживания">
 						</div>
 						<div class="description price">
 							от 26 500 <span>₽</span> / м<sup>2</sup>
